@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="_06_Menu_Navegacion_Relativo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_06_Menu_Navegacion_Relativo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <StackPanel Name="nav">
+            <RelativePanel Name="rp" BorderBrush="#2A872A" BorderThickness="2"  >
+                <Rectangle x:Name="rect" Fill="#4ca64c" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWith="lupa" RelativePanel.AlignBottomWith="lupa" RelativePanel.AlignTopWith="lupa"  >
+
+                </Rectangle>
+                <TextBox x:Name="campo" Background="#99cc99" FontSize="25" PlaceholderText="Buscar..." Foreground="White" RelativePanel.AlignVerticalCenterWith="lupa" RelativePanel.AlignTopWith="lupa" RelativePanel.AlignBottomWith="lupa" RelativePanel.LeftOf="lupa" MinWidth="180" />
+                <SymbolIcon Name="lupa" Foreground="White" Symbol="Find" RelativePanel.AlignRightWithPanel="True" Margin="20"></SymbolIcon>
+                <TextBlock Name="logo" Foreground="White" Text="Agrolocal" RelativePanel.AlignVerticalCenterWith="lupa" FontSize="30"></TextBlock>
+                <Image Source="/Assets/Images/sev1.jpg" RelativePanel.Below="lupa"></Image>
+            </RelativePanel>
+
+        </StackPanel>
+           
+    </Grid>
+</Page>
