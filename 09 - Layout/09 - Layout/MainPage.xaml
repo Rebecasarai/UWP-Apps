@@ -1,0 +1,84 @@
+﻿<Page
+    x:Class="_09___Layout.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_09___Layout"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Border BorderBrush="Gray" BorderThickness="3" Margin="10" Name="textos">
+            <TextBlock TextWrapping="Wrap" Text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim"
+                  MinHeight="50"></TextBlock>
+        </Border>
+        <Border BorderBrush="Gray" BorderThickness="3" Margin="10" RelativePanel.Below="textos" Name="texto2">
+            <TextBlock MaxLines="30" TextWrapping="Wrap" Text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim"
+                  MinHeight="50" ></TextBlock>
+        </Border>
+
+        <Border BorderBrush="Gray" BorderThickness="3" Margin="10" RelativePanel.Below="texto2" Name="recuadroCentro" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True">
+
+            <Grid Name="rp1" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto">
+
+                    </RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*">
+                    </ColumnDefinition>
+                    
+                </Grid.ColumnDefinitions>
+                <VariableSizedWrapGrid  Grid.Column="0" Name="vz" Margin="20" Orientation="Horizontal" >
+                    <Border BorderBrush="Gray" BorderThickness="3" Margin="20">
+                        <Rectangle Fill="Red" Width="100" Height="100" >
+                            
+                        </Rectangle>
+                    </Border>
+                    <Border BorderBrush="Gray" BorderThickness="3" Margin="20">
+                        <Rectangle Fill="Red" Width="100" Height="100">
+
+                        </Rectangle>
+                    </Border>
+                    <Border BorderBrush="Gray" BorderThickness="3" Margin="20">
+                        <Rectangle Fill="Red" Width="100" Height="100">
+
+                        </Rectangle>
+                    </Border>
+                </VariableSizedWrapGrid>
+                
+                <StackPanel  Name="sp" Grid.Column="1">
+                          <Border BorderBrush="Gray" BorderThickness="3" Margin="10" RelativePanel.Below="textos" Name="texto3">
+                        <TextBlock TextWrapping="Wrap" MinHeight="50" Text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim"
+                                                   
+                           ></TextBlock>
+                                    </Border>
+                                    <Border BorderBrush="Gray" BorderThickness="3" Margin="10" RelativePanel.Below="textos" Name="texto4">
+                        <TextBlock TextWrapping="Wrap" MinHeight="50" Text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim"
+                           ></TextBlock>
+                                    </Border>
+                                    <Border BorderBrush="Gray" BorderThickness="3" Margin="10" RelativePanel.Below="textos" Name="texto5">
+                        <TextBlock TextWrapping="Wrap" MinHeight="50" Text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim"
+                           ></TextBlock>
+                                    </Border>
+                                    <Border BorderBrush="Gray" BorderThickness="3" Margin="10" RelativePanel.Below="textos" Name="texto6">
+                        <TextBlock TextWrapping="Wrap" MinHeight="50"
+                                    Text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim"
+                           ></TextBlock>
+                                    </Border>
+
+                                </StackPanel>
+                    
+
+                </Grid>
+
+        </Border>
+        <Border BorderBrush="Gray" BorderThickness="3" Margin="10"  Name="texto7" RelativePanel.Below="recuadroCentro">
+            <TextBlock TextWrapping="Wrap" Text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim"
+                   ></TextBlock>
+        </Border>
+    </RelativePanel>
+</Page>
