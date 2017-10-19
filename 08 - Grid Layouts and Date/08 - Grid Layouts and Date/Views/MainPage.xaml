@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="_08___Grid_Layouts_and_Date.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_08___Grid_Layouts_and_Date"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:localmodel="using:_08___Grid_Layouts_and_Date.Models"
+    mc:Ignorable="d">
+    <Page.DataContext>
+        <localmodel:clsPersona>
+            
+            
+        </localmodel:clsPersona>
+    </Page.DataContext>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.RowDefinitions >
+
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Formulario" Name="titulo" FontSize="40" Grid.ColumnSpan="1" Grid.RowSpan="1"
+                   Grid.Row="0" Grid.Column="1" 
+                   TextAlignment="Center"/>
+
+        <TextBlock Text="Nombre: " Name="name" TextAlignment="Right" FontSize="20" Grid.ColumnSpan="1" Grid.RowSpan="1" Grid.Row="1" />
+        <TextBox Name="campoName" Text="{Binding nombre}" Grid.ColumnSpan="1" PlaceholderText="Introduzca nombre"  Grid.Column="1"  Grid.Row="1" TextChanged="campoName_TextChanged" />
+        <TextBlock Name="errorName" Grid.Row="1" Grid.Column="2" Foreground="Red" ></TextBlock>
+        
+        <TextBlock Text="Apellido: " Name="lastname" TextAlignment="Right" FontSize="20" Grid.ColumnSpan="1" Grid.RowSpan="1" Grid.Row="2" />
+        <TextBox Name="campoApellido" Grid.ColumnSpan="1" PlaceholderText="Introduzca apellido"  Grid.Column="1"  Grid.Row="2" TextChanged="campoApellido_TextChanged" />
+        <TextBlock Name="errorApellido" Grid.Row="2" Grid.Column="2" Foreground="Red" ></TextBlock>
+
+        <TextBlock Text="fecha: " Name="fecha" TextAlignment="Right" FontSize="20" Grid.ColumnSpan="1" Grid.RowSpan="1" Grid.Row="3" />
+        <TextBox Name="campoDate" Grid.ColumnSpan="1" PlaceholderText="Introduzca fecha"  Grid.Column="1"  Grid.Row="3" TextChanged="date_TextChanged" />
+        <TextBlock Name="errorFecha" Grid.Row="3" Grid.Column="2" Foreground="Red" ></TextBlock>
+
+
+        <Button Name="enviar" Grid.Row="4" Content="Enviar" Grid.ColumnSpan="1" Grid.Column="1" MinWidth="200" Height="80" HorizontalAlignment="Center" Foreground="Beige" FontSize="30" Background="Blue" Click="enviar_Click" />
+        <FlipView Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="960,90,0,0" Grid.Row="3" Grid.RowSpan="2" VerticalAlignment="Top" Width="100"/>
+    </Grid>
+</Page>
