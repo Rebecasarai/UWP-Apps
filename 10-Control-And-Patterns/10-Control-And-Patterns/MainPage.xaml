@@ -25,8 +25,9 @@
         <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0">
                     <TextBlock Text="Aproveche esta grandiosa oferta" HorizontalAlignment="Center" FontSize="20"></TextBlock>
                     <TextBlock Text="Haga aquí su reserva con un descuento increible y visite Helsinki!" TextWrapping="Wrap" Foreground="MidnightBlue" Margin="0 20 0 20" ></TextBlock>
-                    
-            <RadioButton >
+                    <TextBlock Text="¿Aceptas terminos y condiciones?" TextWrapping="Wrap" Foreground="MidnightBlue" Margin="0 0 0 20" ></TextBlock>
+
+                    <RadioButton >
                 <RadioButton.Content>
                     <StackPanel Orientation="Horizontal">
                         <SymbolIcon Margin="0 0 20 0" Symbol="Accept" Foreground="Green" ></SymbolIcon>
@@ -92,7 +93,7 @@
             <StackPanel Grid.Column="3" Grid.Row="0" Orientation="Vertical">
                 <TextBlock TextWrapping="Wrap" Text="Comentarios" FontSize="30" HorizontalAlignment="Center" Margin="0 0 0 20"></TextBlock>
                 <TextBlock TextWrapping="Wrap" Text="¿Desea hacernos saber algo más? Haganoslo saber aquí:" Margin="0 0 0 5"></TextBlock>
-                <TextBox TextWrapping="Wrap" Height="50" ></TextBox>
+                <TextBox  TextWrapping="Wrap" Height="50" ></TextBox>
 
             </StackPanel>
 
