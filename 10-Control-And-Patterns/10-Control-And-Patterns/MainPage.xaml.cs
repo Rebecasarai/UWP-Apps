@@ -22,9 +22,42 @@ namespace _10_Control_And_Patterns
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private int riesgo = 0;
+        private bool pressed;
         public MainPage()
         {
             this.InitializeComponent();
+            calendar.MinDate = DateTime.Now;
+        }
+
+        private void ProgressBarcontrol_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            
+        }
+
+        
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void comentarios_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+        }
+
+        private void alergies_Toggled(object sender, RoutedEventArgs e)
+        {
+            if (!pressed)
+            {
+                pressed = false;
+                riesgo += 30;
+                ProgressBarcontrol.Value = riesgo;
+
+            }
         }
     }
 }

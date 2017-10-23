@@ -5,98 +5,140 @@
     xmlns:local="using:_10_Control_And_Patterns"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
     mc:Ignorable="d">
     <ScrollViewer>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Border BorderBrush="Black" BorderThickness="2">
-        <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Border BorderBrush="Black" BorderThickness="2">
+                <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0">
                     <TextBlock Text="Aproveche esta grandiosa oferta" HorizontalAlignment="Center" FontSize="20"></TextBlock>
                     <TextBlock Text="Haga aquí su reserva con un descuento increible y visite Helsinki!" TextWrapping="Wrap" Foreground="MidnightBlue" Margin="0 20 0 20" ></TextBlock>
                     <TextBlock Text="¿Aceptas terminos y condiciones?" TextWrapping="Wrap" Foreground="MidnightBlue" Margin="0 0 0 20" ></TextBlock>
 
                     <RadioButton >
-                <RadioButton.Content>
-                    <StackPanel Orientation="Horizontal">
-                        <SymbolIcon Margin="0 0 20 0" Symbol="Accept" Foreground="Green" ></SymbolIcon>
-                        <TextBlock Text="Aceptar"></TextBlock>
+                        <RadioButton.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <SymbolIcon Margin="0 0 20 0" Symbol="Accept" Foreground="Green" ></SymbolIcon>
+                                <TextBlock Text="Aceptar"></TextBlock>
                                 <ToolTipService.ToolTip>
                                     <ToolTip Content="Carpe Diem!" 
                   HorizontalOffset="10" VerticalOffset="10"/>
                                 </ToolTipService.ToolTip>
                             </StackPanel>
-                </RadioButton.Content>
-            </RadioButton>
-            <RadioButton >
-                <RadioButton.Content>
-                    <StackPanel Orientation="Horizontal">
-                        <SymbolIcon Margin="0 0 20 0" Symbol="Clear" Foreground="Red" ></SymbolIcon>
-                        <TextBlock Text="Rechazar"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>
+                    <RadioButton >
+                        <RadioButton.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <SymbolIcon Margin="0 0 20 0" Symbol="Clear" Foreground="Red" ></SymbolIcon>
+                                <TextBlock Text="Rechazar"></TextBlock>
                                 <ToolTipService.ToolTip>
                                     <ToolTip Content="Que te lo pierdes!" 
                   HorizontalOffset="10" VerticalOffset="10"/>
                                 </ToolTipService.ToolTip>
                             </StackPanel>
-                </RadioButton.Content>
-            </RadioButton>
-            <RadioButton >
-                <RadioButton.Content>
-                    <StackPanel Orientation="Horizontal">
-                        <SymbolIcon Margin="0 0 20 0" Symbol="Clock" Foreground="Black" ></SymbolIcon>
-                        <TextBlock Text="Luego"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>
+                    <RadioButton >
+                        <RadioButton.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <SymbolIcon Margin="0 0 20 0" Symbol="Clock" Foreground="Black" ></SymbolIcon>
+                                <TextBlock Text="Luego"></TextBlock>
                                 <ToolTipService.ToolTip>
                                     <ToolTip Content="Ah ver el indeciso" 
                   HorizontalOffset="10" VerticalOffset="10"/>
                                 </ToolTipService.ToolTip>
                             </StackPanel>
-                </RadioButton.Content>
-            </RadioButton>
-        </StackPanel>
-        </Border>
+                        </RadioButton.Content>
+                    </RadioButton>
+                </StackPanel>
+            </Border>
 
-        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" >
-            <Pivot x:Name="rootPivot" Title="Paquetes de viaje y estadia" Foreground="BlueViolet">
-                <PivotItem Header="Todo incluido">
+            <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" >
+                <Pivot x:Name="rootPivot" Title="Paquetes de viaje y estadia" Foreground="BlueViolet">
+                    <PivotItem Header="Todo incluido">
                         <StackPanel Orientation="Vertical">
                             <TextBlock Text="Excelente, muy caro"/>
                             <Image Source="Assets/Images/helsinki.jpg" MaxHeight="300" ></Image>
                         </StackPanel>
                     </PivotItem>
-                <PivotItem Header="Media estadia" Foreground="Green">
+                    <PivotItem Header="Media estadia" Foreground="Green">
                         <StackPanel Orientation="Vertical">
                             <TextBlock Text="Media Pensión"/>
                             <Image Source="Assets/Images/allas-2016-opening_party-eetu_ahanen-045_1.jpg" MaxHeight="300" ></Image>
                         </StackPanel>
                     </PivotItem>
-                <PivotItem Header="Básico">
-                    <StackPanel Orientation="Vertical">
-                        <TextBlock Text="Econocomico y básico"/>
+                    <PivotItem Header="Básico">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="Econocomico y básico"/>
                             <Image Source="Assets/Images/finland-helsinki-boat.jpg" MaxHeight="300" ></Image>
-                    </StackPanel>
-                </PivotItem>
-            </Pivot>
-        </StackPanel>
+                        </StackPanel>
+                    </PivotItem>
+                </Pivot>
+            </StackPanel>
 
 
-            <StackPanel Grid.Column="3" Grid.Row="0" Orientation="Vertical">
+            <StackPanel Margin="10" Grid.Column="3" Grid.Row="0" Orientation="Vertical">
                 <TextBlock TextWrapping="Wrap" Text="Comentarios" FontSize="30" HorizontalAlignment="Center" Margin="0 0 0 20"></TextBlock>
-                <TextBlock TextWrapping="Wrap" Text="¿Desea hacernos saber algo más? Haganoslo saber aquí:" Margin="0 0 0 5"></TextBlock>
-                <TextBox  TextWrapping="Wrap" Height="50" ></TextBox>
+                <TextBlock TextWrapping="Wrap"  Text="¿Desea hacernos saber algo más? Haganoslo saber aquí:" Margin="0 10 0 5"></TextBlock>
+                
+                <TextBox Text="" Name="comentarios" IsSpellCheckEnabled="True" TextWrapping="Wrap" Height="50" TextChanged="comentarios_TextChanged" ></TextBox>
+                <ToggleSwitch Header="*Eres alergico?" Name="alergies" OnContent="Sí" OffContent="No" Toggled="alergies_Toggled"></ToggleSwitch>
+                
+                <TextBlock Margin="0 20" Text="Muy bien, tendremos en cuenta sus comentarios:"></TextBlock>
+                <TextBlock Name="resulcomentario" Text="{Binding Text, ElementName=comentarios}" ></TextBlock>
 
             </StackPanel>
 
+
+            <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Vertical">
+                <TextBlock Text="Elige la fecha de Ida"></TextBlock>
+                <CalendarView Name="calendar" HorizontalAlignment="Center"   />
+                
+            </StackPanel>
+            <StackPanel Grid.Column="0" Grid.Row="3" Orientation="Vertical">
+                <TextBlock Text="Elige la fecha de Vuelta"></TextBlock>
+                <CalendarView Name="calendarBack" HorizontalAlignment="Center" MinDate="{Binding SelectedDates, ElementName=calendar, Mode=OneTime}"  />
+
+            </StackPanel>
+            <StackPanel  Grid.Column="2" Grid.Row="2" Orientation="Vertical">
+
+                <WebView  x:Name="webView" Source="https://rebecasarai.github.io/" Height="366"/>
+
+            </StackPanel>
+
+            <StackPanel Grid.Column="3" Grid.Row="2" Margin="20" Orientation="Vertical">
+                <TextBlock Text="Riesgo de viaje"></TextBlock>
+                <ProgressBar x:Name="ProgressBarcontrol"  Maximum="200" Margin="20" Height="40" />
+                <MediaPlayerElement Name="Sonido" Source="https://www.youtube.com/watch?v=J80_qZWuaxo" Height="100" Width="200" AutoPlay="True">
+                 
+                </MediaPlayerElement>
+            </StackPanel>
+            <StackPanel  Grid.Row="2" Grid.Column="1" Orientation="Vertical">
+
+                <Slider x:Name="zoomslider" Header="Zoom" Width="200" Minimum="1"/>
+                <Maps:MapControl
+                   Height="300"           
+                   ZoomLevel="{Binding Value, ElementName=zoomslider, Mode=TwoWay}"
+                   TiltInteractionMode="GestureAndControl"   /> 
+
+            </StackPanel>
         </Grid>
+
     </ScrollViewer>
 </Page>
