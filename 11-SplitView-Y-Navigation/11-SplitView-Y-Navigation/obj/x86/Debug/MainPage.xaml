@@ -1,0 +1,70 @@
+﻿<Page
+    x:Class="_11_SplitView_Y_Navigation.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_11_SplitView_Y_Navigation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" HorizontalAlignment="Left" Width="1920">
+
+        <SplitView x:ConnectionId='1' IsPaneOpen="False"
+           DisplayMode="CompactOverlay"
+           CompactPaneLength="65"
+                   MinWidth="100"
+           OpenPaneLength="400"
+           Name="splitView" 
+                 >
+            <SplitView.Pane >
+                <StackPanel Orientation="Vertical" Background="PaleVioletRed"  >
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 20 " >
+                        <ToggleButton x:ConnectionId='2' Name="hamburger"                         Margin="0 0 20 0" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" FontSize="40" Foreground="white" Background="PaleVioletRed"></ToggleButton>
+
+                        <TextBlock Text="Menú" FontSize="28" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <AppBarButton Icon="Home" Foreground="White" ></AppBarButton>
+                        <TextBlock Text="Inicio" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                        
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" >
+                        <AppBarButton Icon="Map" Foreground="blue"></AppBarButton>
+                        <TextBlock Text="Ver reuniones" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" >
+                        <AppBarButton Icon="AddFriend" Foreground="White"></AppBarButton>
+                        <TextBlock Text="Añadir contacto" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+
+                    </StackPanel>
+                </StackPanel>
+            </SplitView.Pane>
+            <SplitView.Content>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Orientation="Vertical"  >
+
+                        <CommandBar VerticalContentAlignment="Center" Background="PaleVioletRed" >
+                            <AppBarButton Icon="Home" FontSize="40" ></AppBarButton>
+                            <AppBarButton Icon="Home" FontSize="40" ></AppBarButton>
+                            <AppBarButton Icon="Home" FontSize="40" ></AppBarButton>
+                            
+                        </CommandBar>
+                        <TextBlock Text="ContentPane" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                    </StackPanel>
+
+                </Grid>
+            </SplitView.Content>
+
+        </SplitView>
+
+    </Grid>
+</Page>
+
