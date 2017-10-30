@@ -1,2 +1,3 @@
 App.xbf
-Views\MainPage.xbf
+Views\HomePage.xbf
+Views\Login.xbf

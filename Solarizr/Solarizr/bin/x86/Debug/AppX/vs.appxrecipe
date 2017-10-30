@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\rsgonzalez\Desktop\Asignaturas\DI\Universales\Solarizr\Solarizr\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-10-27T12:39:39.311</Modified>
+      <Modified>2017-10-30T13:38:00.569</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\rsgonzalez\Desktop\Asignaturas\DI\Universales\Solarizr\Solarizr\bin\x86\Debug\Solarizr.exe">
       <PackagePath>entrypoint\Solarizr.exe</PackagePath>
-      <Modified>2017-10-27T12:39:37.752</Modified>
+      <Modified>2017-10-30T13:37:59.528</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rsgonzalez\.nuget\packages\Microsoft.CSharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -495,6 +495,10 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-11T21:15:04.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rsgonzalez\Desktop\Asignaturas\DI\Universales\Solarizr\Solarizr\Assets\Images\paneles.jpg">
+      <PackagePath>Assets\Images\paneles.jpg</PackagePath>
+      <Modified>2017-10-30T13:02:24.294</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rsgonzalez\Desktop\Asignaturas\DI\Universales\Solarizr\Solarizr\Assets\Images\sun.gif">
       <PackagePath>Assets\Images\sun.gif</PackagePath>
       <Modified>2017-10-26T10:34:40.359</Modified>
@@ -539,7 +543,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rsgonzalez\Desktop\Asignaturas\DI\Universales\Solarizr\Solarizr\bin\x86\Debug\Solarizr.xr.xml">
       <PackagePath>Solarizr.xr.xml</PackagePath>
-      <Modified>2017-10-27T12:39:37.595</Modified>
+      <Modified>2017-10-30T13:37:59.117</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -548,11 +552,11 @@
     <AppxPackagedFile Include="C:\Users\rsgonzalez\Desktop\Asignaturas\DI\Universales\Solarizr\Solarizr\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-10-27T12:39:39.086</Modified>
+      <Modified>2017-10-30T13:38:00.156</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rsgonzalez\Desktop\Asignaturas\DI\Universales\Solarizr\Solarizr\bin\x86\Debug\Core\Solarizr.exe">
       <PackagePath>Solarizr.exe</PackagePath>
-      <Modified>2017-10-27T12:39:39.306</Modified>
+      <Modified>2017-10-30T13:38:00.559</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
