@@ -64,7 +64,8 @@
                 <SplitView.Content>
 
                     <RelativePanel>
-                        <RelativePanel Name="rp1">
+                        <TextBlock Name="titulo"  Margin="20" Text="Home" RelativePanel.AlignHorizontalCenterWithPanel="true" ></TextBlock>
+                        <RelativePanel Name="rp1" RelativePanel.Below="titulo">
                             <Maps:MapControl Name="mapa1" Width="100" Height="100" 
                                              Margin="20" ></Maps:MapControl>
                             <TextBlock Name="texto1"  RelativePanel.RightOf="mapa1" Text="Monday, October 29th" Margin="0 20 0 0">
