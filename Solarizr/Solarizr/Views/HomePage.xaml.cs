@@ -25,11 +25,32 @@ namespace Solarizr.Views
         public HomePage()
         {
             this.InitializeComponent();
+            this.MyFrame.Navigate(typeof(Inicio));
         }
 
         private void toggleButton_Click(object sender, RoutedEventArgs e)
         {
             mySplitView.IsPaneOpen = !mySplitView.IsPaneOpen;
+        }
+
+        private void btnlogout_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
+        }
+
+        private void btn3_Click(System.Object sender, RoutedEventArgs e)
+        {
+            this.MyFrame.Navigate(typeof(About));
+        }
+
+        private void btn1_Click(object sender, RoutedEventArgs e)
+        {
+            this.MyFrame.Navigate(typeof(Inicio));
+        }
+
+        private void btn2_Click(object sender, RoutedEventArgs e)
+        {
+            this.MyFrame.Navigate(typeof(Appointments));
         }
     }
 }

@@ -1,0 +1,98 @@
+﻿<Page
+    x:Class="Solarizr.Views.Inicio"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Solarizr.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+    <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <RelativePanel Name="rp5" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
+            <RelativePanel.Background>
+                <ImageBrush ImageSource="ms-appx:///Assets/Images/paneles.jpg" Stretch="Fill" />
+            </RelativePanel.Background>
+            <TextBlock Name="titulo" FontSize="20" Margin="20" Text="Home" RelativePanel.AlignHorizontalCenterWithPanel="true" ></TextBlock>
+
+            <RelativePanel RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" Name="rp1" RelativePanel.Below="titulo">
+                <Rectangle RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" Fill="White" Opacity="0.5"></Rectangle>
+                <Maps:MapControl Name="mapa1" Width="100" Height="100" 
+                                             Margin="20" ></Maps:MapControl>
+                <TextBlock Name="texto1"  RelativePanel.RightOf="mapa1" Text="Monday, October 29th" Margin="0 20 0 0">
+
+                </TextBlock>
+                <TextBlock Name="time1" Text="8:00 AM" RelativePanel.Below="texto1" RelativePanel.RightOf="mapa1" Margin="0 20"></TextBlock>
+
+                <TextBlock Name="direccion1" Text="500 5th Street, New York" RelativePanel.Below="time1" RelativePanel.RightOf="mapa1" ></TextBlock>
+
+
+            </RelativePanel>
+
+            <RelativePanel Name="rp2" RelativePanel.Below="rp1" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
+                <Rectangle RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" Fill="White" Opacity="0.5"></Rectangle>
+                <Maps:MapControl Name="mapa2" Width="100" Height="100" 
+                                             Margin="20" ></Maps:MapControl>
+                <TextBlock Name="texto2"  RelativePanel.RightOf="mapa2" Text="Monday, October 29th" Margin="0 20 0 0" >
+
+                </TextBlock>
+                <TextBlock Name="time2" Text="8:00 AM" RelativePanel.Below="texto2" RelativePanel.RightOf="mapa2" Margin="0 20"></TextBlock>
+
+                <TextBlock Name="direccion2" Text="500 5th Street, New York" RelativePanel.Below="time2" RelativePanel.RightOf="mapa2" ></TextBlock>
+
+
+            </RelativePanel>
+
+            <RelativePanel Name="rp3" RelativePanel.Below="rp2" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
+                <Rectangle RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" Fill="White" Opacity="0.5"></Rectangle>
+
+                <Maps:MapControl Name="mapa3" Width="100" Height="100" 
+                                             Margin="20" ></Maps:MapControl>
+                <TextBlock Name="texto3"  RelativePanel.RightOf="mapa3" Text="Tuesdar, November 2th" Margin="0 20 0 0">
+
+                </TextBlock>
+                <TextBlock Name="time3" Text="8:00 AM" RelativePanel.Below="texto3" RelativePanel.RightOf="mapa3" Margin="0 20"></TextBlock>
+
+                <TextBlock Name="direccion3" Text="500 5th Street, New York" RelativePanel.Below="time3" RelativePanel.RightOf="mapa3" ></TextBlock>
+
+
+            </RelativePanel>
+            <RelativePanel Name="rp4" RelativePanel.Below="rp3" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
+                <Rectangle RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" Fill="White" Opacity="0.5"></Rectangle>
+
+                <Maps:MapControl Name="mapa4" Width="100" Height="100" 
+                                             Margin="20" ></Maps:MapControl>
+                <TextBlock Name="texto4"  RelativePanel.RightOf="mapa4" Text="Monday, October 29th" Margin="0 20 0 0">
+
+                </TextBlock>
+                <TextBlock Name="time4" Text="8:00 AM" RelativePanel.Below="texto4" RelativePanel.RightOf="mapa4" Margin="0 20"></TextBlock>
+
+                <TextBlock Name="direccion4" Text="500 5th Street, New York" RelativePanel.Below="time4" RelativePanel.RightOf="mapa4" ></TextBlock>
+
+
+            </RelativePanel>
+
+            <RelativePanel Name="rp7" RelativePanel.Below="rp4" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
+                <Rectangle RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" Fill="White" Opacity="0.5"></Rectangle>
+
+                <Maps:MapControl Name="mapa5" Width="100" Height="100" 
+                                             Margin="20" ></Maps:MapControl>
+                <TextBlock Name="texto5"  RelativePanel.RightOf="mapa5" Text="Monday, October 29th" Margin="0 20 0 0">
+
+                </TextBlock>
+                <TextBlock Name="time5" Text="8:00 AM" RelativePanel.Below="texto5" RelativePanel.RightOf="mapa5" Margin="0 20"></TextBlock>
+
+                <TextBlock Name="direccion5" Text="500 5th Street, New York" RelativePanel.Below="time5" RelativePanel.RightOf="mapa5" ></TextBlock>
+
+
+            </RelativePanel>
+
+        </RelativePanel>
+
+
+
+    </RelativePanel>
+    </ScrollViewer>
+</Page>

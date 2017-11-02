@@ -5,7 +5,6 @@
     xmlns:local="using:Solarizr.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
     mc:Ignorable="d">
 
     <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -26,7 +25,7 @@
                    OpenPaneLength="250" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignTopWithPanel="True">
                 <SplitView.Pane>
                     <RelativePanel Background="LightBlue">
-                        <Button Name="btn1" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" Width="250">
+                        <Button Name="btn1" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" Width="250" Click="btn1_Click">
                             <Button.Content>
                                 <RelativePanel Width="250" Margin="-10 0 0 0">
                                     <SymbolIcon Name="icon1" Symbol="Home" Height="50" Width="50" VerticalAlignment="Center" HorizontalAlignment="Left" RelativePanel.AlignLeftWithPanel="True"></SymbolIcon>
@@ -34,16 +33,16 @@
                                 </RelativePanel>
                             </Button.Content>
                         </Button>
-                        <Button Name="btn2" RelativePanel.Below="btn1" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" Width="250">
+                        <Button Name="btn2" RelativePanel.Below="btn1" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" Width="250" Click="btn2_Click">
                             <Button.Content>
                                 <RelativePanel Width="250" Margin="-10 0 0 0">
                                     <SymbolIcon Name="icon2" Symbol="ContactInfo" Height="50" Width="50" VerticalAlignment="Center" HorizontalAlignment="Left" RelativePanel.AlignLeftWithPanel="True"></SymbolIcon>
-                                    <TextBlock Name="t2" Text="Appointments" VerticalAlignment="Center" HorizontalAlignment="Left" RelativePanel.RightOf="icon2" RelativePanel.AlignVerticalCenterWith="icon2" Margin="10 0 0 0"></TextBlock>
+                                    <TextBlock Name="t2" Text="Appointment for Today" VerticalAlignment="Center" HorizontalAlignment="Left" RelativePanel.RightOf="icon2" RelativePanel.AlignVerticalCenterWith="icon2" Margin="10 0 0 0" ></TextBlock>
                                 </RelativePanel>
                             </Button.Content>
                         </Button>
                         <Rectangle Height="1" Fill="Black" RelativePanel.Above="btn3" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True"></Rectangle>
-                        <Button Name="btn3" RelativePanel.Above="btnlogout" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" Width="250">
+                        <Button Name="btn3" RelativePanel.Above="btnlogout" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" Width="250" Click="btn3_Click">
                             <Button.Content>
                                 <RelativePanel Width="250" Margin="-10 0 0 0">
                                     <SymbolIcon Name="icon3" Symbol="Help" Height="50" Width="50" VerticalAlignment="Center" HorizontalAlignment="Left" RelativePanel.AlignLeftWithPanel="True"></SymbolIcon>
@@ -51,11 +50,11 @@
                                 </RelativePanel>
                             </Button.Content>
                         </Button>
-                        <Button Name="btnlogout" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" Width="250">
+                        <Button Name="btnlogout" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" Width="250" Click="btnlogout_Click">
                             <Button.Content>
                                 <RelativePanel Width="250" Margin="-10 0 0 0">
                                     <SymbolIcon Name="iconlogout" Symbol="Back" Height="50" Width="50" VerticalAlignment="Center" HorizontalAlignment="Left" RelativePanel.AlignLeftWithPanel="True"></SymbolIcon>
-                                    <TextBlock Name="logout" Text="Logout" VerticalAlignment="Center" HorizontalAlignment="Left" RelativePanel.RightOf="iconlogout" RelativePanel.AlignVerticalCenterWith="iconlogout" Margin="10 0 0 0"></TextBlock>
+                                    <TextBlock Name="logout" Text="Logout" VerticalAlignment="Center" RelativePanel.RightOf="iconlogout" RelativePanel.AlignVerticalCenterWith="iconlogout" Margin="10,0,0.2,0" />
                                 </RelativePanel>
                             </Button.Content>
                         </Button>
@@ -63,78 +62,35 @@
                 </SplitView.Pane>
                 <SplitView.Content>
 
-                    <RelativePanel>
-                        <TextBlock Name="titulo"  Margin="20" Text="Home" RelativePanel.AlignHorizontalCenterWithPanel="true" ></TextBlock>
-                        <RelativePanel Name="rp1" RelativePanel.Below="titulo">
-                            <Maps:MapControl Name="mapa1" Width="100" Height="100" 
-                                             Margin="20" ></Maps:MapControl>
-                            <TextBlock Name="texto1"  RelativePanel.RightOf="mapa1" Text="Monday, October 29th" Margin="0 20 0 0">
-                                
-                            </TextBlock>
-                            <TextBlock Name="time1" Text="8:00 AM" RelativePanel.Below="texto1" RelativePanel.RightOf="mapa1" Margin="0 20"></TextBlock>
-
-                            <TextBlock Name="direccion1" Text="500 5th Street, New York" RelativePanel.Below="time1" RelativePanel.RightOf="mapa1" ></TextBlock>
-
-                            
-                        </RelativePanel>
-
-                        <RelativePanel Name="rp2" RelativePanel.Below="rp1">
-                            <Maps:MapControl Name="mapa2" Width="100" Height="100" 
-                                             Margin="20" ></Maps:MapControl>
-                            <TextBlock Name="texto2"  RelativePanel.RightOf="mapa2" Text="Monday, October 29th" Margin="0 20 0 0">
-
-                            </TextBlock>
-                            <TextBlock Name="time2" Text="8:00 AM" RelativePanel.Below="texto2" RelativePanel.RightOf="mapa2" Margin="0 20"></TextBlock>
-
-                            <TextBlock Name="direccion2" Text="500 5th Street, New York" RelativePanel.Below="time2" RelativePanel.RightOf="mapa2" ></TextBlock>
+                    <Frame x:Name="MyFrame" />
 
 
-                        </RelativePanel>
 
-                        <RelativePanel Name="rp3" RelativePanel.Below="rp2">
-                            <Maps:MapControl Name="mapa3" Width="100" Height="100" 
-                                             Margin="20" ></Maps:MapControl>
-                            <TextBlock Name="texto3"  RelativePanel.RightOf="mapa3" Text="Monday, October 29th" Margin="0 20 0 0">
-
-                            </TextBlock>
-                            <TextBlock Name="time3" Text="8:00 AM" RelativePanel.Below="texto3" RelativePanel.RightOf="mapa3" Margin="0 20"></TextBlock>
-
-                            <TextBlock Name="direccion3" Text="500 5th Street, New York" RelativePanel.Below="time3" RelativePanel.RightOf="mapa3" ></TextBlock>
-
-
-                        </RelativePanel>
-                        <RelativePanel Name="rp4" RelativePanel.Below="rp3">
-                            <Maps:MapControl Name="mapa4" Width="100" Height="100" 
-                                             Margin="20" ></Maps:MapControl>
-                            <TextBlock Name="texto4"  RelativePanel.RightOf="mapa4" Text="Monday, October 29th" Margin="0 20 0 0">
-
-                            </TextBlock>
-                            <TextBlock Name="time4" Text="8:00 AM" RelativePanel.Below="texto4" RelativePanel.RightOf="mapa4" Margin="0 20"></TextBlock>
-
-                            <TextBlock Name="direccion4" Text="500 5th Street, New York" RelativePanel.Below="time4" RelativePanel.RightOf="mapa4" ></TextBlock>
-
-
-                        </RelativePanel>
-
-                        <RelativePanel Name="rp5" RelativePanel.Below="rp4">
-                            <Maps:MapControl Name="mapa5" Width="100" Height="100" 
-                                             Margin="20" ></Maps:MapControl>
-                            <TextBlock Name="texto5"  RelativePanel.RightOf="mapa5" Text="Monday, October 29th" Margin="0 20 0 0">
-
-                            </TextBlock>
-                            <TextBlock Name="time5" Text="8:00 AM" RelativePanel.Below="texto5" RelativePanel.RightOf="mapa5" Margin="0 20"></TextBlock>
-
-                            <TextBlock Name="direccion5" Text="500 5th Street, New York" RelativePanel.Below="time5" RelativePanel.RightOf="mapa5" ></TextBlock>
-
-
-                        </RelativePanel>
-
-                    </RelativePanel>
-                    
                 </SplitView.Content>
-
             </SplitView>
         </RelativePanel>
+
+        <!--ViewBox-->
+        <!--<Viewbox RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" StretchDirection="DownOnly">
+            <StackPanel>
+                <TextBlock Name="Version" Text="Solariz™ Versión 0.50.10" FontFamily="Arial" FontWeight="Bold"/>
+                <TextBlock SelectionChanged="Contenido_SelectionChanged" Height="465">
+                    <TextBlock.Name>Contenido</TextBlock.Name>
+                    <TextBlock.FontFamily>Arial</TextBlock.FontFamily>
+                    <TextBlock.Text>
+                        © 2017 Churraca's Team
+                        
+                        All rights reserved. No part of this publication may be reproduced, distributed, or 
+                        transmitted in any form or by any means, including photocopying, recording, or other 
+                        electronic or mechanical methods, without the prior written permission of the publisher, except 
+                        in the case of brief quotations embodied in critical reviews and certain other noncommercial 
+                        uses permitted by copyright law.
+                    </TextBlock.Text>
+                    <TextBlock.TextWrapping>Wrap</TextBlock.TextWrapping>
+                </TextBlock>
+            </StackPanel>
+        </Viewbox>-->
+
     </RelativePanel>
 
 </Page>

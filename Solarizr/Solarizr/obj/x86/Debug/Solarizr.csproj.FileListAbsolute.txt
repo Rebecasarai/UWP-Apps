@@ -218,3 +218,683 @@ C:\Users\rsgonzalez\Desktop\Asignaturas\DI\Universales\Solarizr\Solarizr\obj\x86
 C:\Users\rsgonzalez\Desktop\Asignaturas\DI\Universales\Solarizr\Solarizr\obj\x86\Debug\Views\HomePage.xaml
 C:\Users\rsgonzalez\Desktop\Asignaturas\DI\Universales\Solarizr\Solarizr\obj\x86\Debug\Views\HomePage.xbf
 C:\Users\rsgonzalez\Desktop\Asignaturas\DI\Universales\Solarizr\Solarizr\bin\x86\Debug\Views\HomePage.xbf
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\App.xbf
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\Views\HomePage.xbf
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\Views\Login.xbf
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\Solarizr.xr.xml
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\Solarizr.exe
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\Solarizr.pdb
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\resources.pri
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\AppxManifest.xml
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\Core\AppxManifest.xml
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\Core\Solarizr.exe
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\Solarizr.build.appxrecipe
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\Microsoft.CSharp.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.ComponentModel.DataAnnotations.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Core.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Net.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Numerics.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.Serialization.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.ServiceModel.Web.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.ServiceModel.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Windows.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Xml.Linq.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Xml.Serialization.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Xml.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\Microsoft.VisualBasic.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Collections.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Diagnostics.Tools.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Diagnostics.Tracing.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Globalization.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Globalization.Calendars.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.IO.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.Extensions.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.Primitives.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Resources.ResourceManager.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.Handles.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.InteropServices.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Text.Encoding.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Text.Encoding.Extensions.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Threading.Tasks.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Threading.Timer.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\Microsoft.Win32.Primitives.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Diagnostics.Debug.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.IO.FileSystem.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Net.Primitives.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Net.Sockets.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.Extensions.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\clrjit.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\clrcompression.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Private.Uri.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.AppContext.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Buffers.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Collections.Concurrent.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Collections.Immutable.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Collections.NonGeneric.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Collections.Specialized.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.ComponentModel.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.ComponentModel.Annotations.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.ComponentModel.EventBasedAsync.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Data.Common.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Diagnostics.Contracts.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Diagnostics.StackTrace.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Dynamic.Runtime.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Globalization.Extensions.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.IO.Compression.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.IO.Compression.ZipFile.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.IO.FileSystem.Primitives.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.IO.IsolatedStorage.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.IO.UnmanagedMemoryStream.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Linq.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Linq.Expressions.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Linq.Parallel.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Linq.Queryable.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Net.Http.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Net.Http.Rtc.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Net.NameResolution.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Net.NetworkInformation.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Net.Requests.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Net.WebHeaderCollection.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Net.WebSockets.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Net.WebSockets.Client.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Numerics.Vectors.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Numerics.Vectors.WindowsRuntime.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.ObjectModel.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Private.DataContractSerialization.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Private.ServiceModel.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.Context.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.DispatchProxy.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.Emit.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.Emit.ILGeneration.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.Emit.Lightweight.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.Metadata.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.TypeExtensions.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.InteropServices.WindowsRuntime.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.Numerics.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.Serialization.Json.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.Serialization.Primitives.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.Serialization.Xml.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.WindowsRuntime.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.WindowsRuntime.UI.Xaml.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Security.Claims.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Security.Cryptography.Algorithms.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Security.Cryptography.Cng.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Security.Cryptography.Encoding.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Security.Cryptography.Primitives.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Security.Cryptography.X509Certificates.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Security.Principal.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.ServiceModel.Duplex.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.ServiceModel.Http.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.ServiceModel.NetTcp.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.ServiceModel.Primitives.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.ServiceModel.Security.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Text.Encoding.CodePages.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Text.RegularExpressions.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Threading.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Threading.Overlapped.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Threading.Tasks.Dataflow.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Threading.Tasks.Extensions.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Threading.Tasks.Parallel.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Xml.ReaderWriter.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Xml.XDocument.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Xml.XmlDocument.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\bin\x86\Debug\System.Xml.XmlSerializer.dll
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\Solarizr.csprojResolveAssemblyReference.cache
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\App.g.i.cs
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\App.g.cs
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\Views\HomePage.g.i.cs
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\Views\HomePage.g.cs
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\Views\Login.g.i.cs
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\Views\Login.g.cs
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\XamlTypeInfo.g.cs
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\App.xaml
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\Views\HomePage.xaml
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\Views\Login.xaml
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\App.xbf
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\Views\HomePage.xbf
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\Views\Login.xbf
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\XamlSaveStateFile.xml
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\Solarizr.csproj.CoreCompileInputs.cache
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\Solarizr.exe
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\Solarizr.pdb
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\ResourceHandlingTask.state
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.Microsoft.CSharp.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.Microsoft.VisualBasic.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Collections.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.IO.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Runtime.InteropServices.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Diagnostics.Debug.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.IO.FileSystem.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.Primitives.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.Sockets.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Runtime.Extensions.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Private.Uri.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Buffers.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Collections.Concurrent.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Collections.Immutable.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Collections.NonGeneric.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Collections.Specialized.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.ComponentModel.Annotations.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.ComponentModel.EventBasedAsync.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Data.Common.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Dynamic.Runtime.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Globalization.Extensions.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.IO.Compression.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.IO.Compression.ZipFile.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.IO.IsolatedStorage.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.IO.UnmanagedMemoryStream.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Linq.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Linq.Expressions.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Linq.Parallel.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Linq.Queryable.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.Http.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.NameResolution.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.NetworkInformation.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.Requests.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.WebHeaderCollection.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.WebSockets.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.WebSockets.Client.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Numerics.Vectors.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.ObjectModel.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Private.DataContractSerialization.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Private.ServiceModel.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Reflection.DispatchProxy.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Reflection.Metadata.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Runtime.Numerics.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Runtime.Serialization.Primitives.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Runtime.WindowsRuntime.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Runtime.WindowsRuntime.UI.Xaml.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Security.Claims.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Security.Cryptography.Algorithms.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Security.Cryptography.Cng.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Security.Cryptography.Encoding.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Security.Cryptography.Primitives.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Security.Cryptography.X509Certificates.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Text.Encoding.CodePages.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Text.RegularExpressions.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Threading.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Threading.Overlapped.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Threading.Tasks.Dataflow.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Threading.Tasks.Parallel.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Xml.ReaderWriter.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Xml.XDocument.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Xml.XmlDocument.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Xml.XmlSerializer.SR.resw
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\priconfig.xml
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\priconfig.xml.intermediate
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\layout.resfiles
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\layout.resfiles.intermediate
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\resources.resfiles
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\resources.resfiles.intermediate
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\pri.resfiles
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\pri.resfiles.intermediate
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\qualifiers.txt
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\qualifiers.txt.intermediate
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\resources.en-us.resfiles
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\resources.en-us.resfiles.intermediate
+D:\OneDrive\2DAM\Desarrollo de Interfaces\Solarizr\Solarizr\obj\x86\Debug\ProjectArchitectures.txt
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\App.xbf
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\Views\HomePage.xbf
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\Views\Login.xbf
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\Solarizr.xr.xml
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\Solarizr.exe
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\Solarizr.pdb
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\resources.pri
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\AppxManifest.xml
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\Core\AppxManifest.xml
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\Core\Solarizr.exe
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\Solarizr.build.appxrecipe
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\Microsoft.CSharp.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.ComponentModel.DataAnnotations.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Core.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Net.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Numerics.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.Serialization.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.ServiceModel.Web.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.ServiceModel.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Windows.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Xml.Linq.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Xml.Serialization.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Xml.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\Microsoft.VisualBasic.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Collections.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Diagnostics.Tools.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Diagnostics.Tracing.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Globalization.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Globalization.Calendars.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.IO.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.Extensions.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.Primitives.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Resources.ResourceManager.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.Handles.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.InteropServices.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Text.Encoding.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Text.Encoding.Extensions.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Threading.Tasks.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Threading.Timer.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\Microsoft.Win32.Primitives.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Diagnostics.Debug.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.IO.FileSystem.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Net.Primitives.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Net.Sockets.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.Extensions.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\clrjit.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\clrcompression.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Private.Uri.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.AppContext.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Buffers.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Collections.Concurrent.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Collections.Immutable.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Collections.NonGeneric.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Collections.Specialized.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.ComponentModel.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.ComponentModel.Annotations.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.ComponentModel.EventBasedAsync.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Data.Common.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Diagnostics.Contracts.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Diagnostics.DiagnosticSource.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Diagnostics.StackTrace.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Dynamic.Runtime.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Globalization.Extensions.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.IO.Compression.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.IO.Compression.ZipFile.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.IO.FileSystem.Primitives.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.IO.IsolatedStorage.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.IO.UnmanagedMemoryStream.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Linq.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Linq.Expressions.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Linq.Parallel.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Linq.Queryable.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Net.Http.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Net.Http.Rtc.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Net.NameResolution.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Net.NetworkInformation.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Net.Requests.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Net.WebHeaderCollection.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Net.WebSockets.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Net.WebSockets.Client.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Numerics.Vectors.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Numerics.Vectors.WindowsRuntime.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.ObjectModel.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Private.DataContractSerialization.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Private.ServiceModel.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.Context.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.DispatchProxy.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.Emit.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.Emit.ILGeneration.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.Emit.Lightweight.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.Metadata.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.TypeExtensions.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.InteropServices.WindowsRuntime.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.Numerics.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.Serialization.Json.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.Serialization.Primitives.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.Serialization.Xml.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.WindowsRuntime.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.WindowsRuntime.UI.Xaml.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Security.Claims.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Security.Cryptography.Algorithms.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Security.Cryptography.Cng.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Security.Cryptography.Encoding.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Security.Cryptography.Primitives.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Security.Cryptography.X509Certificates.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Security.Principal.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.ServiceModel.Duplex.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.ServiceModel.Http.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.ServiceModel.NetTcp.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.ServiceModel.Primitives.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.ServiceModel.Security.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Text.Encoding.CodePages.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Text.RegularExpressions.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Threading.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Threading.Overlapped.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Threading.Tasks.Dataflow.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Threading.Tasks.Extensions.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Threading.Tasks.Parallel.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Xml.ReaderWriter.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Xml.XDocument.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Xml.XmlDocument.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\System.Xml.XmlSerializer.dll
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\App.g.i.cs
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\App.g.cs
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\Views\HomePage.g.i.cs
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\Views\HomePage.g.cs
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\Views\Login.g.i.cs
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\Views\Login.g.cs
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\XamlTypeInfo.g.cs
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\App.xaml
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\Views\HomePage.xaml
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\Views\Login.xaml
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\App.xbf
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\Views\HomePage.xbf
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\Views\Login.xbf
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\XamlSaveStateFile.xml
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\Solarizr.csproj.CoreCompileInputs.cache
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\Solarizr.exe
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\Solarizr.pdb
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\ResourceHandlingTask.state
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.Microsoft.CSharp.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.Microsoft.VisualBasic.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Collections.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.IO.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Runtime.InteropServices.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Diagnostics.Debug.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.IO.FileSystem.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.Primitives.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.Sockets.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Runtime.Extensions.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Private.Uri.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Buffers.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Collections.Concurrent.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Collections.Immutable.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Collections.NonGeneric.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Collections.Specialized.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.ComponentModel.Annotations.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.ComponentModel.EventBasedAsync.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Data.Common.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Dynamic.Runtime.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Globalization.Extensions.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.IO.Compression.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.IO.Compression.ZipFile.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.IO.IsolatedStorage.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.IO.UnmanagedMemoryStream.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Linq.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Linq.Expressions.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Linq.Parallel.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Linq.Queryable.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.Http.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.NameResolution.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.NetworkInformation.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.Requests.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.WebHeaderCollection.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.WebSockets.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.WebSockets.Client.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Numerics.Vectors.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.ObjectModel.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Private.DataContractSerialization.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Private.ServiceModel.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Reflection.DispatchProxy.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Reflection.Metadata.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Runtime.Numerics.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Runtime.Serialization.Primitives.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Runtime.WindowsRuntime.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Runtime.WindowsRuntime.UI.Xaml.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Security.Claims.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Security.Cryptography.Algorithms.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Security.Cryptography.Cng.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Security.Cryptography.Encoding.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Security.Cryptography.Primitives.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Security.Cryptography.X509Certificates.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Text.Encoding.CodePages.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Text.RegularExpressions.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Threading.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Threading.Overlapped.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Threading.Tasks.Dataflow.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Threading.Tasks.Parallel.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Xml.ReaderWriter.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Xml.XDocument.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Xml.XmlDocument.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Xml.XmlSerializer.SR.resw
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\priconfig.xml
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\priconfig.xml.intermediate
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\layout.resfiles
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\layout.resfiles.intermediate
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\resources.resfiles
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\resources.resfiles.intermediate
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\pri.resfiles
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\pri.resfiles.intermediate
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\qualifiers.txt
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\qualifiers.txt.intermediate
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\resources.en-us.resfiles
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\resources.en-us.resfiles.intermediate
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\ProjectArchitectures.txt
+Z:\Manu\Descargas\Solarizr\Solarizr\bin\x86\Debug\Views\About.xbf
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\Views\About.g.i.cs
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\Views\About.g.cs
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\Views\About.xaml
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\Views\About.xbf
+Z:\Manu\Descargas\Solarizr\Solarizr\obj\x86\Debug\Solarizr.csprojResolveAssemblyReference.cache
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\App.xbf
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\Views\About.xbf
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\Views\HomePage.xbf
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\Views\Login.xbf
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\Solarizr.xr.xml
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\Solarizr.exe
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\Solarizr.pdb
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\resources.pri
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\AppxManifest.xml
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\Core\AppxManifest.xml
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\Core\Solarizr.exe
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\Solarizr.build.appxrecipe
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\Microsoft.CSharp.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.ComponentModel.DataAnnotations.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Core.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Net.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Numerics.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.Serialization.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.ServiceModel.Web.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.ServiceModel.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Windows.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Xml.Linq.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Xml.Serialization.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Xml.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\Microsoft.VisualBasic.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Collections.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Diagnostics.Tools.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Diagnostics.Tracing.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Globalization.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Globalization.Calendars.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.IO.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.Extensions.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.Primitives.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Resources.ResourceManager.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.Handles.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.InteropServices.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Text.Encoding.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Text.Encoding.Extensions.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Threading.Tasks.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Threading.Timer.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\Microsoft.Win32.Primitives.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Diagnostics.Debug.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.IO.FileSystem.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Net.Primitives.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Net.Sockets.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.Extensions.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\clrjit.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\clrcompression.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Private.Uri.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.AppContext.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Buffers.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Collections.Concurrent.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Collections.Immutable.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Collections.NonGeneric.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Collections.Specialized.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.ComponentModel.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.ComponentModel.Annotations.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.ComponentModel.EventBasedAsync.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Data.Common.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Diagnostics.Contracts.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Diagnostics.StackTrace.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Dynamic.Runtime.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Globalization.Extensions.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.IO.Compression.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.IO.Compression.ZipFile.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.IO.IsolatedStorage.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.IO.UnmanagedMemoryStream.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Linq.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Linq.Expressions.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Linq.Parallel.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Linq.Queryable.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Net.Http.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Net.Http.Rtc.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Net.NameResolution.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Net.NetworkInformation.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Net.Requests.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Net.WebHeaderCollection.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Net.WebSockets.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Net.WebSockets.Client.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Numerics.Vectors.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Numerics.Vectors.WindowsRuntime.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.ObjectModel.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Private.DataContractSerialization.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Private.ServiceModel.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.Context.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.DispatchProxy.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.Emit.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.Emit.ILGeneration.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.Emit.Lightweight.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.Metadata.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Reflection.TypeExtensions.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.InteropServices.WindowsRuntime.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.Numerics.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.Serialization.Json.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.Serialization.Primitives.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.Serialization.Xml.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.WindowsRuntime.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Runtime.WindowsRuntime.UI.Xaml.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Security.Claims.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Security.Cryptography.Cng.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Security.Principal.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.ServiceModel.Duplex.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.ServiceModel.Http.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.ServiceModel.NetTcp.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.ServiceModel.Primitives.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.ServiceModel.Security.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Text.RegularExpressions.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Threading.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Threading.Overlapped.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Threading.Tasks.Dataflow.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Threading.Tasks.Parallel.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Xml.ReaderWriter.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Xml.XDocument.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Xml.XmlDocument.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\System.Xml.XmlSerializer.dll
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\Solarizr.csprojResolveAssemblyReference.cache
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\App.g.i.cs
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\App.g.cs
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\Views\About.g.i.cs
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\Views\About.g.cs
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\Views\HomePage.g.i.cs
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\Views\HomePage.g.cs
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\Views\Login.g.i.cs
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\Views\Login.g.cs
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\XamlTypeInfo.g.cs
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\App.xaml
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\Views\About.xaml
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\Views\HomePage.xaml
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\Views\Login.xaml
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\App.xbf
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\Views\About.xbf
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\Views\HomePage.xbf
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\Views\Login.xbf
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\XamlSaveStateFile.xml
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\Solarizr.csproj.CoreCompileInputs.cache
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\Solarizr.exe
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\Solarizr.pdb
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\ResourceHandlingTask.state
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.Microsoft.CSharp.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.Microsoft.VisualBasic.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Collections.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.IO.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Runtime.InteropServices.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Diagnostics.Debug.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.IO.FileSystem.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.Primitives.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.Sockets.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Runtime.Extensions.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Private.Uri.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Buffers.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Collections.Concurrent.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Collections.Immutable.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Collections.NonGeneric.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Collections.Specialized.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.ComponentModel.Annotations.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.ComponentModel.EventBasedAsync.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Data.Common.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Dynamic.Runtime.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Globalization.Extensions.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.IO.Compression.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.IO.Compression.ZipFile.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.IO.IsolatedStorage.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.IO.UnmanagedMemoryStream.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Linq.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Linq.Expressions.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Linq.Parallel.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Linq.Queryable.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.Http.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.NameResolution.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.NetworkInformation.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.Requests.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.WebHeaderCollection.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.WebSockets.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Net.WebSockets.Client.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Numerics.Vectors.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.ObjectModel.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Private.DataContractSerialization.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Private.ServiceModel.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Reflection.DispatchProxy.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Reflection.Metadata.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Runtime.Numerics.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Runtime.Serialization.Primitives.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Runtime.WindowsRuntime.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Runtime.WindowsRuntime.UI.Xaml.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Security.Claims.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Security.Cryptography.Algorithms.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Security.Cryptography.Cng.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Security.Cryptography.Encoding.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Security.Cryptography.Primitives.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Security.Cryptography.X509Certificates.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Text.Encoding.CodePages.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Text.RegularExpressions.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Threading.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Threading.Overlapped.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Threading.Tasks.Dataflow.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Threading.Tasks.Parallel.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Xml.ReaderWriter.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Xml.XDocument.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Xml.XmlDocument.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\FxResources.System.Xml.XmlSerializer.SR.resw
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\priconfig.xml
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\priconfig.xml.intermediate
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\layout.resfiles
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\layout.resfiles.intermediate
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\resources.resfiles
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\resources.resfiles.intermediate
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\pri.resfiles
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\pri.resfiles.intermediate
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\qualifiers.txt
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\qualifiers.txt.intermediate
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\resources.en-us.resfiles
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\resources.en-us.resfiles.intermediate
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\Views\Inicio.g.i.cs
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\Views\Inicio.g.cs
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\Views\Inicio.xaml
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\Views\Inicio.xbf
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\Views\Inicio.xbf
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\bin\x86\Debug\Views\Appointments.xbf
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\Views\Appointments.g.i.cs
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\Views\Appointments.g.cs
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\Views\Appointments.xaml
+C:\Users\icastillo\Downloads\Solarizr Con Vista About\Solarizr\Solarizr\obj\x86\Debug\Views\Appointments.xbf

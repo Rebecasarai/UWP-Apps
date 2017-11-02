@@ -9,20 +9,21 @@
 
     <RelativePanel >
         <RelativePanel.Background>
-            <ImageBrush ImageSource="\Assets\Images\paneles.jpg" Stretch="Fill" />
+            <ImageBrush ImageSource="ms-appx:///Assets/Images/paneles.jpg" Stretch="Fill" />
         </RelativePanel.Background>
 
         <RelativePanel  Background="CornflowerBlue" Name="barrasuperior" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
             <Image Source="/Assets/Images/sun.gif" Margin="0 0 20 0" Width="30" Height="30" RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.LeftOf="textSol"></Image>
             <TextBlock Name="textSol" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Text="Solarizr" Foreground="White"></TextBlock>
         </RelativePanel>
-        <TextBlock x:Name="usuario" Text="Usuario" RelativePanel.Below="barrasuperior" RelativePanel.AlignHorizontalCenterWith="barrasuperior" Margin="0 50 0 0" />
-        <TextBox x:Name="txtUsuario" RelativePanel.Below="usuario" RelativePanel.AlignHorizontalCenterWithPanel="True" />
 
-        <TextBlock x:Name="password" Text="Contraseña" RelativePanel.Below="txtUsuario" RelativePanel.AlignHorizontalCenterWith="txtUsuario" Margin="0 10 0 0" />
-        <TextBox x:Name="txtPassword" RelativePanel.Below="password" RelativePanel.AlignHorizontalCenterWithPanel="True" />
+        <TextBox x:Name="txtUsuario"  PlaceholderText="User" Width="200" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0 200 0 0" />
+        <TextBox x:Name="txtPassword"  PlaceholderText="Password" Width="200" RelativePanel.Below="txtUsuario" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0 10 0 0"  />
 
-        <Button Content="Login" x:Name="login" RelativePanel.Below="txtPassword" RelativePanel.AlignHorizontalCenterWith="txtPassword" Margin="-0.2,0,0,0" VerticalAlignment="Bottom" Click="login_Click" />
+        <CheckBox x:Name="checbox" Content="Keep me signed in" RelativePanel.Below="txtPassword" RelativePanel.AlignLeftWith="txtPassword" Margin="0 10 0 0" />
 
+        <Button Content="Login" Background="DeepSkyBlue" x:Name="buttonlogin"  RelativePanel.Below="checbox" RelativePanel.AlignLeftWith="txtPassword" Margin="0 10 0 0"  Click="login_Click" />
+
+        <HyperlinkButton Content="Can't acces your account?" RelativePanel.Below="buttonlogin" Foreground="DarkOrange" RelativePanel.AlignHorizontalCenterWithPanel="True" />
     </RelativePanel>
 </Page>

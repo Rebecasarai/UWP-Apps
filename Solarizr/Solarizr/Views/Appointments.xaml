@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="Solarizr.Views.Appointments"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Solarizr.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+    mc:Ignorable="d">
+    <ScrollViewer>
+    <RelativePanel>
+
+        <RelativePanel.Background>
+            <ImageBrush ImageSource="ms-appx:///Assets/Images/paneles.jpg" Stretch="Fill" />
+        </RelativePanel.Background>
+        <TextBlock Name="titulo" FontSize="20" Margin="20" Text="Appointments" Foreground="White" RelativePanel.AlignHorizontalCenterWithPanel="true" ></TextBlock>
+
+        <Maps:MapControl Name="mapa0" Width="400" Height="400" RelativePanel.Below="titulo"
+                                             Margin="20" ></Maps:MapControl>
+        <RelativePanel  Padding="20" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" Name="rp1" RelativePanel.Below="mapa0">
+            <Rectangle RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" Fill="White" Opacity="0.5"></Rectangle>
+
+            <TextBlock Name="texto1" Text="Monday, October 29th" Margin="20 20 0 0">
+
+            </TextBlock>
+            <TextBlock Name="time1" Text="8:00 AM" RelativePanel.Below="texto1" Margin="20 20"></TextBlock>
+
+            <TextBlock Name="direccion1" Text="500 5th Street, New York" RelativePanel.Below="time1" Margin="20 0 0 20" ></TextBlock>
+
+
+        </RelativePanel>
+
+    </RelativePanel>
+    </ScrollViewer>
+</Page>

@@ -132,17 +132,23 @@ namespace Solarizr.Solarizr_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[4];
-            _typeNameTable[0] = "Solarizr.Views.HomePage";
+            _typeNameTable = new string[7];
+            _typeNameTable[0] = "Solarizr.Views.About";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "Solarizr.Views.Login";
+            _typeNameTable[3] = "Solarizr.Views.Appointments";
+            _typeNameTable[4] = "Solarizr.Views.HomePage";
+            _typeNameTable[5] = "Solarizr.Views.Inicio";
+            _typeNameTable[6] = "Solarizr.Views.Login";
 
-            _typeTable = new global::System.Type[4];
-            _typeTable[0] = typeof(global::Solarizr.Views.HomePage);
+            _typeTable = new global::System.Type[7];
+            _typeTable[0] = typeof(global::Solarizr.Views.About);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::Solarizr.Views.Login);
+            _typeTable[3] = typeof(global::Solarizr.Views.Appointments);
+            _typeTable[4] = typeof(global::Solarizr.Views.HomePage);
+            _typeTable[5] = typeof(global::Solarizr.Views.Inicio);
+            _typeTable[6] = typeof(global::Solarizr.Views.Login);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -177,8 +183,11 @@ namespace Solarizr.Solarizr_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_HomePage() { return new global::Solarizr.Views.HomePage(); }
-        private object Activate_3_Login() { return new global::Solarizr.Views.Login(); }
+        private object Activate_0_About() { return new global::Solarizr.Views.About(); }
+        private object Activate_3_Appointments() { return new global::Solarizr.Views.Appointments(); }
+        private object Activate_4_HomePage() { return new global::Solarizr.Views.HomePage(); }
+        private object Activate_5_Inicio() { return new global::Solarizr.Views.Inicio(); }
+        private object Activate_6_Login() { return new global::Solarizr.Views.Login(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -190,9 +199,9 @@ namespace Solarizr.Solarizr_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  Solarizr.Views.HomePage
+            case 0:   //  Solarizr.Views.About
                 userType = new global::Solarizr.Solarizr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_HomePage;
+                userType.Activator = Activate_0_About;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -205,9 +214,30 @@ namespace Solarizr.Solarizr_XamlTypeInfo
                 xamlType = new global::Solarizr.Solarizr_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  Solarizr.Views.Login
+            case 3:   //  Solarizr.Views.Appointments
                 userType = new global::Solarizr.Solarizr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_Login;
+                userType.Activator = Activate_3_Appointments;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 4:   //  Solarizr.Views.HomePage
+                userType = new global::Solarizr.Solarizr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_HomePage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  Solarizr.Views.Inicio
+                userType = new global::Solarizr.Solarizr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_5_Inicio;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  Solarizr.Views.Login
+                userType = new global::Solarizr.Solarizr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_6_Login;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
