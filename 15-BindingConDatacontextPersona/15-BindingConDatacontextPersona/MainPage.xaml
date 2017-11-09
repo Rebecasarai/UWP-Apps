@@ -13,13 +13,46 @@
     </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="Phone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowHeight="0" MinWindowWidth="0"/>
+                      
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="formulario.(Grid.Row)" Value="1"  ></Setter>
+                        <Setter Target="formulario.(Grid.Column)" Value="0"  ></Setter>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Tablet">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowHeight="400" MinWindowWidth="400"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="Desktop"/>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <!--<VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="VisualStatePhone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="ColorGrid.Background"  Value="Blue"></Setter>
+                        
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>     -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <ListView x:Name="itemListView" Grid.Column="0"  ItemsSource="{Binding mListadoColecPersons}" SelectedItem="{Binding personSeleccionada,Mode=TwoWay}" >
             <ListView.ItemTemplate>
@@ -33,7 +66,7 @@
             </ListView.ItemTemplate>
             
         </ListView>
-        <Grid Grid.Column="1" DataContext="{Binding personSeleccionada}" Background="AliceBlue">
+        <Grid Grid.Column="1" DataContext="{Binding personSeleccionada}" Background="AliceBlue" Name="formulario">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
@@ -60,7 +93,7 @@
             <TextBox Name="txtBlcFechaNacimiento" Text="{Binding FechaNac}" Grid.Column="1" Grid.Row="3" ></TextBox>
             
             <TextBlock Text="Dirección" Margin="20 0" FontSize="20" Grid.Column="0" Grid.Row="4"></TextBlock>
-            <TextBox Name="txtBlcDireccion" Text="{Binding Direccion}" Grid.Column="0" Grid.Row="5" Grid.RowSpan="2" ></TextBox>
+            <TextBox Name="txtBlcDireccion" Text="{Binding Direccion}" Grid.Column="0" Grid.Row="5" Grid.RowSpan="2" Grid.ColumnSpan="2" ></TextBox>
 
 
 
