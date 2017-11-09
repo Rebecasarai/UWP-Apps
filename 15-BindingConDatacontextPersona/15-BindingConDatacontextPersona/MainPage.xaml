@@ -1,0 +1,70 @@
+﻿<Page
+    x:Class="_15_BindingConDatacontextPersona.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_15_BindingConDatacontextPersona"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:_15_BindingConDatacontextPersona.ViewModels"
+    mc:Ignorable="d">
+    
+    <Page.DataContext>
+        <vm:MainPageVM></vm:MainPageVM>
+    </Page.DataContext>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ListView x:Name="itemListView" Grid.Column="0"  ItemsSource="{Binding mListadoColecPersons}" SelectedItem="{Binding personSeleccionada,Mode=TwoWay}" >
+            <ListView.ItemTemplate>
+                <DataTemplate >
+                    <StackPanel Orientation="Horizontal">
+                        <SymbolIcon Symbol="Contact"></SymbolIcon>
+                        <TextBlock Text="{Binding Nombre}" Margin=" 10 0"></TextBlock>
+                        <TextBlock Text="{Binding Apellido}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            
+        </ListView>
+        <Grid Grid.Column="1" DataContext="{Binding personSeleccionada}" Background="AliceBlue">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Nombre" FontSize="20"  Margin="20 0" Grid.Column="0"></TextBlock>
+            <TextBox Name="txtBlcNombre" Text="{Binding Nombre}" Grid.Column="1" ></TextBox>
+
+            <TextBlock Text="Apellido" Margin="20 0" FontSize="20" Grid.Column="0" Grid.Row="1"></TextBlock>
+            <TextBox Name="txtBlcapellido" Text="{Binding Apellido}" Grid.Column="1" Grid.Row="1" ></TextBox>
+
+            <TextBlock Text="Telefóno" Margin="20 0" FontSize="20" Grid.Column="0" Grid.Row="2"></TextBlock>
+            <TextBox Name="txtBlctelefono" Text="{Binding Telefono}" Grid.Column="1" Grid.Row="2" ></TextBox>
+
+            <TextBlock Text="Fecha de Nacimiento" Margin="20 0" FontSize="20" Grid.Column="0" Grid.Row="3"></TextBlock>
+            <TextBox Name="txtBlcFechaNacimiento" Text="{Binding FechaNac}" Grid.Column="1" Grid.Row="3" ></TextBox>
+            
+            <TextBlock Text="Dirección" Margin="20 0" FontSize="20" Grid.Column="0" Grid.Row="4"></TextBlock>
+            <TextBox Name="txtBlcDireccion" Text="{Binding Direccion}" Grid.Column="0" Grid.Row="5" Grid.RowSpan="2" ></TextBox>
+
+
+
+        </Grid>
+
+    </Grid>
+</Page>

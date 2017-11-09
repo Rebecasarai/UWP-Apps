@@ -1,0 +1,16 @@
+﻿<Page
+    x:Class="_12_Binding.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_12_Binding"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+
+    <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Slider Name="sliderSize" Background="Black" Header="Tamaño" Width="500" Margin="50" Value="{Binding ElementName=txtTamano, Mode=TwoWay, Path=Value}" Minimum="1"></Slider>
+        <TextBlock Name="txtMuestra" Text="Texto ejemplo" FontSize="{Binding Value, ElementName=sliderSize, Mode=OneWay}" RelativePanel.Below="sliderSize" Margin="50"></TextBlock>
+        <TextBox Name="txtTamano" InputScope="Number" Text="{Binding ElementName=sliderSize, Mode=TwoWay, Path=Value, UpdateSourceTrigger=PropertyChanged}" KeyDown="txtTamano_KeyDown" RelativePanel.Below="txtMuestra" Margin="50" TextChanged="txtTamano_TextChanged"></TextBox>
+    </RelativePanel>
+</Page>
