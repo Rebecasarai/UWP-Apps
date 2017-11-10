@@ -15,37 +15,31 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="VisualStateGroup">
-                <VisualState x:Name="Phone">
+                <!--TamañoTablet-->
+                <VisualState x:Name="Tablet">
+                    <!--Tamaño limite minimo-->
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowHeight="0" MinWindowWidth="0"/>
-                      
+                        <AdaptiveTrigger MinWindowHeight="100" MinWindowWidth="100"/>
                     </VisualState.StateTriggers>
+                    <!--Los cambios-->
                     <VisualState.Setters>
                         <Setter Target="formulario.(Grid.Row)" Value="1"  ></Setter>
                         <Setter Target="formulario.(Grid.Column)" Value="0"  ></Setter>
+                        <Setter Target="formulario.(Grid.ColumnSpan)" Value="2"></Setter>
                     </VisualState.Setters>
                 </VisualState>
-                <VisualState x:Name="Tablet">
+                <!--Tamaño escritorio-->
+                <VisualState x:Name="Desktop">
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowHeight="400" MinWindowWidth="400"/>
-                    </VisualState.StateTriggers>
-                </VisualState>
-                <VisualState x:Name="Desktop"/>
-            </VisualStateGroup>
-        </VisualStateManager.VisualStateGroups>
-        <!--<VisualStateManager.VisualStateGroups>
-            <VisualStateGroup x:Name="VisualStateGroup">
-                <VisualState x:Name="VisualStatePhone">
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="0"/>
+                        <AdaptiveTrigger MinWindowHeight="600" MinWindowWidth="600"  />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="ColorGrid.Background"  Value="Blue"></Setter>
-                        
+                        <Setter Target="formulario.(Grid.Row)" Value="0"  ></Setter>
+                        <Setter Target="formulario.(Grid.Column)" Value="1"  ></Setter>
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
-        </VisualStateManager.VisualStateGroups>     -->
+        </VisualStateManager.VisualStateGroups>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
@@ -94,8 +88,6 @@
             
             <TextBlock Text="Dirección" Margin="20 0" FontSize="20" Grid.Column="0" Grid.Row="4"></TextBlock>
             <TextBox Name="txtBlcDireccion" Text="{Binding Direccion}" Grid.Column="0" Grid.Row="5" Grid.RowSpan="2" Grid.ColumnSpan="2" ></TextBox>
-
-
 
         </Grid>
 
