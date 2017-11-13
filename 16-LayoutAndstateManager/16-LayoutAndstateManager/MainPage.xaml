@@ -110,11 +110,11 @@
                 <Image Source="/Assets/Imagenes/p.jpg" Grid.ColumnSpan="3" Grid.Row="0" Name="img1" ></Image>
                 <Image Source="/Assets/Imagenes/playa-de-venezuela.jpg" Grid.ColumnSpan="3" Grid.Row="1" Name="img2" ></Image>
                 <Image Source="/Assets/Imagenes/p.jpg" Grid.ColumnSpan="3" Grid.Row="2" Name="img3" ></Image>
-                <Image Source="/Assets/Imagenes/p.jpg" Grid.ColumnSpan="3" Grid.Row="3" Name="img4" ></Image>
+                <Image Source="/Assets/Imagenes/playa-de-venezuela.jpg" Grid.ColumnSpan="3" Grid.Row="3" Name="img4" ></Image>
                 <Image Source="/Assets/Imagenes/p.jpg" Grid.ColumnSpan="3" Grid.Row="4" Name="img5" ></Image>
-                <Image Source="/Assets/Imagenes/p.jpg" Grid.ColumnSpan="3" Grid.Row="5" Name="img6" ></Image>
+                <Image Source="/Assets/Imagenes/playa-de-venezuela.jpg" Grid.ColumnSpan="3" Grid.Row="5" Name="img6" ></Image>
                 <Image Source="/Assets/Imagenes/p.jpg" Grid.ColumnSpan="3" Grid.Row="6" Name="img7" ></Image>
-                <Image Source="/Assets/Imagenes/p.jpg" Grid.ColumnSpan="3" Grid.Row="7" Name="img8" ></Image>
+                <Image Source="/Assets/Imagenes/playa-de-venezuela.jpg" Grid.ColumnSpan="3" Grid.Row="7" Name="img8" ></Image>
                 <Image Source="/Assets/Imagenes/p.jpg" Grid.ColumnSpan="3" Grid.Row="8" Name="img9" ></Image>
             </Grid>
         </ScrollViewer>

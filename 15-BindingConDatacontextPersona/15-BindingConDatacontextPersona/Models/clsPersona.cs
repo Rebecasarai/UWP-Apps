@@ -1,27 +1,105 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace _15_BindingConDatacontextPersona.Models
 {
-    public class clsPersona
+    public class clsPersona: INotifyPropertyChanged
     {
         //Propiedades
-        private string nombre;
+        private string _nombre;
 
-        public string Nombre { get => nombre; set => nombre = value; }
-        public string Apellido { get => apellido; set => apellido = value; }
-        public string Direccion { get => direccion; set => direccion = value; }
-        public string Telefono { get => telefono; set => telefono = value; }
-        public int IdPersona { get => idPersona; set => idPersona = value; }
-        public DateTime FechaNac { get => fechaNac; set => fechaNac = value; }
-        public int IdDepartamento { get => idDepartamento; set => idDepartamento = value; }
-
-        private String apellido;
-        private String direccion;
-        private String telefono;
-        private int idPersona;
-        private DateTime fechaNac;
-        private int idDepartamento;
-
+        private String _apellido;
+        private String _direccion;
+        private String _telefono;
+        private int _idPersona;
+        private DateTime _fechaNac;
+        private int _idDepartamento;
+        public string Nombre
+        {
+            get
+            {
+                return _nombre;
+            }
+            set
+            {
+                _nombre = value;
+                NotifyPropertyChanged("Nombre");
+            }
+        }
+        public string Apellido
+        {
+            get
+            {
+                return _apellido;
+            }
+            set
+            {
+                _apellido = value;
+                NotifyPropertyChanged("Apellido");
+            }
+        }
+        public string Direccion
+        {
+            get
+            {
+                return _direccion;
+            }
+            set
+            {
+                _direccion = value;
+                NotifyPropertyChanged("Direccion");
+            }
+        }
+        public string Telefono
+        {
+            get
+            {
+                return _telefono;
+            }
+            set
+            {
+                _telefono = value;
+                NotifyPropertyChanged("Telefono");
+            }
+        }
+        public int IdPersona
+        {
+            get
+            {
+                return _idPersona;
+            }
+            set
+            {
+                _idPersona = value;
+                NotifyPropertyChanged("IdPersona");
+            }
+        }
+        public DateTime FechaNac
+        {
+            get
+            {
+                return _fechaNac;
+            }
+            set
+            {
+                _fechaNac = value;
+                NotifyPropertyChanged("FechaNac");
+            }
+        }
+        public int IdDepartamento
+        {
+            get
+            {
+                return _idDepartamento;
+            }
+            set
+            {
+                _idDepartamento = value;
+                NotifyPropertyChanged("IdDepartamento");
+            }
+        }
+        
         /// <summary>
         /// Constructor por defecto
         /// </summary>
@@ -43,7 +121,6 @@ namespace _15_BindingConDatacontextPersona.Models
         }
         public clsPersona()
         {
-
         }
 
         public clsPersona(int idPersona, string nombre, string apellidos, DateTime fechaNac, string direccion, string telefono, int idDepartamento)
@@ -57,7 +134,17 @@ namespace _15_BindingConDatacontextPersona.Models
             this.IdDepartamento = idDepartamento;
         }
 
-        
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+
     }
 
 }

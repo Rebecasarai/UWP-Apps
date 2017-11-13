@@ -26,5 +26,14 @@ namespace _15_BindingConDatacontextPersona
         {
             this.InitializeComponent();
         }
+
+        private void btnGuardar_Click(object sender, RoutedEventArgs e)
+        {
+            this.txtBlcNombre.GetBindingExpression(TextBox.TextProperty).UpdateSource();
+            this.txtBlcapellido.GetBindingExpression(TextBox.TextProperty).UpdateSource();
+            this.txtBlcDireccion.GetBindingExpression(TextBox.TextProperty).UpdateSource();
+            this.txtBlcFechaNacimiento.GetBindingExpression(TextBox.TextProperty).UpdateSource();
+            this.txtBlctelefono.GetBindingExpression(TextBox.TextProperty).UpdateSource();
+        }
     }
 }

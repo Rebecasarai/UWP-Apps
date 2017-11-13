@@ -25,12 +25,11 @@ namespace _15_BindingConDatacontextPersona.ViewModels
         }
         #endregion
 
-        #region "Propiedades publicas"
+        #region "Propiedades"
         public ObservableCollection<clsPersona> mListadoColecPersons
         {
             get { return _mListadoColecPersons; }
         }
-
         public clsPersona personSeleccionada
         {
             get { return _personSeleccionada; }
