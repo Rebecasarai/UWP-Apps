@@ -85,7 +85,6 @@ namespace _15_BindingConDatacontextPersona.ViewModels
         /// <param name="sender"></param>
         /// <param name="e"></param>
         public void BorrarClick(object sender, RoutedEventArgs e)
-
         {
             mListadoColecPersons.RemoveAt(indiceDePersonaSelec);
             NotifyPropertyChanged("mListadoColecPersons");
