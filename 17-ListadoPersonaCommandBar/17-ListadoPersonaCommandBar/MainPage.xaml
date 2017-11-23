@@ -65,7 +65,7 @@
             </ListView.ItemTemplate>
 
         </ListView>
-        <Grid Grid.Column="1" Grid.Row="0"  Background="AliceBlue" Name="formulario" >
+        <Grid Grid.Column="1" Grid.Row="1"  Background="AliceBlue" Name="formulario" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
