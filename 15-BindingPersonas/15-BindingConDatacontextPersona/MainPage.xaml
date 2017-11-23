@@ -5,9 +5,14 @@
     xmlns:local="using:_15_BindingConDatacontextPersona"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:_15_BindingConDatacontextPersona.ViewModels"
     mc:Ignorable="d">
     
     <!--Nunca combinar DAtaContext con x:Bind-->
+
+    <Page.DataContext>
+        <vm:MainPageVM/>
+    </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <VisualStateManager.VisualStateGroups>
@@ -42,15 +47,23 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
+        
+        <StackPanel Grid.ColumnSpan="2" Orientation="Horizontal" >
+            <AppBarButton Icon="Save" Label="Guardar" Command="{Binding savePersona}" />
+            <AppBarButton Icon="Delete" Label="Borrar" Command="{Binding delete}" />
+            <AppBarButton Icon="Add" Label="Añadir" Command="{Binding addPersona}"/>
+            <TextBox Name="busqueda" Margin="10" PlaceholderText="Search..." Width="200" Height="10" VerticalAlignment="Top" Text="{Binding textoBusqueda,UpdateSourceTrigger=PropertyChanged,Mode=OneWay}"/>
+            <AppBarButton Icon="Find"></AppBarButton>
+        </StackPanel>
         <!-- Le damos la fuente los items, bindeando la lista o colection de Personas 
         Y que al seleccionar un item, bindee la personaSeleccionada, Two Ways para que avise cuando cambie-->
         <!-- en vez de Binding, usamos x:Bind y ViewModel.tal.tal.
         Cambiamos SelectedItem por SelectedIndex y se lo pasamos como atributo para luego en el evento borrar, borramos del array el qie este en esa posicion. DEBE SER TWO WAYS PARA QUE BORRE EL QUE ES-->
-        <ListView x:Name="itemListView" Grid.Row="0" Grid.Column="0" MinWidth="100"  ItemsSource="{x:Bind ViewModel.mListadoColecPersons}" SelectedIndex="{x:Bind ViewModel.indiceDePersonaSelec, Mode=TwoWay}" >
+        <ListView x:Name="itemListView" Grid.Row="1" Grid.Column="0" MinWidth="100"  SelectedItem="{Binding personaSeleccionada,Mode=TwoWay}" ItemsSource="{Binding listado}" >
             <ListView.ItemTemplate>
                 <DataTemplate >
                     <StackPanel Orientation="Horizontal">
@@ -63,7 +76,10 @@
             </ListView.ItemTemplate>
 
         </ListView>
-        <Grid Grid.Column="1" Grid.Row="0"  Background="AliceBlue" Name="formulario" >
+        
+        
+
+        <Grid Grid.Column="1" Grid.Row="1"  Background="AliceBlue" Name="formulario" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
@@ -80,7 +96,7 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock Text="Nombre" FontSize="20"  Margin="20 0" Grid.Column="0"></TextBlock>
-            <TextBox Name="txtBlcNombre" Text="{x:Bind ViewModel.personSeleccionada.Nombre, Mode=TwoWay}" Grid.Column="1" ></TextBox>
+            <TextBox Name="txtBlcNombre" Text="{Binding ViewModel.personSeleccionada.Nombre, Mode=TwoWay}" Grid.Column="1" ></TextBox>
 
             <TextBlock Text="Apellido" Margin="20 0" FontSize="20" Grid.Column="0" Grid.Row="1"></TextBlock>
             <TextBox Name="txtBlcapellido" Text="{Binding Apellido, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="1" ></TextBox>
@@ -93,9 +109,6 @@
             
             <TextBlock Text="Dirección" Margin="20 0" FontSize="20" Grid.Column="0" Grid.Row="4"></TextBlock>
             <TextBox Name="txtBlcDireccion" Text="{Binding Direccion, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="0" Grid.Row="5" Grid.RowSpan="2" Grid.ColumnSpan="2" ></TextBox>
-
-            <AppBarButton Icon="Save" Name="btnGuardar" Click="{x:Bind ViewModel.Guardar_Click}" Grid.Row="7"  ></AppBarButton>
-            <AppBarButton Icon="Delete" Click="{x:Bind ViewModel.BorrarClick}" Grid.Row="7" Grid.Column="1" ></AppBarButton>
 
 
         </Grid>

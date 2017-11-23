@@ -8,15 +8,20 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Windows.UI.Xaml;
+using BindingPersonaListaPersonaConDataContext.ViewModels;
 
 namespace _15_BindingConDatacontextPersona.ViewModels
 {
-    public class MainPageVM: INotifyPropertyChanged
+    public class MainPageVM: clsVMBase
     {
         #region "Atributos"
         public clsPersona _personSeleccionada;
         public ObservableCollection<clsPersona> _mListadoColecPersons;
-        public int _indiceDePersonaSelec;
+        private string _search;
+        private DelegateCommand _delete;
+        private DelegateCommand _addPersona;
+        private DelegateCommand _savePersona;
+        private DelegateCommand _searchPersona;
 
         #endregion
 
@@ -28,7 +33,57 @@ namespace _15_BindingConDatacontextPersona.ViewModels
         }
         #endregion
 
-        #region "Propiedades"
+
+        #region "Propiedades públicas"
+        public DelegateCommand delete
+        {
+            get
+            {
+                _delete = new DelegateCommand(ExecuteDelete, CanExecuteDelete);
+                return _delete;
+            }
+
+            set
+            {
+                _delete = value;
+            }
+        }
+        public string search
+        {
+            get
+            {
+                return _search;
+            }
+
+            set
+            {
+                _search = value;
+            }
+        }
+        public DelegateCommand addPersona
+        {
+            get
+            {
+                _addPersona = new DelegateCommand(ExecuteAddPersona);
+                return _addPersona;
+            }
+            set
+            {
+                _addPersona = value;
+            }
+        }
+        public DelegateCommand savePersona
+        {
+            get
+            {
+                _savePersona = new DelegateCommand(ExecuteSavePersona);
+                return _savePersona;
+            }
+            set
+            {
+                _savePersona = value;
+            }
+        }
         public ObservableCollection<clsPersona> mListadoColecPersons
         {
             get { return _mListadoColecPersons; }
@@ -36,59 +91,55 @@ namespace _15_BindingConDatacontextPersona.ViewModels
         public clsPersona personSeleccionada
         {
             get { return _personSeleccionada; }
-            set {
-                _personSeleccionada = value;
-                //Notificación a la vista
-                NotifyPropertyChanged("personSeleccionada");
-            }
-        }
-
-        public int indiceDePersonaSelec
-        {
-            get { return _indiceDePersonaSelec; }
             set
             {
-                _indiceDePersonaSelec = value;
+                _personSeleccionada = value;
+                _delete.RaiseCanExecuteChanged();
+                _savePersona.RaiseCanExecuteChanged();
+                //Notificación de cambio a la vista
+                NotifyPropertyChanged("_personSeleccionada");
             }
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
         #endregion
-        /// <summary>
-        /// Notifica los cambios
-        /// </summary>
-        /// <param name="propertyName"></param>
-        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
+        public bool CanExecuteDelete()
         {
-            if (PropertyChanged != null)
+            bool canExecute = false;
+            if (_personSeleccionada != null)
             {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+                canExecute = true;
             }
+            return canExecute;
         }
 
-        public static implicit operator MainPageVM(MainPage v)
+        public void ExecuteDelete()
         {
-            throw new NotImplementedException();
-        }
-        /// <summary>
-        /// Evento de click en icono guardar, aquí en VM. No es codigo Behind
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public void Guardar_Click(object sender, RoutedEventArgs e)
-        {
-            //Código para guardar
-        }
-        /// <summary>
-        /// eVENTO DEL CLICK, EN vm, NO ES CODIGO BEHIND
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public void BorrarClick(object sender, RoutedEventArgs e)
-
-        {
-            mListadoColecPersons.RemoveAt(indiceDePersonaSelec);
+            mListadoColecPersons.Remove(_personSeleccionada);
             NotifyPropertyChanged("mListadoColecPersons");
+        }
+        public void ExecuteAddPersona()
+        {
+            _personSeleccionada = new clsPersona();
+            NotifyPropertyChanged("_personSeleccionada");
+        }
+        //private bool canExecuteSavePersona()
+        //{
+        //    bool sePuede = false;
+        //    if (_personaSeleccionada != null)
+        //    {
+        //        sePuede = true;
+
+        //    }
+        //    return sePuede;
+        //}
+        private void ExecuteSavePersona()
+        {
+            if (_personSeleccionada.IdPersona == 0)
+            {
+                _personSeleccionada.IdPersona = mListadoColecPersons.ElementAt(mListadoColecPersons.Count - 1).IdPersona + 1;
+                NotifyPropertyChanged("personSeleccionada");
+                mListadoColecPersons.Add(_personSeleccionada);
+                NotifyPropertyChanged("listado");
+            }
         }
 
     }
