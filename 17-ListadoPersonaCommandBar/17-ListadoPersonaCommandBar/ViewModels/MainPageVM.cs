@@ -88,12 +88,14 @@ namespace _17_ListadoPersonaCommandBar.ViewModels
 
 
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public DelegateCommand cmdSearch
         {
             get
             {
-                _cmdSearch = new DelegateCommand(ExecuteSearch);
+                _cmdSearch = new DelegateCommand(ExecuteSearch, CanExecuteSearch);
                 return _cmdSearch;
             }
 
@@ -152,17 +154,33 @@ namespace _17_ListadoPersonaCommandBar.ViewModels
             }
             return canExecute;
         }
-
+        /// <summary>
+        /// Si va a buscar o no
+        /// </summary>
+        /// <returns></returns>
         public bool CanExecuteSearch()
         {
-            return !String.IsNullOrWhiteSpace(textoABuscar);
-        }
-
-        public void ExecuteSearch()
-        {
-            _mListadoColecPersons = mPersonasIntantactas;
+            bool puede= false;
             if (!String.IsNullOrWhiteSpace(textoABuscar))
             {
+                puede = true;
+            }
+            //Si es nulo o vacio, al vovler despues de borrar, recargue la lista
+            //Al igual que si es la primera vez cargando la lista
+            else
+            {
+                _mListadoColecPersons = mPersonasIntantactas;
+                NotifyPropertyChanged("mListadoColecPersons");
+            }
+            return puede;
+        }
+        /// <summary>
+        /// Al ejecutarse la busqueda
+        /// </summary>
+        public void ExecuteSearch()
+        {
+            //_mListadoColecPersons = mPersonasIntantactas;
+            
                 mPersonasFiltradas = new ObservableCollection<clsPersona>();
                 for (int i = 0; i < mListadoColecPersons.Count; i++)
                 {
@@ -174,7 +192,7 @@ namespace _17_ListadoPersonaCommandBar.ViewModels
                 }
                 _mListadoColecPersons = mPersonasFiltradas;
                 //NotifyPropertyChanged("mListadoColecPersons");
-            }
+            
             NotifyPropertyChanged("mListadoColecPersons");
         }
 

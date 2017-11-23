@@ -1,14 +1,14 @@
-﻿using _17_ListadoPersonaCommandBar.ViewModels;
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace _17_ListadoPersonaCommandBar.Models
+namespace _18_Practica_Examen.Models
 {
-    public class clsPersona: clsVMBase
+    public class clsPersona: INotifyPropertyChanged
     {
         //Propiedades
         private string _nombre;
+
         private String _apellido;
         private String _direccion;
         private String _telefono;

@@ -1,9 +1,9 @@
-﻿using System;
+﻿using _18_Practica_Examen.Models;
+using System;
 using System.Collections.Generic;
-using _17_ListadoPersonaCommandBar.Models;
 using System.Collections.ObjectModel;
 
-namespace _17_ListadoPersonaCommandBar.Models
+namespace _18_Practica_Examen.Models
 {
     public class ListadoPersona
     {
@@ -17,7 +17,6 @@ namespace _17_ListadoPersonaCommandBar.Models
             ObservableCollection<clsPersona> personaslist = new ObservableCollection<clsPersona>();
 
             clsPersona persona1 = new clsPersona(1, "Maria", "Sanchez", DateTime.Now, "Calle Ejemplo, 20, 41005, Sevilla", "287423");
-
             clsPersona persona2 = new clsPersona(2, "José", "Gomez", DateTime.Now, "Calle Ejemplo, 20, 41005, Sevilla", "287423");
             clsPersona persona3 = new clsPersona(3,"Luis","Sanchez",DateTime.Now, "Calle Ejemplo, 20, 41005, Sevilla","287423");
             clsPersona persona4 = new clsPersona(4, "Juan", "Martinez", DateTime.Now, "Calle Ejemplo, 20, 41005, Sevilla", "235423");
@@ -32,6 +31,8 @@ namespace _17_ListadoPersonaCommandBar.Models
             personaslist.Add(persona6);
             return personaslist;
          }
+
+
         
     }
 }
