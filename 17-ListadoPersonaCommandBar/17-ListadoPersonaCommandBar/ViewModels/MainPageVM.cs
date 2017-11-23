@@ -17,6 +17,11 @@ namespace _17_ListadoPersonaCommandBar.ViewModels
         #region "Atributos"
         public clsPersona _personSeleccionada;
         public ObservableCollection<clsPersona> _mListadoColecPersons;
+        public ObservableCollection<clsPersona> _mPersonasFiltradas = new ObservableCollection<clsPersona>();
+        public ObservableCollection<clsPersona> _mPersonasIntantactas;
+        private String _textoABuscar;
+        
+        private DelegateCommand _cmdSearch;
         private DelegateCommand _cmdDelete;
         private DelegateCommand _cmdAdd;
         private DelegateCommand _cmdSave;
@@ -28,9 +33,11 @@ namespace _17_ListadoPersonaCommandBar.ViewModels
         {
             ListadoPersona mlistPersona = new ListadoPersona();
             _mListadoColecPersons = mlistPersona.instaPersonas();
+            _mPersonasIntantactas = mListadoColecPersons;
         }
         #endregion
-        #region "Propiedades"
+        
+        #region "Propiedades públicas"
         public ObservableCollection<clsPersona> mListadoColecPersons
         {
             get { return _mListadoColecPersons; }
@@ -44,11 +51,58 @@ namespace _17_ListadoPersonaCommandBar.ViewModels
                 NotifyPropertyChanged("personSeleccionada");
             }
         }
+
+        public ObservableCollection<clsPersona> mPersonasFiltradas
+        {
+            
+            get { return _mPersonasFiltradas; }
+            set
+            {
+                _mPersonasFiltradas = value;
+                //Notificación a la vista
+                NotifyPropertyChanged("mPersonasFiltradas");
+            }
+        }
+        public ObservableCollection<clsPersona> mPersonasIntantactas
+        {
+
+            get { return _mPersonasIntantactas; }
+            set
+            {
+                _mPersonasIntantactas = value;
+                //Notificación a la vista
+                NotifyPropertyChanged("mPersonasIntantactas");
+            }
+        }
+
+        public String textoABuscar
+        {
+            get { return _textoABuscar; }
+            set
+            {
+                _textoABuscar = value;
+                //Notificación a la vista
+                //NotifyPropertyChanged("textoABuscar");
+                _cmdSearch.RaiseCanExecuteChanged();
+            }
+
+
+        }
+
+        public DelegateCommand cmdSearch
+        {
+            get
+            {
+                _cmdSearch = new DelegateCommand(ExecuteSearch);
+                return _cmdSearch;
+            }
+
+            set
+            {
+                _cmdSearch = value;
+            }
+        }
         
-        #endregion
-
-
-        #region "Propiedades públicas"
         public DelegateCommand cmdDelete
         {
             get
@@ -97,6 +151,32 @@ namespace _17_ListadoPersonaCommandBar.ViewModels
                 canExecute = true;
             }
             return canExecute;
+        }
+
+        public bool CanExecuteSearch()
+        {
+            return !String.IsNullOrWhiteSpace(textoABuscar);
+        }
+
+        public void ExecuteSearch()
+        {
+
+            if (!String.IsNullOrWhiteSpace(textoABuscar))
+            {
+                mPersonasFiltradas = new ObservableCollection<clsPersona>();
+                for (int i = 0; i < mListadoColecPersons.Count; i++)
+                {
+                    if ((mListadoColecPersons.ElementAt(i).Nombre.ToLower().Contains(textoABuscar)) ||
+                        (mListadoColecPersons.ElementAt(i).Apellido.ToLower().Contains(textoABuscar)))
+                    {
+                        mPersonasFiltradas.Add(mListadoColecPersons.ElementAt(i));
+                        //_mListadoColecPersons.Remove(mListadoColecPersons.ElementAt(i));
+                    }
+                }
+                _mListadoColecPersons = mPersonasFiltradas;
+                NotifyPropertyChanged("mListadoColecPersons"); 
+
+            }
         }
 
         public void ExecuteDelete()

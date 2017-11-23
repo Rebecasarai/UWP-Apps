@@ -26,7 +26,11 @@ namespace _17_ListadoPersonaCommandBar
         {
             this.InitializeComponent();
         }
-
+        /// <summary>
+        /// Avisamos a la vista de que debe de actualizar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
             this.txtBlcNombre.GetBindingExpression(TextBox.TextProperty).UpdateSource();
@@ -34,6 +38,16 @@ namespace _17_ListadoPersonaCommandBar
             this.txtBlcDireccion.GetBindingExpression(TextBox.TextProperty).UpdateSource();
             this.txtBlcFechaNacimiento.GetBindingExpression(TextBox.TextProperty).UpdateSource();
             this.txtBlctelefono.GetBindingExpression(TextBox.TextProperty).UpdateSource();
+        }
+        /// <summary>
+        /// Se debe colocar ya que trabajamos dando al boton.
+        /// Se debe de actualizar la vista por este medio
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AppBarButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.searchBox.GetBindingExpression(TextBox.TextProperty).UpdateSource();
         }
     }
 }
