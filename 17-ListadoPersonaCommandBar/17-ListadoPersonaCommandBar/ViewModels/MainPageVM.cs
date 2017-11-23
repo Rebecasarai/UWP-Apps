@@ -33,7 +33,7 @@ namespace _17_ListadoPersonaCommandBar.ViewModels
         {
             ListadoPersona mlistPersona = new ListadoPersona();
             _mListadoColecPersons = mlistPersona.instaPersonas();
-            //_mPersonasIntantactas = mListadoColecPersons;
+            _mPersonasIntantactas = mListadoColecPersons;
         }
         #endregion
         
@@ -166,17 +166,16 @@ namespace _17_ListadoPersonaCommandBar.ViewModels
                 mPersonasFiltradas = new ObservableCollection<clsPersona>();
                 for (int i = 0; i < mListadoColecPersons.Count; i++)
                 {
-                    if ((mListadoColecPersons.ElementAt(i).Nombre.ToLower().Contains(textoABuscar)) ||
-                        (mListadoColecPersons.ElementAt(i).Apellido.ToLower().Contains(textoABuscar)))
+                    if ((mListadoColecPersons.ElementAt(i).Nombre.ToLower().StartsWith(textoABuscar)) ||
+                        (mListadoColecPersons.ElementAt(i).Apellido.ToLower().StartsWith(textoABuscar)))
                     {
                         mPersonasFiltradas.Add(mListadoColecPersons.ElementAt(i));
-                        //_mListadoColecPersons.Remove(mListadoColecPersons.ElementAt(i));
                     }
                 }
                 _mListadoColecPersons = mPersonasFiltradas;
-                NotifyPropertyChanged("mListadoColecPersons"); 
+                //NotifyPropertyChanged("mListadoColecPersons");
             }
-            
+            NotifyPropertyChanged("mListadoColecPersons");
         }
 
         public void ExecuteDelete()
