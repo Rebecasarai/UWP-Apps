@@ -12,7 +12,43 @@
     </Page.DataContext>
 
     <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView Name="mListViewCat" ItemsSource="{Binding mListadoCategoria}" SelectedItem="{Binding categoriaSeleccionada, Mode=TwoWay}" >
+
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <!--TamañoTablet-->
+                <VisualState x:Name="Tablet">
+                    <!--Tamaño limite minimo-->
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowHeight="100" MinWindowWidth="100"/>
+                    </VisualState.StateTriggers>
+                    <!--Los cambios-->
+                    <VisualState.Setters>
+                        <!--<Setter Target="formulario.(Grid.Row)" Value="1"  ></Setter>-->
+                        <Setter Target="mListViewVendedores.(RelativePanel.RightOf)" Value=""></Setter>
+                        <Setter Target="mListViewVendedores.(RelativePanel.Below)" Value="mListViewCat"></Setter>
+                    </VisualState.Setters>
+                </VisualState>
+                <!--Tamaño escritorio-->
+                <VisualState x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowHeight="600" MinWindowWidth="600"  />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <StackPanel Orientation="Horizontal" Name="menu">
+            <AppBarButton Icon="Save" Label="Guardar" />
+            <AppBarButton Icon="Delete" Label="Borrar" />
+            <AppBarButton Icon="Add" Label="Añadir"/>
+            <TextBox Name="searchBox" PlaceholderText="Busque aquí" Text="{Binding textoABuscar, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ></TextBox>
+            <AppBarButton Icon="Filter" Command="{Binding cmdSearch}" Label="Search" Click="AppBarButton_Click_1"  ></AppBarButton>
+        </StackPanel>
+
+        <ListView Name="mListViewCat" ItemsSource="{Binding mListadoCategoria}" SelectedItem="{Binding categoriaSeleccionada, Mode=TwoWay}" RelativePanel.Below="menu" >
             <ListView.ItemTemplate>
                 <DataTemplate >
                     <StackPanel Orientation="Horizontal">
@@ -27,7 +63,7 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <ListView Name="mListViewVendedores" ItemsSource="{Binding categoriaSeleccionada.vendedores}" RelativePanel.RightOf="mListViewCat">
+        <ListView Name="mListViewVendedores" ItemsSource="{Binding categoriaSeleccionada.vendedores}"  RelativePanel.RightOf="mListViewCat" RelativePanel.Below="menu">
             <ListView.ItemTemplate>
                 <DataTemplate >
                     <StackPanel Orientation="Horizontal">
@@ -38,6 +74,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
         
         
         

@@ -191,7 +191,6 @@ namespace _17_ListadoPersonaCommandBar.ViewModels
                     }
                 }
                 _mListadoColecPersons = mPersonasFiltradas;
-                //NotifyPropertyChanged("mListadoColecPersons");
             
             NotifyPropertyChanged("mListadoColecPersons");
         }

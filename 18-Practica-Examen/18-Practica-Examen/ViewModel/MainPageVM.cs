@@ -13,8 +13,12 @@ namespace _18_Practica_Examen.ViewModel
 {
     class MainPageVM:clsVMBase
     {
-        public Categoria _categoriaSeleccionada;
-        public ObservableCollection<Categoria> _mListadoCategoria;
+        private Categoria _categoriaSeleccionada;
+        private ObservableCollection<Categoria> _mListadoCategoria;
+        private ObservableCollection<Categoria> _mCategoriasIntactas;
+        private String textABuscar;
+        private DelegateCommand _cmdSearch;
+        private clsPersona _personSeleccionada;
 
 
         #region "constructor"
@@ -22,6 +26,7 @@ namespace _18_Practica_Examen.ViewModel
         {
             ListadoCategoria mlistCategoria = new ListadoCategoria();
             _mListadoCategoria = mlistCategoria.instaCategorias();
+            _mCategoriasIntactas = _mListadoCategoria;
         }
         #endregion
 
@@ -48,6 +53,21 @@ namespace _18_Practica_Examen.ViewModel
             }
         }
 
+
+        public clsPersona personSeleccionada
+        {
+            get { return _personSeleccionada; }
+            set
+            {
+                _personSeleccionada = value;
+                //Notificación a la vista
+                NotifyPropertyChanged("personSeleccionada");
+            }
+        }
+
         #endregion
+
+
+
     }
 }
