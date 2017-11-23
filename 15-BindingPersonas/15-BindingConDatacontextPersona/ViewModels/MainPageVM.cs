@@ -79,12 +79,32 @@ namespace _15_BindingConDatacontextPersona.ViewModels
         {
             //Código para guardar
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f6bfe85081f05ead5b96cfbb3f79905252b44c13
         /// <summary>
         /// eVENTO DEL CLICK, EN vm, NO ES CODIGO BEHIND
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         public void BorrarClick(object sender, RoutedEventArgs e)
+<<<<<<< HEAD
+=======
+=======
+        //private bool canExecuteSavePersona()
+        //{
+        //    bool sePuede = false;
+        //    if (_personaSeleccionada != null)
+        //    {
+        //        sePuede = true;
+
+        //    }
+        //    return sePuede;
+        //}
+        private void ExecuteSavePersona()
+>>>>>>> refs/remotes/origin/master
+>>>>>>> f6bfe85081f05ead5b96cfbb3f79905252b44c13
         {
             mListadoColecPersons.RemoveAt(indiceDePersonaSelec);
             NotifyPropertyChanged("mListadoColecPersons");
