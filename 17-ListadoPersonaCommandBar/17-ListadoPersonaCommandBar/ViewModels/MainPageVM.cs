@@ -33,7 +33,7 @@ namespace _17_ListadoPersonaCommandBar.ViewModels
         {
             ListadoPersona mlistPersona = new ListadoPersona();
             _mListadoColecPersons = mlistPersona.instaPersonas();
-            _mPersonasIntantactas = mListadoColecPersons;
+            //_mPersonasIntantactas = mListadoColecPersons;
         }
         #endregion
         
@@ -160,7 +160,7 @@ namespace _17_ListadoPersonaCommandBar.ViewModels
 
         public void ExecuteSearch()
         {
-
+            _mListadoColecPersons = mPersonasIntantactas;
             if (!String.IsNullOrWhiteSpace(textoABuscar))
             {
                 mPersonasFiltradas = new ObservableCollection<clsPersona>();
@@ -175,8 +175,8 @@ namespace _17_ListadoPersonaCommandBar.ViewModels
                 }
                 _mListadoColecPersons = mPersonasFiltradas;
                 NotifyPropertyChanged("mListadoColecPersons"); 
-
             }
+            
         }
 
         public void ExecuteDelete()
