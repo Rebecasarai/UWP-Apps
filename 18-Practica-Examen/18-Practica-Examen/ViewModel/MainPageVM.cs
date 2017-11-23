@@ -20,7 +20,6 @@ namespace _18_Practica_Examen.ViewModel
         #region "constructor"
         public MainPageVM()
         {
-
             ListadoCategoria mlistCategoria = new ListadoCategoria();
             _mListadoCategoria = mlistCategoria.instaCategorias();
         }
@@ -38,7 +37,6 @@ namespace _18_Practica_Examen.ViewModel
                 NotifyPropertyChanged("categoriaSeleccionada");
             }
         }
-
         public ObservableCollection<Categoria> mListadoCategoria
         {
             get { return _mListadoCategoria; }

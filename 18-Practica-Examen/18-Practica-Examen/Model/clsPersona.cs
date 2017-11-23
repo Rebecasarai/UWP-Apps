@@ -1,10 +1,11 @@
-﻿using System;
+﻿using _18_Practica_Examen.ViewModels;
+using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
 namespace _18_Practica_Examen.Models
 {
-    public class clsPersona: INotifyPropertyChanged
+    public class clsPersona: clsVMBase
     {
         //Propiedades
         private string _nombre;
