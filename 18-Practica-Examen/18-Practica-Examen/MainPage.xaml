@@ -45,7 +45,7 @@
             <AppBarButton Icon="Delete" Label="Borrar" />
             <AppBarButton Icon="Add" Label="Añadir"/>
             <TextBox Name="searchBox" PlaceholderText="Busque aquí" Text="{Binding textoABuscar, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ></TextBox>
-            <AppBarButton Icon="Filter" Command="{Binding cmdSearch}" Label="Search" Click="AppBarButton_Click_1"  ></AppBarButton>
+            <AppBarButton Icon="Filter" Command="{Binding cmdSearch}" Label="Search" ></AppBarButton>
         </StackPanel>
 
         <ListView Name="mListViewCat" ItemsSource="{Binding mListadoCategoria}" SelectedItem="{Binding categoriaSeleccionada, Mode=TwoWay}" RelativePanel.Below="menu" >
@@ -53,11 +53,8 @@
                 <DataTemplate >
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="{Binding nombre}" Margin=" 10 0"></TextBlock>
-                        <Image Name="Foto" Source="{Binding imagen}" MaxWidth="150" MaxHeight="100">
-                            <Image.Projection>
-                                <PlaneProjection></PlaneProjection>
-                            </Image.Projection>
-                        </Image>
+                        
+                        <Image Source="{Binding imagen}" ></Image>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
@@ -75,8 +72,6 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        
-        
         
     </RelativePanel>
 </Page>

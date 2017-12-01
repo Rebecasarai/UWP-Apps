@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using _17_ListadoPersonaCommandBar.Models;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Windows.UI.Xaml;
-using _17_ListadoPersonaCommandBar.ViewModels;
+using _18_CRUD_Personas_UWP_UI.ViewModels;
+using _18_CRUD_Personas_UWP_UI.Models;
 
-namespace _17_ListadoPersonaCommandBar.ViewModels
+namespace _18_CRUD_Personas_UWP_UI.ViewModels
 {
     public class MainPageVM : clsVMBase
     {
