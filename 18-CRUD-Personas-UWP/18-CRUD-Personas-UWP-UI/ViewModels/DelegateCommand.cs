@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace _17_ListadoPersonaCommandBar.ViewModels
+namespace _18_CRUD_Personas_UWP_UI.ViewModels
 {
     public class DelegateCommand : ICommand
     {

@@ -1,4 +1,4 @@
-﻿using _18_CRUD_Personas_UWP_UI.Conexion;
+﻿using _18_CRUD_Personas_UWP_DAL.Conexion;
 using _18_CRUD_Personas_UWP_UI.Models;
 using System;
 using System.Collections.Generic;
@@ -19,14 +19,14 @@ namespace _18_CRUD_Personas_UWP_UI.Listado
         }
         public List<clsPersona> getPersonas()
         {
-            Connection cx = new Connection();
+            clsConnection cx = new clsConnection();
             SqlDataReader lector;
             clsPersona p;
             SqlCommand consulta = new SqlCommand();
             try
             {
                 consulta.CommandText = "Select * From Personas";
-                consulta.Connection = cx.conexion;
+                consulta.Connection = cx.getConnection();
                 lector = consulta.ExecuteReader();
 
                 if (lector.HasRows)

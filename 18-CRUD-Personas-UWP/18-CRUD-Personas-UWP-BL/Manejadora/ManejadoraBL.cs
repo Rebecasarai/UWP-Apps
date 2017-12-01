@@ -25,7 +25,7 @@ namespace _18_CRUD_Personas_UWP_BL.Manejadoras
         {
             int resultado = 0;
             ManejadoraBL manejadoraDAL = new ManejadoraBL();
-            resultado = manejadoraDAL.UpdatePersonaDAL(p);
+            resultado = manejadoraDAL.updatePersonaDAL(p);
 
             return resultado;
         }

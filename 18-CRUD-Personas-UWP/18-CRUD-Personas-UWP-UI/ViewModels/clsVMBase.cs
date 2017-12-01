@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _17_ListadoPersonaCommandBar.ViewModels
+namespace _18_CRUD_Personas_UWP_UI.ViewModels
 {
     public abstract class clsVMBase : INotifyPropertyChanged
     {

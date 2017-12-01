@@ -1,8 +1,6 @@
 ﻿
 using _18_CRUD_Personas_UWP_DAL.Conexion;
 using _18_CRUD_Personas_UWP_UI.Models;
-using CRUD_Personas_DAL.Conexion;
-using CRUD_Personas_Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -15,10 +13,10 @@ namespace CRUD_DAL.Manejadoras
     public class GestionPersonaDAL
     {
 
-        public Persona buscarPersonaDAl(int id)
+        public clsPersona buscarPersonaDAl(int id)
         {
             //Creamos el objeto de tipo conexion de mi conexion
-            clsMyConnection miConexion = new clsMyConnection();
+            clsConnection miConexion = new clsConnection();
 
             //Creamos la sql Connection
             SqlConnection conexion = new SqlConnection();
@@ -30,7 +28,7 @@ namespace CRUD_DAL.Manejadoras
             SqlDataReader miLector;
 
             //
-            Persona person = new Persona();
+            clsPersona person = new clsPersona();
 
             try
             {
@@ -58,8 +56,8 @@ namespace CRUD_DAL.Manejadoras
                 {
                     miLector.Read();
 
-                    person = new Persona();
-                    person.idPersona = (Int32)miLector["ID"];
+                    person = new clsPersona();
+                    person.IdPersona = (Int32)miLector["ID"];
                     person.nombre = (String)miLector["Nombre"];
                     person.apellidos = (String)miLector["Apellidos"];
                     person.fechaNac = (DateTime)miLector["FechaNacimiento"];
@@ -89,8 +87,8 @@ namespace CRUD_DAL.Manejadoras
             int resultado = 0;
 
             //
-            miComando.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = persona.idPersona;
-            miComando.Parameters.Add("@nombre", System.Data.SqlDbType.VarChar).Value = persona.nombre;
+            miComando.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = persona.IdPersona;
+            miComando.Parameters.Add("@nombre", System.Data.SqlDbType.VarChar).Value = persona.Nombre;
             miComando.Parameters.Add("@apellidos", System.Data.SqlDbType.VarChar).Value = persona.apellidos;
             miComando.Parameters.Add("@fechaNacimiento", System.Data.SqlDbType.DateTime).Value = persona.fechaNac;
             miComando.Parameters.Add("@direccion", System.Data.SqlDbType.VarChar).Value = persona.direccion;

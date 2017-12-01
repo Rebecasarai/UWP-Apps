@@ -106,7 +106,9 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="clsPersona.cs" />
+    <Compile Include="clsVMBase.cs" />
+    <Compile Include="ListadoPersona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\_18_CRUD_Personas_UWP_Entidades.rd.xml" />
   </ItemGroup>
