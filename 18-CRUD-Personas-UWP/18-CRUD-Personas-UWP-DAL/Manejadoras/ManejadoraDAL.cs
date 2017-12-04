@@ -58,11 +58,11 @@ namespace CRUD_DAL.Manejadoras
 
                     person = new clsPersona();
                     person.IdPersona = (Int32)miLector["ID"];
-                    person.nombre = (String)miLector["Nombre"];
-                    person.apellidos = (String)miLector["Apellidos"];
-                    person.fechaNac = (DateTime)miLector["FechaNacimiento"];
-                    person.direccion = (String)miLector["Direccion"];
-                    person.telefono = (String)miLector["Telefono"];
+                    person.Nombre = (String)miLector["Nombre"];
+                    person.Apellido = (String)miLector["Apellidos"];
+                    person.FechaNac = (DateTime)miLector["FechaNacimiento"];
+                    person.Direccion = (String)miLector["Direccion"];
+                    person.Telefono = (String)miLector["Telefono"];
 
 
                 }//fin while
@@ -89,10 +89,10 @@ namespace CRUD_DAL.Manejadoras
             //
             miComando.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = persona.IdPersona;
             miComando.Parameters.Add("@nombre", System.Data.SqlDbType.VarChar).Value = persona.Nombre;
-            miComando.Parameters.Add("@apellidos", System.Data.SqlDbType.VarChar).Value = persona.apellidos;
-            miComando.Parameters.Add("@fechaNacimiento", System.Data.SqlDbType.DateTime).Value = persona.fechaNac;
-            miComando.Parameters.Add("@direccion", System.Data.SqlDbType.VarChar).Value = persona.direccion;
-            miComando.Parameters.Add("@telefono", System.Data.SqlDbType.VarChar).Value = persona.telefono;
+            miComando.Parameters.Add("@apellidos", System.Data.SqlDbType.VarChar).Value = persona.Apellido;
+            miComando.Parameters.Add("@fechaNacimiento", System.Data.SqlDbType.DateTime).Value = persona.FechaNac;
+            miComando.Parameters.Add("@direccion", System.Data.SqlDbType.VarChar).Value = persona.Direccion;
+            miComando.Parameters.Add("@telefono", System.Data.SqlDbType.VarChar).Value = persona.Telefono;
 
             try
             {
@@ -159,11 +159,11 @@ namespace CRUD_DAL.Manejadoras
 
             //
             // miComando.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = persona.idPersona;
-            miComando.Parameters.Add("@NOMBRE", System.Data.SqlDbType.VarChar).Value = persona.nombre;
-            miComando.Parameters.Add("@APELLIDO", System.Data.SqlDbType.VarChar).Value = persona.apellidos;
-            miComando.Parameters.Add("@FECHANACIMIENT", System.Data.SqlDbType.DateTime).Value = persona.fechaNac;
-            miComando.Parameters.Add("@DIRECCION", System.Data.SqlDbType.VarChar).Value = persona.direccion;
-            miComando.Parameters.Add("@TELEFONO", System.Data.SqlDbType.VarChar).Value = persona.telefono;
+            miComando.Parameters.Add("@NOMBRE", System.Data.SqlDbType.VarChar).Value = persona.Nombre;
+            miComando.Parameters.Add("@APELLIDO", System.Data.SqlDbType.VarChar).Value = persona.Apellido;
+            miComando.Parameters.Add("@FECHANACIMIENT", System.Data.SqlDbType.DateTime).Value = persona.FechaNac;
+            miComando.Parameters.Add("@DIRECCION", System.Data.SqlDbType.VarChar).Value = persona.Direccion;
+            miComando.Parameters.Add("@TELEFONO", System.Data.SqlDbType.VarChar).Value = persona.Telefono;
 
             try
             {
@@ -184,4 +184,3 @@ namespace CRUD_DAL.Manejadoras
 
     }
 }
-s
