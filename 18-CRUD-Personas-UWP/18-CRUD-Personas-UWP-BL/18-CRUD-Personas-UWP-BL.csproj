@@ -107,8 +107,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="Listado\Listado.cs" />
-    <Compile Include="Manejadora\ManejadoraBL.cs" />
+    <Compile Include="Listados\ListadoPersonasBL.cs" />
+    <Compile Include="Manejadoras\ManejadoraBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\_18_CRUD_Personas_UWP_BL.rd.xml" />
   </ItemGroup>

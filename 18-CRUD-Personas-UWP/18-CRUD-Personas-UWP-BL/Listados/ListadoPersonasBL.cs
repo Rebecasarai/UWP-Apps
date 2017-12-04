@@ -1,5 +1,5 @@
-﻿using _18_CRUD_Personas_UWP_UI.Listado;
-using _18_CRUD_Personas_UWP_UI.Models;
+﻿using _18_CRUD_Personas_UWP_Entidades;
+using _18_CRUD_Personas_UWP_UI.Listado;
 using System;
 using System.Collections.Generic;
 using System.Linq;

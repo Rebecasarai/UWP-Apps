@@ -1,12 +1,11 @@
-﻿using _18_CRUD_Personas_UWP_UI;
-using _18_CRUD_Personas_UWP_UI.ViewModels;
+﻿
 using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace _18_CRUD_Personas_UWP_UI.Models
+namespace _18_CRUD_Personas_UWP_Entidades
 {
-    public class clsPersona: clsVMBase
+    public class clsPersona : clsVMBase
     {
         //Propiedades
         private string _nombre;

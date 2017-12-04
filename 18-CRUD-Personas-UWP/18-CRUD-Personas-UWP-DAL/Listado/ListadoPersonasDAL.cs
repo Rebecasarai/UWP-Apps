@@ -1,5 +1,5 @@
 ﻿using _18_CRUD_Personas_UWP_DAL.Conexion;
-using _18_CRUD_Personas_UWP_UI.Models;
+using _18_CRUD_Personas_UWP_Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -25,8 +25,8 @@ namespace _18_CRUD_Personas_UWP_UI.Listado
             SqlCommand consulta = new SqlCommand();
             try
             {
-                consulta.CommandText = "Select * From Personas";
-                consulta.Connection = cx.getConnection();
+                consulta.CommandText = "Select IDPERSONA, NOMBRE, APELLIDO, DIRECCION, TELEFONO From Personas";
+                consulta.Connection = cx.conexion;
                 lector = consulta.ExecuteReader();
 
                 if (lector.HasRows)
@@ -34,11 +34,11 @@ namespace _18_CRUD_Personas_UWP_UI.Listado
                     while (lector.Read())
                     {
                         p = new clsPersona();
-                        p.IdPersona = (int)lector["ID"];
-                        p.Nombre = (string)lector["nombre"];
-                        p.Apellido = (string)lector["apellidos"];
-                        p.Direccion = (string)lector["direccion"];
-                        p.Telefono = (string)lector["telefono"];
+                        p.IdPersona = (int)lector["IDPERSONA"];
+                        p.Nombre = (string)lector["NOMBRE"];
+                        p.Apellido = (string)lector["APELLIDO"];
+                        p.Direccion = (string)lector["DIRECCION"];
+                        p.Telefono = (string)lector["TELEFONO"];
                         this.listado.Add(p);
                     }
                 }

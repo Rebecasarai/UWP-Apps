@@ -1,4 +1,4 @@
-﻿using _18_CRUD_Personas_UWP_UI.Models;
+﻿using _18_CRUD_Personas_UWP_Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +25,7 @@ namespace _18_CRUD_Personas_UWP_BL.Manejadoras
         {
             int resultado = 0;
             ManejadoraBL manejadoraDAL = new ManejadoraBL();
-            resultado = manejadoraDAL.updatePersonaDAL(p);
+            resultado = manejadoraDAL.updatePersona(p);
 
             return resultado;
         }

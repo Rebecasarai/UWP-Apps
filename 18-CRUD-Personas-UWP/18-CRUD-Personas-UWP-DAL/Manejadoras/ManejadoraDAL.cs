@@ -1,6 +1,7 @@
 ﻿
 using _18_CRUD_Personas_UWP_DAL.Conexion;
-using _18_CRUD_Personas_UWP_UI.Models;
+using _18_CRUD_Personas_UWP_Entidades;
+using _18_CRUD_Personas_UWP_UI;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -32,8 +33,7 @@ namespace CRUD_DAL.Manejadoras
 
             try
             {
-
-                conexion = miConexion.getConnection();
+                conexion = miConexion.conexion;
                 //Creamos comandos
                 miComando.CommandText = "Select ID, Nombre,Apellidos,FechaNacimiento,Direccion,Telefono from Personas where ID=@id";
                 /**creamos la variable que le pondremos en el where*/
@@ -96,7 +96,7 @@ namespace CRUD_DAL.Manejadoras
 
             try
             {
-                conexion = miConexion.getConnection();
+                conexion = miConexion.conexion;
                 //Actualizamos los datos de la persona en la base de datos
                 miComando.CommandText = "Update Personas set Nombre=@nombre,Apellidos=@apellidos," +
                                         "FechaNacimiento=@fechaNacimiento,Direccion=@direccion,Telefono=@telefono " +
@@ -131,7 +131,7 @@ namespace CRUD_DAL.Manejadoras
 
             try
             {
-                conexion = miConexion.getConnection();
+                conexion = miConexion.conexion;
                 miComando.CommandText = "Delete From Personas where ID=@id";
                 miComando.Connection = conexion; //no olvides esto
                 filasAfectadas = miComando.ExecuteNonQuery();
@@ -167,7 +167,7 @@ namespace CRUD_DAL.Manejadoras
 
             try
             {
-                conexion = miConexion.getConnection();
+                conexion = miConexion.conexion;
                 //Insertamos los datos de la persona en la base de datos
                 miComando.CommandText = "Insert into Personas set NOMBRE=@NOMBRE,APELLIDO=@APELLIDO," +
                                         "FECHANACIMIENT=@FECHANACIMIENT,DIRECCION=@DIRECCION,TELEFONO=@TELEFONO ";
@@ -181,6 +181,60 @@ namespace CRUD_DAL.Manejadoras
 
             return (resultado);
         }//fin guardarPersonaDAL
+
+
+        public void updatePersona(clsPersona p)
+        {
+            clsConnection cx = new clsConnection();
+            SqlCommand consulta = new SqlCommand();
+            SqlParameter nombre = new SqlParameter();
+            SqlParameter apellidos = new SqlParameter();
+            SqlParameter id = new SqlParameter();
+            SqlParameter idDepartamento = new SqlParameter();
+            SqlParameter direccion = new SqlParameter();
+            SqlParameter telefono = new SqlParameter();
+            try
+            {
+                nombre.ParameterName = "@nombre";
+                nombre.SqlDbType = System.Data.SqlDbType.NVarChar;
+                nombre.Value = p.Nombre;
+
+                idDepartamento.ParameterName = "@idDepartamento";
+                idDepartamento.SqlDbType = System.Data.SqlDbType.Int;
+                idDepartamento.Value = p.IdDepartamento;
+
+                apellidos.ParameterName = "@apellidos";
+                apellidos.SqlDbType = System.Data.SqlDbType.NVarChar;
+                apellidos.Value = p.Apellido;
+
+                direccion.ParameterName = "@direccion";
+                direccion.SqlDbType = System.Data.SqlDbType.NVarChar;
+                direccion.Value = p.Direccion;
+
+                telefono.ParameterName = "@telefono";
+                telefono.SqlDbType = System.Data.SqlDbType.Char;
+                telefono.Value = p.Telefono;
+
+                id.ParameterName = "@id";
+                id.SqlDbType = System.Data.SqlDbType.Int;
+                id.Value = p.IdPersona;
+
+                consulta.Parameters.Add(nombre);
+                consulta.Parameters.Add(apellidos);
+                consulta.Parameters.Add(direccion);
+                consulta.Parameters.Add(telefono);
+                consulta.Parameters.Add(id);
+                consulta.Parameters.Add(idDepartamento);
+                consulta.CommandText = "Update Personas Set Nombre=@nombre, Apellidos=@apellidos, Direccion=@direccion, Telefono=@telefono, ID_Departamento=@idDepartamento WHERE ID=@id";
+                consulta.Connection = cx.conexion;
+                consulta.ExecuteNonQuery();
+                cx.closeConnection();
+            }
+            catch (SqlException e)
+            {
+                
+            }
+        }
 
     }
 }

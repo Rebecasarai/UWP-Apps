@@ -8,7 +8,8 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Windows.UI.Xaml;
 using _18_CRUD_Personas_UWP_UI.ViewModels;
-using _18_CRUD_Personas_UWP_UI.Models;
+using _18_CRUD_Personas_UWP_BL.Listados;
+using _18_CRUD_Personas_UWP_Entidades;
 
 namespace _18_CRUD_Personas_UWP_UI.ViewModels
 {
@@ -31,9 +32,10 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
         #region "constructor"
         public MainPageVM()
         {
-            ListadoPersona mlistPersona = new ListadoPersona();
-            _mListadoColecPersons = mlistPersona.instaPersonas();
-            _mPersonasIntantactas = mListadoColecPersons;
+
+            ListadoPersonasBL listado = new ListadoPersonasBL();
+            this._mListadoColecPersons = new ObservableCollection<clsPersona>(listado.getListadoBL());
+            this._mPersonasIntantactas = this._mListadoColecPersons;
         }
         #endregion
         
@@ -85,9 +87,8 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
                 //NotifyPropertyChanged("textoABuscar");
                 _cmdSearch.RaiseCanExecuteChanged();
             }
-
-
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -220,6 +221,7 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
         }
         private void ExecuteSavePersona()
         {
+            //Colocar insertar a la tabla
             _personSeleccionada.IdPersona = mListadoColecPersons.ElementAt(mListadoColecPersons.Count() - 1).IdPersona - 1;
             NotifyPropertyChanged("personSeleccionada");
             mListadoColecPersons.Add(_personSeleccionada);
