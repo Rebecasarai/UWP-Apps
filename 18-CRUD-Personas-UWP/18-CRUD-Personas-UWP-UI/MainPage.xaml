@@ -63,7 +63,7 @@
             <AppBarButton Icon="Filter" Command="{Binding cmdSearch}" Label="Search" Click="AppBarButton_Click"  ></AppBarButton>
         </StackPanel>
 
-        <ListView x:Name="itemListView" Grid.Row="1" Grid.Column="0" MinWidth="100"  SelectedItem="{Binding personSeleccionada,Mode=TwoWay}" ItemsSource="{Binding mListadoColecPersons}">
+        <ListView x:Name="itemListView" Grid.Row="1" Grid.Column="0" MinWidth="100"  SelectedItem="{Binding personSeleccionada,Mode=TwoWay}" ItemsSource="{Binding mListaConBusqueda}">
             <ListView.ItemTemplate>
                 <DataTemplate >
                     <StackPanel Orientation="Horizontal">

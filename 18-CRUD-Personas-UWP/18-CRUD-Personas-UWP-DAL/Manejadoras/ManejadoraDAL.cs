@@ -103,9 +103,9 @@ namespace _18_CRUD_Personas_UWP_DAL.Manejadoras
             {
                 conexion = miConexion.conexion;
                 //Actualizamos los datos de la persona en la base de datos
-                miComando.CommandText = "Update Personas set Nombre=@nombre,Apellidos=@apellidos," +
-                                        "FechaNacimiento=@fechaNacimiento,Direccion=@direccion,Telefono=@telefono " +
-                                        "where ID=@id";
+                miComando.CommandText = "Update Personas set NOMBRE=@NOMBRE,APELLIDO=@APELLIDO," +
+                                        "FECHANACIMIENT=@FECHANACIMIENT,DIRECCION=@DIRECCION,TELEFONO=@TELEFONO " +
+                                        "where IDPERSONA=@IDPERSONA";
                 //
                 miComando.Connection = conexion;
 
@@ -137,7 +137,7 @@ namespace _18_CRUD_Personas_UWP_DAL.Manejadoras
             try
             {
                 conexion = miConexion.conexion;
-                miComando.CommandText = "Delete From Personas where ID=@id";
+                miComando.CommandText = "Delete From Personas where IDPERSONA=@id";
                 miComando.Connection = conexion; //no olvides esto
                 filasAfectadas = miComando.ExecuteNonQuery();
 
@@ -161,10 +161,10 @@ namespace _18_CRUD_Personas_UWP_DAL.Manejadoras
 
             int resultado = 0;
             
-            // miComando.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = persona.idPersona;
+            miComando.Parameters.Add("@IDPERSONA", System.Data.SqlDbType.Int).Value = persona.IdPersona;
             miComando.Parameters.Add("@NOMBRE", System.Data.SqlDbType.VarChar).Value = persona.Nombre;
             miComando.Parameters.Add("@APELLIDO", System.Data.SqlDbType.VarChar).Value = persona.Apellido;
-            miComando.Parameters.Add("@FECHANACIMIENT", System.Data.SqlDbType.DateTime).Value = persona.FechaNac;
+            //miComando.Parameters.Add("@FECHANACIMIENT", System.Data.SqlDbType.DateTime).Value = persona.FechaNac;
             miComando.Parameters.Add("@DIRECCION", System.Data.SqlDbType.VarChar).Value = persona.Direccion;
             miComando.Parameters.Add("@TELEFONO", System.Data.SqlDbType.VarChar).Value = persona.Telefono;
 
@@ -172,13 +172,14 @@ namespace _18_CRUD_Personas_UWP_DAL.Manejadoras
             {
                 conexion = miConexion.conexion;
                 //Insertamos los datos de la persona en la base de datos
-                miComando.CommandText = "Insert into Personas set NOMBRE=@NOMBRE,APELLIDO=@APELLIDO," +
-                                        "FECHANACIMIENT=@FECHANACIMIENT,DIRECCION=@DIRECCION,TELEFONO=@TELEFONO ";
-                //
+                miComando.CommandText = "INSERT INTO PERSONAS (IDPERSONA, NOMBRE,APELLIDO,DIRECCION,TELEFONO) VALUES (@IDPERSONA, @NOMBRE, @APELLIDO," +
+                                        " @DIRECCION, @TELEFONO)";
                 miComando.Connection = conexion;
 
                 //ejecutamos el comando de actualizar
                 resultado = miComando.ExecuteNonQuery();
+
+                conexion.Close();
             }
             catch (SqlException sql) { throw sql; }
 
@@ -204,7 +205,7 @@ namespace _18_CRUD_Personas_UWP_DAL.Manejadoras
 
                 idDepartamento.ParameterName = "@idDepartamento";
                 idDepartamento.SqlDbType = System.Data.SqlDbType.Int;
-                idDepartamento.Value = p.IdDepartamento;
+                idDepartamento.Value = p.idDepartamento;
 
                 apellidos.ParameterName = "@apellidos";
                 apellidos.SqlDbType = System.Data.SqlDbType.NVarChar;
@@ -235,7 +236,7 @@ namespace _18_CRUD_Personas_UWP_DAL.Manejadoras
             }
             catch (SqlException e)
             {
-                
+                throw e;   
             }
         }
 

@@ -39,6 +39,7 @@ namespace _18_CRUD_Personas_UWP_UI.Listado
                         p.Apellido = (string)lector["APELLIDO"];
                         p.Direccion = (string)lector["DIRECCION"];
                         p.Telefono = (string)lector["TELEFONO"];
+
                         this.listado.Add(p);
                     }
                 }
