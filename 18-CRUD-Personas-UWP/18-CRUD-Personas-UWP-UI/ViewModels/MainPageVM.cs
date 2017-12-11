@@ -10,6 +10,7 @@ using Windows.UI.Xaml;
 using _18_CRUD_Personas_UWP_UI.ViewModels;
 using _18_CRUD_Personas_UWP_BL.Listados;
 using _18_CRUD_Personas_UWP_Entidades;
+using _18_CRUD_Personas_UWP_BL.Manejadoras;
 
 namespace _18_CRUD_Personas_UWP_UI.ViewModels
 {
@@ -32,7 +33,6 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
         #region "constructor"
         public MainPageVM()
         {
-
             ListadoPersonasBL listado = new ListadoPersonasBL();
             this._mListadoColecPersons = new ObservableCollection<clsPersona>(listado.getListadoBL());
             this._mPersonasIntantactas = this._mListadoColecPersons;
@@ -53,6 +53,7 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
                 NotifyPropertyChanged("personSeleccionada");
             }
         }
+
 
         public ObservableCollection<clsPersona> mPersonasFiltradas
         {
@@ -182,6 +183,9 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
         {
             //_mListadoColecPersons = mPersonasIntantactas;
             
+            //Listado para buscar LAMBDA EXPRESION TO SEARCH
+            //LINQ expresion para buscar
+
                 mPersonasFiltradas = new ObservableCollection<clsPersona>();
                 for (int i = 0; i < mListadoColecPersons.Count; i++)
                 {
@@ -198,6 +202,10 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
 
         public void ExecuteDelete()
         {
+            //Llamamos a la BL para borrar de la BD
+            ManejadoraBL manejadorabl = new ManejadoraBL();
+            manejadorabl.borrarPersona(_personSeleccionada.IdPersona);
+            //eliminamos del List
             mListadoColecPersons.Remove(_personSeleccionada);
             NotifyPropertyChanged("mListadoColecPersons");
         }
@@ -221,11 +229,16 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
         }
         private void ExecuteSavePersona()
         {
+            //Añadimos a la BD, a través de la BL
+            ManejadoraBL manejadoraBL = new ManejadoraBL();
+            manejadoraBL.addPersona(_personSeleccionada);
             //Colocar insertar a la tabla
             _personSeleccionada.IdPersona = mListadoColecPersons.ElementAt(mListadoColecPersons.Count() - 1).IdPersona - 1;
             NotifyPropertyChanged("personSeleccionada");
             mListadoColecPersons.Add(_personSeleccionada);
             NotifyPropertyChanged("mListadoColecPersons");
+
+
         }
 
     }

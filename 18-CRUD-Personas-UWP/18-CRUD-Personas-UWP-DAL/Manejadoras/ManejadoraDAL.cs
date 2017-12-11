@@ -9,11 +9,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CRUD_DAL.Manejadoras
+namespace _18_CRUD_Personas_UWP_DAL.Manejadoras
 {
-    public class GestionPersonaDAL
+    public class ManejadoraDAL
     {
-
+        /// <summary>
+        /// Funcion que busca una persona por id
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public clsPersona buscarPersonaDAl(int id)
         {
             //Creamos el objeto de tipo conexion de mi conexion
@@ -138,8 +143,7 @@ namespace CRUD_DAL.Manejadoras
 
             }
             catch (Exception e) { throw e; }
-
-
+            
             return filasAfectadas;
 
         }
@@ -156,8 +160,7 @@ namespace CRUD_DAL.Manejadoras
             SqlCommand miComando = new SqlCommand();
 
             int resultado = 0;
-
-            //
+            
             // miComando.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = persona.idPersona;
             miComando.Parameters.Add("@NOMBRE", System.Data.SqlDbType.VarChar).Value = persona.Nombre;
             miComando.Parameters.Add("@APELLIDO", System.Data.SqlDbType.VarChar).Value = persona.Apellido;
