@@ -25,7 +25,7 @@ namespace _18_CRUD_Personas_UWP_UI.Listado
             SqlCommand consulta = new SqlCommand();
             try
             {
-                consulta.CommandText = "Select IDPERSONA, NOMBRE, APELLIDO, DIRECCION, TELEFONO From Personas";
+                consulta.CommandText = "Select ID, NOMBRE, APELLIDO, DIRECCION, TELEFONO, FECHANACIMIENT From PersonasBD";
                 consulta.Connection = cx.conexion;
                 lector = consulta.ExecuteReader();
 
@@ -34,12 +34,12 @@ namespace _18_CRUD_Personas_UWP_UI.Listado
                     while (lector.Read())
                     {
                         p = new clsPersona();
-                        p.IdPersona = (int)lector["IDPERSONA"];
+                        p.IdPersona = (int)lector["ID"];
                         p.Nombre = (string)lector["NOMBRE"];
                         p.Apellido = (string)lector["APELLIDO"];
                         p.Direccion = (string)lector["DIRECCION"];
                         p.Telefono = (string)lector["TELEFONO"];
-
+                        p.FechaNac = (DateTime)lector["FECHANACIMIENT"];
                         this.listado.Add(p);
                     }
                 }

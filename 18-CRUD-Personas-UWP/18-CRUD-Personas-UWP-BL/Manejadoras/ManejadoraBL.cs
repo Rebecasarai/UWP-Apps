@@ -10,8 +10,6 @@ namespace _18_CRUD_Personas_UWP_BL.Manejadoras
 {
     public class ManejadoraBL
     {
-        clsPersona mPerson = new clsPersona();
-
         /// <summary>
         /// Metodo que obtiene la persona por id
         /// </summary>
@@ -31,13 +29,10 @@ namespace _18_CRUD_Personas_UWP_BL.Manejadoras
         /// </summary>
         /// <param name="p">Recibe al objeto de persona</param>
         /// <returns>Retorna un entero que representa el numero de filas afectadas</returns>
-        public int updatePersona(clsPersona p)
+        public void updatePersona(clsPersona p)
         {
-            int filasAfectadas = 0;
-            ManejadoraBL manejadoraDAL = new ManejadoraBL();
-            filasAfectadas = manejadoraDAL.updatePersona(p);
-
-            return filasAfectadas;
+            ManejadoraDAL manejadoraDAL = new ManejadoraDAL();
+            manejadoraDAL.guardarPersonaDAL(p);
         }
         
         /// <summary>

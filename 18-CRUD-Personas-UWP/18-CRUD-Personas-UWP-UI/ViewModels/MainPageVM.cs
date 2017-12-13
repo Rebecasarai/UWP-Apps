@@ -11,6 +11,7 @@ using _18_CRUD_Personas_UWP_UI.ViewModels;
 using _18_CRUD_Personas_UWP_BL.Listados;
 using _18_CRUD_Personas_UWP_Entidades;
 using _18_CRUD_Personas_UWP_BL.Manejadoras;
+using Windows.UI.Xaml.Controls;
 
 namespace _18_CRUD_Personas_UWP_UI.ViewModels
 {
@@ -30,6 +31,11 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
 
         private ManejadoraBL _manejadoraBL;
         private ListadoPersonasBL _listadoBL;
+
+
+        private string _textoReloj;
+        private DispatcherTimer timer;
+        private int _segundos;
         #endregion
 
         #region "constructor"
@@ -137,7 +143,7 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
         {
             get
             {
-                _cmdSave = new DelegateCommand(ExecuteSavePersona);
+                _cmdSave = new DelegateCommand(ExecuteSave);
                 return _cmdSave;
             }
 
@@ -152,7 +158,11 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
             bool canExecute = false;
             if (_personSeleccionada != null)
             {
-                canExecute = true;
+                if (!String.IsNullOrEmpty(_personSeleccionada.Nombre))
+                {
+                    canExecute = true;
+                }
+
             }
             return canExecute;
         }
@@ -189,8 +199,8 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
             NotifyPropertyChanged("mListaConBusqueda");
                 for (int i = 0; i < mListaCompleta.Count; i++)
                 {
-                    if ((mListaCompleta.ElementAt(i).Nombre.ToLower().StartsWith(textoABuscar)) ||
-                        (mListaCompleta.ElementAt(i).Apellido.ToLower().StartsWith(textoABuscar)))
+                    if ((mListaCompleta.ElementAt(i).Nombre.ToLower().Contains(textoABuscar)) ||
+                        (mListaCompleta.ElementAt(i).Apellido.ToLower().Contains(textoABuscar)))
                     {
                         mListaConBusqueda.Add(mListaCompleta.ElementAt(i));
                     }
@@ -206,6 +216,7 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
             ManejadoraBL manejadorabl = new ManejadoraBL();
             manejadorabl.borrarPersona(_personSeleccionada.IdPersona);
 
+            //Hace el efecto inmediato de que borra de lista
             //eliminamos del List
             mListaCompleta.Remove(_personSeleccionada);
             NotifyPropertyChanged("mListaCompleta");
@@ -221,48 +232,78 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
         }
         private bool canExecuteSavePersona()
         {
-            bool sePuede = false;
+            bool proceder = false;
             if (_personSeleccionada != null)
             {
-                sePuede = true;
+                proceder = true;
             }
-            return sePuede;
+            return proceder;
         }
-        private void ExecuteSavePersona()
+
+        private void ExecuteSave()
         {
-            //Añadimos a la BD, a través de la BL
-            //Colocar insertar a la tabla
-            /*_personSeleccionada.IdPersona = mListaCompleta.ElementAt(mListaCompleta.Count() - 1).IdPersona - 1;
-        
-            manejadoraBL.addPersona(_personSeleccionada);
-            NotifyPropertyChanged("personSeleccionada");
-
-
-            mListaCompleta.Add(_personSeleccionada);
-            NotifyPropertyChanged("mListaCompleta");*/
-
             if (_personSeleccionada.IdPersona == 0)
             {
-                _personSeleccionada.IdPersona = mListaConBusqueda.ElementAt(mListaCompleta.Count - 1).IdPersona + 1;
+                //Añadimos a la BD, a través de la BL
+                //Colocar insertar a la tabla
+                _personSeleccionada.IdPersona = mListaCompleta.ElementAt(mListaCompleta.Count() - 1).IdPersona - 1;
+        
                 _manejadoraBL.addPersona(_personSeleccionada);
-                _mListaCompleta = new ObservableCollection<clsPersona>(_listadoBL.getListadoBL());
-                _mListaConBusqueda = mListaCompleta;
-                //mListaCompleta.Add(_personSeleccionada);
+
+                mListaCompleta.Add(_personSeleccionada);
                 NotifyPropertyChanged("mListaCompleta");
-                //NotifyPropertyChanged("mListaCompleta");
-                //NotifyPropertyChanged("personSeleccionada");
             }
             else
             {
-                _manejadoraBL.updatePersona(_personSeleccionada);
+                //_manejadoraBL.updatePersona(_personSeleccionada);
                 _mListaCompleta = new ObservableCollection<clsPersona>(_listadoBL.getListadoBL());
                 _mListaConBusqueda = mListaCompleta;
                 NotifyPropertyChanged("personSeleccionada");
             }
 
+        }
+        public async void mostrarSeguroDelete()
+        {
+            ContentDialog volverAJugar = new ContentDialog();
+            volverAJugar.Title = "Eliminar";
+            volverAJugar.Content = $"¿Está seguro de que de que desea eliminar el usuario {_personSeleccionada.Nombre} {_personSeleccionada.Apellido}?";
+            volverAJugar.PrimaryButtonText = "Si";
+            volverAJugar.SecondaryButtonText = "No";
+            ContentDialogResult resultado = await volverAJugar.ShowAsync();
+            if (resultado == ContentDialogResult.Primary)
+            {
+                _manejadoraBL.borrarPersona(_personSeleccionada.IdPersona);
+                _mListaCompleta = new ObservableCollection<clsPersona>(_listadoBL.getListadoBL());
+                _mListaConBusqueda = mListaCompleta; //No borra la persona seleccionada en el listado original, dnt know why
+                //NotifyPropertyChanged("listado");
+                //NotifyPropertyChanged("listadoAux");
+            }
 
         }
-
+        private void timer_Tick(object sender, object e)
+        {
+            _segundos--;
+            if (_segundos >= 10)
+            {
+                _textoReloj = $"0:{_segundos.ToString()}";
+                NotifyPropertyChanged("textoReloj");
+            }
+            else
+            {
+                _textoReloj = $"0:0{_segundos.ToString()}";
+                NotifyPropertyChanged("textoReloj");
+            }
+            if (_segundos == 0)
+            {
+                _listadoBL = new ListadoPersonasBL();
+                this._mListaCompleta = new ObservableCollection<clsPersona>(_listadoBL.getListadoBL());
+                this._mListaConBusqueda = this._mListaCompleta;
+                NotifyPropertyChanged("mListaCompleta");
+                NotifyPropertyChanged("mListaConBusqueda");
+                _segundos = 30;
+            }
+        }
     }
 }
+
 

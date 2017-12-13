@@ -57,7 +57,7 @@
 
         <StackPanel Orientation="Horizontal">
             <AppBarButton Icon="Save" Label="Guardar" Command="{Binding cmdSave}" Click="AppBarButton_Click"/>
-            <AppBarButton Icon="Delete" Label="Borrar" Command="{Binding cmdDelete}" />
+            <AppBarButton Icon="Delete" Label="Borrar" Command="{Binding cmdDelete, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             <AppBarButton Icon="Add" Label="Añadir" Command="{Binding cmdAdd}"/>
             <TextBox Name="searchBox" PlaceholderText="Busque aquí" Text="{Binding textoABuscar, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ></TextBox>
             <AppBarButton Icon="Filter" Command="{Binding cmdSearch}" Label="Search" Click="AppBarButton_Click"  ></AppBarButton>

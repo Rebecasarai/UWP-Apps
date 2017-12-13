@@ -41,15 +41,5 @@ namespace _18_CRUD_Personas_UWP_UI
             this.txtBlcFechaNacimiento.GetBindingExpression(TextBox.TextProperty).UpdateSource();
             this.txtBlctelefono.GetBindingExpression(TextBox.TextProperty).UpdateSource();
         }
-        /// <summary>
-        /// Se debe colocar ya que trabajamos dando al boton.
-        /// Se debe de actualizar la vista por este medio
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void AppBarButton_Click_1(object sender, RoutedEventArgs e)
-        {
-            this.searchBox.GetBindingExpression(TextBox.TextProperty).UpdateSource();
-        }
     }
 }

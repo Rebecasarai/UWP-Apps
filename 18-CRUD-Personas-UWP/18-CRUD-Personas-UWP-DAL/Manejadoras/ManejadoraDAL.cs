@@ -40,7 +40,7 @@ namespace _18_CRUD_Personas_UWP_DAL.Manejadoras
             {
                 conexion = miConexion.conexion;
                 //Creamos comandos
-                miComando.CommandText = "Select ID, Nombre,Apellidos,FechaNacimiento,Direccion,Telefono from Personas where ID=@id";
+                miComando.CommandText = "Select ID, NOMBRE,APELLIDO,FECHANACIMIENT,DIRECCION,TELEFONO from PersonasBD where ID=@id";
                 /**creamos la variable que le pondremos en el where*/
                 SqlParameter param;
                 param = new SqlParameter();
@@ -63,13 +63,11 @@ namespace _18_CRUD_Personas_UWP_DAL.Manejadoras
 
                     person = new clsPersona();
                     person.IdPersona = (Int32)miLector["ID"];
-                    person.Nombre = (String)miLector["Nombre"];
-                    person.Apellido = (String)miLector["Apellidos"];
-                    person.FechaNac = (DateTime)miLector["FechaNacimiento"];
-                    person.Direccion = (String)miLector["Direccion"];
-                    person.Telefono = (String)miLector["Telefono"];
-
-
+                    person.Nombre = (String)miLector["NOMBRE"];
+                    person.Apellido = (String)miLector["APELLIDO"];
+                    person.FechaNac = (DateTime)miLector["FECHANACIMIENT"];
+                    person.Direccion = (String)miLector["DIRECCION"];
+                    person.Telefono = (String)miLector["TELEFONO"];
                 }//fin while
             }
             catch (SqlException sql) { throw sql; }
@@ -77,6 +75,7 @@ namespace _18_CRUD_Personas_UWP_DAL.Manejadoras
 
             return (person);
         }//fin metodo buscarPersona
+
 
         /// <summary>
         /// este metodo esta guarda los cambios de la persona editada
@@ -92,10 +91,10 @@ namespace _18_CRUD_Personas_UWP_DAL.Manejadoras
             int resultado = 0;
 
             //
-            miComando.Parameters.Add("@IDPERSONA", System.Data.SqlDbType.Int).Value = persona.IdPersona;
+            miComando.Parameters.Add("@ID", System.Data.SqlDbType.Int).Value = persona.IdPersona;
             miComando.Parameters.Add("@NOMBRE", System.Data.SqlDbType.VarChar).Value = persona.Nombre;
             miComando.Parameters.Add("@APELLIDO", System.Data.SqlDbType.VarChar).Value = persona.Apellido;
-            miComando.Parameters.Add("@FECHANACIMIENT", System.Data.SqlDbType.DateTime).Value = persona.FechaNac;
+            miComando.Parameters.Add("@FECHANACIMIENT", System.Data.SqlDbType.DateTime2).Value = persona.FechaNac;
             miComando.Parameters.Add("@DIRECCION", System.Data.SqlDbType.VarChar).Value = persona.Direccion;
             miComando.Parameters.Add("@TELEFONO", System.Data.SqlDbType.VarChar).Value = persona.Telefono;
 
@@ -103,9 +102,9 @@ namespace _18_CRUD_Personas_UWP_DAL.Manejadoras
             {
                 conexion = miConexion.conexion;
                 //Actualizamos los datos de la persona en la base de datos
-                miComando.CommandText = "Update Personas set NOMBRE=@NOMBRE,APELLIDO=@APELLIDO," +
+                miComando.CommandText = "Update PersonasBD set NOMBRE=@NOMBRE,APELLIDO=@APELLIDO," +
                                         "FECHANACIMIENT=@FECHANACIMIENT,DIRECCION=@DIRECCION,TELEFONO=@TELEFONO " +
-                                        "where IDPERSONA=@IDPERSONA";
+                                        "where ID=@ID";
                 //
                 miComando.Connection = conexion;
 
@@ -116,6 +115,8 @@ namespace _18_CRUD_Personas_UWP_DAL.Manejadoras
 
             return (resultado);
         }//fin guardarPersonaDAL
+
+
 
         public int eliminarPersonaDAL(int id)
         {
@@ -137,13 +138,13 @@ namespace _18_CRUD_Personas_UWP_DAL.Manejadoras
             try
             {
                 conexion = miConexion.conexion;
-                miComando.CommandText = "Delete From Personas where IDPERSONA=@id";
+                miComando.CommandText = "Delete From PersonasBD where ID=@id";
                 miComando.Connection = conexion; //no olvides esto
                 filasAfectadas = miComando.ExecuteNonQuery();
 
             }
             catch (Exception e) { throw e; }
-            
+
             return filasAfectadas;
 
         }
@@ -160,11 +161,11 @@ namespace _18_CRUD_Personas_UWP_DAL.Manejadoras
             SqlCommand miComando = new SqlCommand();
 
             int resultado = 0;
-            
-            miComando.Parameters.Add("@IDPERSONA", System.Data.SqlDbType.Int).Value = persona.IdPersona;
+
+            //miComando.Parameters.Add("@IDPERSONA", System.Data.SqlDbType.Int).Value = persona.IdPersona;
             miComando.Parameters.Add("@NOMBRE", System.Data.SqlDbType.VarChar).Value = persona.Nombre;
             miComando.Parameters.Add("@APELLIDO", System.Data.SqlDbType.VarChar).Value = persona.Apellido;
-            //miComando.Parameters.Add("@FECHANACIMIENT", System.Data.SqlDbType.DateTime).Value = persona.FechaNac;
+            miComando.Parameters.Add("@FECHANACIMIENT", System.Data.SqlDbType.DateTime2).Value = persona.FechaNac;
             miComando.Parameters.Add("@DIRECCION", System.Data.SqlDbType.VarChar).Value = persona.Direccion;
             miComando.Parameters.Add("@TELEFONO", System.Data.SqlDbType.VarChar).Value = persona.Telefono;
 
@@ -172,8 +173,8 @@ namespace _18_CRUD_Personas_UWP_DAL.Manejadoras
             {
                 conexion = miConexion.conexion;
                 //Insertamos los datos de la persona en la base de datos
-                miComando.CommandText = "INSERT INTO PERSONAS (IDPERSONA, NOMBRE,APELLIDO,DIRECCION,TELEFONO) VALUES (@IDPERSONA, @NOMBRE, @APELLIDO," +
-                                        " @DIRECCION, @TELEFONO)";
+                miComando.CommandText = "INSERT INTO PERSONASBD (NOMBRE,APELLIDO,DIRECCION,TELEFONO, FECHANACIMIENT) VALUES (@NOMBRE, @APELLIDO," +
+                                        " @DIRECCION, @TELEFONO, @FECHANACIMIENT)";
                 miComando.Connection = conexion;
 
                 //ejecutamos el comando de actualizar
@@ -184,7 +185,7 @@ namespace _18_CRUD_Personas_UWP_DAL.Manejadoras
             catch (SqlException sql) { throw sql; }
 
             return (resultado);
-        }//fin guardarPersonaDAL
+        }//fin crearPersonaDAL
 
 
         public void updatePersona(clsPersona p)
@@ -236,9 +237,69 @@ namespace _18_CRUD_Personas_UWP_DAL.Manejadoras
             }
             catch (SqlException e)
             {
-                throw e;   
+                throw;
             }
         }
+
+
+        public clsPersona getPersonaDAL(int id)
+        {
+            //Creamos el objeto de tipo conexion de mi conexion
+            clsConnection miConexion = new clsConnection();
+
+            //Creamos la sql Connection
+            SqlConnection conexion = new SqlConnection();
+
+            //
+            SqlCommand miComando = new SqlCommand();
+
+            //
+            SqlDataReader miLector;
+
+            //
+            clsPersona person = new clsPersona();
+
+            try
+            {
+                conexion = miConexion.conexion;
+                //Creamos comandos
+                miComando.CommandText = "Select ID, NOMBRE, APELLIDO, FECHANACIMIENT, DIRECCION,TELEFONO from PersonasBD where ID=@id";
+                /**creamos la variable que le pondremos en el where*/
+                SqlParameter param;
+                param = new SqlParameter();
+                param.ParameterName = "@id";
+                param.SqlDbType = System.Data.SqlDbType.Int;
+                param.Value = id;
+
+                //Le damos al comando el paramentro
+                miComando.Parameters.Add(param);
+
+                /*aqui termina la declaracion de la variable */
+
+                miComando.Connection = conexion;
+                miLector = miComando.ExecuteReader();
+
+                //Si hay lineas en el Lector
+                if (miLector.HasRows)
+                {
+                    miLector.Read();
+
+                    person = new clsPersona();
+                    person.IdPersona = (Int32)miLector["ID"];
+                    person.Nombre = (String)miLector["NOMBRE"];
+                    person.Apellido = (String)miLector["APELLIDO"];
+                    person.FechaNac = (DateTime)miLector["FECHANACIMIENT"];
+                    person.Direccion = (String)miLector["DIRECCION"];
+                    person.Telefono = (String)miLector["TELEFONO"];
+
+
+                }//fin while
+            }
+            catch (SqlException sql) { throw sql; }
+
+
+            return (person);
+        }//fin metodo buscarPersona
 
     }
 }
