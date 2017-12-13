@@ -28,14 +28,12 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
         private DelegateCommand _cmdDelete;
         private DelegateCommand _cmdAdd;
         private DelegateCommand _cmdSave;
+        private DelegateCommand _actualizar;
 
         private ManejadoraBL _manejadoraBL;
         private ListadoPersonasBL _listadoBL;
 
 
-        private string _txtCronometro;
-        private DispatcherTimer timer;
-        private int _segundos;
         #endregion
 
         #region "constructor"
@@ -45,13 +43,6 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
             _listadoBL = new ListadoPersonasBL();
             this._mListaCompleta = new ObservableCollection<clsPersona>(_listadoBL.getListadoBL());
             this._mListaConBusqueda = this._mListaCompleta;
-
-
-            timer = new DispatcherTimer();
-            _segundos = 30;
-            timer.Interval = TimeSpan.FromSeconds(1);
-            timer.Tick += timer_Tick;
-            timer.Start();
         }
         #endregion
         
@@ -186,13 +177,20 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
                 _cmdSave = value;
             }
         }
-
-        public string txtCronometro
+        /// <summary>
+        /// 
+        /// </summary>
+        public DelegateCommand actualizarLista
         {
-            get { return _txtCronometro; }
+            get
+            {
+                _actualizar = new DelegateCommand(ExecuteActualizar);
+                return _actualizar;
+            }
+
             set
             {
-                _txtCronometro = value;
+                _actualizar = value;
             }
         }
 
@@ -210,7 +208,6 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
                 {
                     canExecute = true;
                 }
-                canExecute = true;
             }
             return canExecute;
         }
@@ -311,15 +308,28 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
             }
 
         }
+        
+        /// <summary>
+        /// Metodo que realiza la actualizaciónd e la lista, el Refresh
+        /// </summary>
+        private void ExecuteActualizar()
+        {
+            mListaCompleta = new ObservableCollection<clsPersona>(_listadoBL.getListadoBL());
+            mListaConBusqueda = this._mListaCompleta;
+            NotifyPropertyChanged("mListaCompleta");
+            NotifyPropertyChanged("mListaConBusqueda");
+        }
 
         /// <summary>
-        /// Metodo que 
+        /// Metodo que muestra un cuaro que se cerciora de si está seguro de eliminar el usuario
+        /// En caso de dar click a SI, o PrimaryButton, lo borra.
+        /// En caso contrario, vuelve a la vista con la lista
         /// </summary>
         public async void cuadroDelete()
         {
             ContentDialog volverAJugar = new ContentDialog();
             volverAJugar.Title = "Eliminar";
-            volverAJugar.Content = $"¿Está seguro de que de que desea eliminar el usuario {_personSeleccionada.Nombre} {_personSeleccionada.Apellido}?";
+            volverAJugar.Content = $"¿Está seguro de que de que desea eliminar la persona {_personSeleccionada.Nombre} {_personSeleccionada.Apellido}?";
             volverAJugar.PrimaryButtonText = "Si";
             volverAJugar.SecondaryButtonText = "No";
             ContentDialogResult resultado = await volverAJugar.ShowAsync();
@@ -335,37 +345,7 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
             }
 
         }
-        private void timer_Tick(object sender, object e)
-        {
-            _segundos--;
-            if (_segundos >= 10)
-            {
-                _txtCronometro = $"0:{_segundos.ToString()}";
-                NotifyPropertyChanged("txtCronometro");
-            }
-            else
-            {
-                _txtCronometro = $"0:0{_segundos.ToString()}";
-                NotifyPropertyChanged("txtCronometro");
-            }
-            if (_segundos == 0)
-            {
-                _listadoBL = new ListadoPersonasBL();
-                this._mListaCompleta = new ObservableCollection<clsPersona>(_listadoBL.getListadoBL());
-                this._mListaConBusqueda = this._mListaCompleta;
-                NotifyPropertyChanged("mListaCompleta");
-                NotifyPropertyChanged("mListaConBusqueda");
-                _segundos = 60;
-            }
-        }
-
-        private void ExecuteActualizar()
-        {
-            mListaCompleta = new ObservableCollection<clsPersona>(_listadoBL.getListadoBL());
-            mListaConBusqueda = this._mListaCompleta;
-            NotifyPropertyChanged("mListaCompleta");
-            NotifyPropertyChanged("mListaConBusqueda");
-        }
+        
     }
 }
 
