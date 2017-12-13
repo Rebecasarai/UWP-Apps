@@ -57,10 +57,13 @@
 
         <StackPanel Orientation="Horizontal">
             <AppBarButton Icon="Save" Label="Guardar" Command="{Binding cmdSave}" Click="AppBarButton_Click"/>
-            <AppBarButton Icon="Delete" Label="Borrar" Command="{Binding cmdDelete, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <AppBarButton Icon="Delete" Label="Borrar" Command="{Binding cmdDelete}" />
             <AppBarButton Icon="Add" Label="Añadir" Command="{Binding cmdAdd}"/>
             <TextBox Name="searchBox" PlaceholderText="Busque aquí" Text="{Binding textoABuscar, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ></TextBox>
             <AppBarButton Icon="Filter" Command="{Binding cmdSearch}" Label="Search" Click="AppBarButton_Click"  ></AppBarButton>
+            <AppBarButton Icon="Refresh" Label="Actualizar" Command="{Binding actualizarLista }"/>
+            <TextBlock Name="txtCronometro" FontSize="20" Text="{Binding txtCronometro, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            
         </StackPanel>
 
         <ListView x:Name="itemListView" Grid.Row="1" Grid.Column="0" MinWidth="100"  SelectedItem="{Binding personSeleccionada,Mode=TwoWay}" ItemsSource="{Binding mListaConBusqueda}">

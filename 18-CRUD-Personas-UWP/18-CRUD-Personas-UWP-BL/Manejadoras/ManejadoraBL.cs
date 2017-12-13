@@ -32,7 +32,7 @@ namespace _18_CRUD_Personas_UWP_BL.Manejadoras
         public void updatePersona(clsPersona p)
         {
             ManejadoraDAL manejadoraDAL = new ManejadoraDAL();
-            manejadoraDAL.guardarPersonaDAL(p);
+            manejadoraDAL.updatePersona(p);
         }
         
         /// <summary>

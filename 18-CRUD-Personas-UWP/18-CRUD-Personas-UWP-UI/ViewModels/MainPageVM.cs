@@ -33,7 +33,7 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
         private ListadoPersonasBL _listadoBL;
 
 
-        private string _textoReloj;
+        private string _txtCronometro;
         private DispatcherTimer timer;
         private int _segundos;
         #endregion
@@ -45,21 +45,36 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
             _listadoBL = new ListadoPersonasBL();
             this._mListaCompleta = new ObservableCollection<clsPersona>(_listadoBL.getListadoBL());
             this._mListaConBusqueda = this._mListaCompleta;
-            //this._mPersonasIntantactas = this._mListadoColecPersons;
+
+
+            timer = new DispatcherTimer();
+            _segundos = 30;
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += timer_Tick;
+            timer.Start();
         }
         #endregion
         
         #region "Propiedades públicas"
+        /// <summary>
+        /// Persona seleccionada que utilizaremos para actualizar, crear nueva persona o eliminar.
+        /// </summary>
         public clsPersona personSeleccionada
         {
             get { return _personSeleccionada; }
             set {
                 _personSeleccionada = value;
+                _cmdDelete.RaiseCanExecuteChanged();
+                _cmdSave.RaiseCanExecuteChanged();
+
                 //Notificación a la vista
                 NotifyPropertyChanged("personSeleccionada");
             }
         }
 
+        /// <summary>
+        /// Lista compketa de personas, que carga de la BD. Lista original, de partida, sin filtros.
+        /// </summary>
         public ObservableCollection<clsPersona> mListaCompleta
         {
 
@@ -72,6 +87,9 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
             }
         }
 
+        /// <summary>
+        /// Lista que será utilizada para mostrar la lista de personas filtrada por la busqueda
+        /// </summary>
         public ObservableCollection<clsPersona> mListaConBusqueda
         {
             get { return _mListaConBusqueda; }
@@ -83,6 +101,9 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
             }
         }
 
+        /// <summary>
+        /// Texto a Buscar, String obtenido a través del cuadro de texto
+        /// </summary>
         public String textoABuscar
         {
             get { return _textoABuscar; }
@@ -96,7 +117,8 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
         }
 
         /// <summary>
-        /// 
+        /// Delegate que invoca el delegate ExecuteSearch: Metodo que se encarga de buscar en la lista de personas, a través de un cuadro de texto de busqueda
+        /// Es llamado al ser presionado el boton "Buscar"
         /// </summary>
         public DelegateCommand cmdSearch
         {
@@ -112,11 +134,15 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
             }
         }
         
+        /// <summary>
+        /// Delegate que se encarga de invocar el metodo ExecuteDelete: Metodo que se encarga de borrar a un persona.
+        /// Es llamado al ser presionado el botón "Borrar"
+        /// </summary>
         public DelegateCommand cmdDelete
         {
             get
             {
-                _cmdDelete = new DelegateCommand(ExecuteDelete);
+                _cmdDelete = new DelegateCommand(ExecuteDelete, CanExecuteDelete);
                 return _cmdDelete;
             }
 
@@ -125,6 +151,10 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
                 _cmdDelete = value;
             }
         }
+        /// <summary>
+        /// Delegado que invoca al metodo ExecuteAddPersona: Encargado de limpiar los campos a introducir información de la persona, para añadirla a la lista y BD.
+        /// Es llamado al ser presionado
+        /// </summary>
         public DelegateCommand cmdAdd
         {
             get
@@ -139,11 +169,15 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
             }
         }
 
+        /// <summary>
+        /// Delega el guardar, invocando a ExecuteSave: Encargado de guardar o insertar una nueva persona a la BD.
+        /// Es llamado al ser presionado el boton "Guardar"
+        /// </summary>
         public DelegateCommand cmdSave
         {
             get
             {
-                _cmdSave = new DelegateCommand(ExecuteSave);
+                _cmdSave = new DelegateCommand(ExecuteSave, canExecuteSavePersona);
                 return _cmdSave;
             }
 
@@ -152,7 +186,21 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
                 _cmdSave = value;
             }
         }
+
+        public string txtCronometro
+        {
+            get { return _txtCronometro; }
+            set
+            {
+                _txtCronometro = value;
+            }
+        }
+
         #endregion
+        /// <summary>
+        /// Metodo que permite desactivar o activar el boton de borrar
+        /// </summary>
+        /// <returns>Booleano, que representa si desactiva o no el boton</returns>
         public bool CanExecuteDelete()
         {
             bool canExecute = false;
@@ -162,67 +210,64 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
                 {
                     canExecute = true;
                 }
-
+                canExecute = true;
             }
             return canExecute;
         }
+
         /// <summary>
         /// Permite desactivar el boton de buscar al estar en blanco el campo de texto
         /// </summary>
-        /// <returns></returns>
-    public bool CanExecuteSearch()
-    {
-        bool buscado = false;
-        if (!String.IsNullOrEmpty(textoABuscar))
+        /// <returns>Booleano buscara, que representa si procede o no</returns>
+        public bool CanExecuteSearch()
         {
-            buscado = true;
+            bool buscara = false;
+            if (!String.IsNullOrEmpty(textoABuscar))
+            {
+                buscara = true;
+            }
+            else
+            {
+                mListaConBusqueda = _mListaCompleta;
+                NotifyPropertyChanged("mListaConBusqueda");
+            }
+            return buscara;
         }
-        else
-        {
-            
-            mListaConBusqueda = _mListaCompleta;
-            NotifyPropertyChanged("mListaConBusqueda");
-        }
-        return buscado;
-    }
-    /// <summary>
-    /// Al ejecutarse la busqueda
-    /// </summary>
-    public void ExecuteSearch()
-        {
-            //_mListadoColecPersons = mPersonasIntantactas;
 
-            //Listado para buscar LAMBDA EXPRESION TO SEARCH
-            //LINQ expresion para buscar
+        /// <summary>
+        /// Metodo Execute que realiza la busqueda de personas, por nombre, a través de un cuadro de texto
+        /// </summary>
+        public void ExecuteSearch()
+            {
+                //Listado para buscar LAMBDA EXPRESION TO SEARCH
+                //LINQ expresion para buscar
 
-            mListaConBusqueda = new ObservableCollection<clsPersona>();
-            NotifyPropertyChanged("mListaConBusqueda");
-                for (int i = 0; i < mListaCompleta.Count; i++)
-                {
-                    if ((mListaCompleta.ElementAt(i).Nombre.ToLower().Contains(textoABuscar)) ||
-                        (mListaCompleta.ElementAt(i).Apellido.ToLower().Contains(textoABuscar)))
+                mListaConBusqueda = new ObservableCollection<clsPersona>();
+                NotifyPropertyChanged("mListaConBusqueda");
+                    for (int i = 0; i < mListaCompleta.Count; i++)
                     {
-                        mListaConBusqueda.Add(mListaCompleta.ElementAt(i));
+                        if ((mListaCompleta.ElementAt(i).Nombre.ToLower().Contains(textoABuscar)) ||
+                            (mListaCompleta.ElementAt(i).Apellido.ToLower().Contains(textoABuscar)))
+                        {
+                            mListaConBusqueda.Add(mListaCompleta.ElementAt(i));
+                        }
                     }
-                }
-            //_mListaCompleta = mListaConBusqueda;
+                //_mListaCompleta = mListaConBusqueda;
             
-            NotifyPropertyChanged("mListaConBusqueda");
-        }
+                NotifyPropertyChanged("mListaConBusqueda");
+            }
 
+        /// <summary>
+        /// Metodo Execute que realiza el eliminar a una persona de la BD
+        /// </summary>
         public void ExecuteDelete()
         {
-            //Llamamos a la BL para borrar de la BD
-            ManejadoraBL manejadorabl = new ManejadoraBL();
-            manejadorabl.borrarPersona(_personSeleccionada.IdPersona);
-
-            //Hace el efecto inmediato de que borra de lista
-            //eliminamos del List
-            mListaCompleta.Remove(_personSeleccionada);
-            NotifyPropertyChanged("mListaCompleta");
+            cuadroDelete();
         }
+
         /// <summary>
-        /// Se añade una nueva persona
+        /// Metodo que se encarga de poder añadir la persona nueva, a través de la interfaz.
+        /// Es invocado por Delegate cmdAdd
         /// </summary>
         public void ExecuteAddPersona()
         {
@@ -240,6 +285,10 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
             return proceder;
         }
 
+        /// <summary>
+        /// Metodo que realiza el guardar.
+        /// Es invocado atraves de cmdSave, al ser presionado el boton de "Guardar"
+        /// </summary>
         private void ExecuteSave()
         {
             if (_personSeleccionada.IdPersona == 0)
@@ -251,18 +300,22 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
                 _manejadoraBL.addPersona(_personSeleccionada);
 
                 mListaCompleta.Add(_personSeleccionada);
-                NotifyPropertyChanged("mListaCompleta");
+                //NotifyPropertyChanged("mListaCompleta");
             }
             else
             {
-                //_manejadoraBL.updatePersona(_personSeleccionada);
+                _manejadoraBL.updatePersona(_personSeleccionada);
                 _mListaCompleta = new ObservableCollection<clsPersona>(_listadoBL.getListadoBL());
                 _mListaConBusqueda = mListaCompleta;
                 NotifyPropertyChanged("personSeleccionada");
             }
 
         }
-        public async void mostrarSeguroDelete()
+
+        /// <summary>
+        /// Metodo que 
+        /// </summary>
+        public async void cuadroDelete()
         {
             ContentDialog volverAJugar = new ContentDialog();
             volverAJugar.Title = "Eliminar";
@@ -272,11 +325,13 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
             ContentDialogResult resultado = await volverAJugar.ShowAsync();
             if (resultado == ContentDialogResult.Primary)
             {
-                _manejadoraBL.borrarPersona(_personSeleccionada.IdPersona);
-                _mListaCompleta = new ObservableCollection<clsPersona>(_listadoBL.getListadoBL());
-                _mListaConBusqueda = mListaCompleta; //No borra la persona seleccionada en el listado original, dnt know why
-                //NotifyPropertyChanged("listado");
-                //NotifyPropertyChanged("listadoAux");
+                //Llamamos a la BL para borrar de la BD
+                ManejadoraBL manejadorabl = new ManejadoraBL();
+                manejadorabl.borrarPersona(_personSeleccionada.IdPersona);
+
+                //Hace el efecto inmediato de que borra de lista
+                mListaCompleta.Remove(_personSeleccionada);
+                NotifyPropertyChanged("mListaCompleta");
             }
 
         }
@@ -285,13 +340,13 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
             _segundos--;
             if (_segundos >= 10)
             {
-                _textoReloj = $"0:{_segundos.ToString()}";
-                NotifyPropertyChanged("textoReloj");
+                _txtCronometro = $"0:{_segundos.ToString()}";
+                NotifyPropertyChanged("txtCronometro");
             }
             else
             {
-                _textoReloj = $"0:0{_segundos.ToString()}";
-                NotifyPropertyChanged("textoReloj");
+                _txtCronometro = $"0:0{_segundos.ToString()}";
+                NotifyPropertyChanged("txtCronometro");
             }
             if (_segundos == 0)
             {
@@ -300,8 +355,16 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
                 this._mListaConBusqueda = this._mListaCompleta;
                 NotifyPropertyChanged("mListaCompleta");
                 NotifyPropertyChanged("mListaConBusqueda");
-                _segundos = 30;
+                _segundos = 60;
             }
+        }
+
+        private void ExecuteActualizar()
+        {
+            mListaCompleta = new ObservableCollection<clsPersona>(_listadoBL.getListadoBL());
+            mListaConBusqueda = this._mListaCompleta;
+            NotifyPropertyChanged("mListaCompleta");
+            NotifyPropertyChanged("mListaConBusqueda");
         }
     }
 }
