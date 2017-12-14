@@ -298,7 +298,6 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
             _personSeleccionada = new clsPersona();
             NotifyPropertyChanged("personSeleccionada");
             _cmdSave.RaiseCanExecuteChanged();
-            
         }
         /// <summary>
         /// Metodo que guarda se xcerciora si debe o no habilitar el boton de guardar
@@ -363,7 +362,7 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
             volverAJugar.Title = "Eliminar";
             volverAJugar.Content = $"¿Está seguro de que de que desea eliminar la persona {_personSeleccionada.Nombre} {_personSeleccionada.Apellido}?";
             volverAJugar.PrimaryButtonText = "Si";
-            volverAJugar.SecondaryButtonText = "No";
+            volverAJugar.SecondaryButtonText = "Cancelar";
             ContentDialogResult resultado = await volverAJugar.ShowAsync();
             int filasafectadas = 0;
             if (resultado == ContentDialogResult.Primary)
