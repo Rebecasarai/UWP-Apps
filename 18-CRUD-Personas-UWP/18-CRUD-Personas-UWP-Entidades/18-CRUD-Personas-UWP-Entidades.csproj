@@ -108,6 +108,8 @@
   <ItemGroup>
     <Compile Include="clsPersona.cs" />
     <Compile Include="clsVMBase.cs" />
+    <Compile Include="DateTimeConverter.cs" />
+    <Compile Include="DateTimeToDateTimeOffsetConverter .cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\_18_CRUD_Personas_UWP_Entidades.rd.xml" />
   </ItemGroup>

@@ -198,6 +198,7 @@ namespace _18_CRUD_Personas_UWP_DAL.Manejadoras
             SqlParameter idDepartamento = new SqlParameter();
             SqlParameter direccion = new SqlParameter();
             SqlParameter telefono = new SqlParameter();
+            SqlParameter fechanacimient = new SqlParameter();
             try
             {
                 nombre.ParameterName = "@nombre";
@@ -220,9 +221,14 @@ namespace _18_CRUD_Personas_UWP_DAL.Manejadoras
                 telefono.SqlDbType = System.Data.SqlDbType.Char;
                 telefono.Value = p.Telefono;
 
+                id.ParameterName = "@fechanacimient";
+                id.SqlDbType = System.Data.SqlDbType.DateTime2;
+                id.Value = p.FechaNac;
+
                 id.ParameterName = "@id";
                 id.SqlDbType = System.Data.SqlDbType.Int;
                 id.Value = p.IdPersona;
+                
 
                 consulta.Parameters.Add(nombre);
                 consulta.Parameters.Add(apellidos);

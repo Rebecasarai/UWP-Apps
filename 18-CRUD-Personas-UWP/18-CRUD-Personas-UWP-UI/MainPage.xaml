@@ -32,7 +32,7 @@
                 <!--Tamaño escritorio-->
                 <VisualState x:Name="Desktop">
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowHeight="600" MinWindowWidth="750"  />
+                        <AdaptiveTrigger MinWindowWidth="850"  />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="formulario.(Grid.Row)" Value="1"  ></Setter>
@@ -99,20 +99,21 @@
             <StackPanel Grid.ColumnSpan="2" Orientation="Horizontal">
             </StackPanel>
 
-            <TextBlock Text="Nombre" FontSize="16"  Margin="30 0" Grid.Column="0" Grid.Row="1" TextAlignment="Right" ></TextBlock>
-            <TextBox Name="txtBlcNombre" Margin="0 0 20 0" Text="{Binding personSeleccionada.Nombre,Mode=TwoWay,UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="1" ></TextBox>
+            <TextBlock Text="Nombre" FontSize="16"  Margin="30 10" Grid.Column="0" Grid.Row="1" TextAlignment="Right" ></TextBlock>
+            <TextBox Name="txtBlcNombre" Margin="0 10 20 10"  Text="{Binding personSeleccionada.Nombre,Mode=TwoWay,UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="1" ></TextBox>
 
-            <TextBlock Text="Apellido" Margin="30 0" FontSize="16" Grid.Column="0" Grid.Row="2" TextAlignment="Right"></TextBlock>
-            <TextBox Name="txtBlcapellido" Margin="0 0 20 0" Text="{Binding personSeleccionada.Apellido, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="2" ></TextBox>
+            <TextBlock Text="Apellido" Margin="30 10" FontSize="16" Grid.Column="0" Grid.Row="2" TextAlignment="Right"></TextBlock>
+            <TextBox Name="txtBlcapellido" Margin="0 10 20 10" Text="{Binding personSeleccionada.Apellido, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="2" ></TextBox>
 
-            <TextBlock Text="Telefóno" Margin="30 0" FontSize="16" Grid.Column="0" Grid.Row="3" TextAlignment="Right"></TextBlock>
-            <TextBox Name="txtBlctelefono" Margin="0 0 20 0" Text="{Binding personSeleccionada.Telefono, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="3" ></TextBox>
+            <TextBlock Text="Telefóno" Margin="30 10" FontSize="16" Grid.Column="0" Grid.Row="3" TextAlignment="Right"></TextBlock>
+            <TextBox Name="txtBlctelefono" Margin="0 10 20 10" Text="{Binding personSeleccionada.Telefono, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="3" ></TextBox>
 
-            <TextBlock Text="Fecha de Nacimiento" Margin="30 0" FontSize="16" Grid.Column="0" Grid.Row="4" TextAlignment="Right"></TextBlock>
-            <TextBox Name="txtBlcFechaNacimiento" Margin="0 0 20 0" Text="{Binding personSeleccionada.FechaNac, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="4" ></TextBox>
+            <TextBlock Text="Fecha de Nacimiento" Margin="30 10" FontSize="16" Grid.Column="0" Grid.Row="4" TextAlignment="Right"></TextBlock>
+            <TextBox Name="txtBlcFechaNacimiento" Margin="0 10 20 10" Text="{Binding personSeleccionada.FechaNac, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="4" ></TextBox>
+            <!--DatePicker Name="txtBlcFechaNacimiento" Header="Date of birth " Margin="0 10 20 10"  ="{Binding personSeleccionada.FechaNac, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="4" />-->
 
-            <TextBlock Text="Dirección" Margin="30 0" FontSize="16" Grid.Column="0" Grid.Row="5" TextAlignment="Right"></TextBlock>
-            <TextBox Name="txtBlcDireccion" Margin="0 0 20 0" Text="{Binding personSeleccionada.Direccion, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="5" Grid.RowSpan="1" Grid.ColumnSpan="2" ></TextBox>
+            <TextBlock Text="Dirección" Margin="30 10" FontSize="16" Grid.Column="0" Grid.Row="5" TextAlignment="Right"></TextBlock>
+            <TextBox Name="txtBlcDireccion" Margin="0 10 20 10" Text="{Binding personSeleccionada.Direccion, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2"  ></TextBox>
 
 
         </Grid>

@@ -12,6 +12,11 @@ namespace _18_CRUD_Personas_UWP_Entidades
         private string _apellido;
         private string _telefono;
         private string _direccion;
+
+        public clsPersona()
+        {
+            FechaNac = DateTime.Now;
+        }
         #endregion
         #region publicas
         public int IdPersona { get; set; }
@@ -33,6 +38,8 @@ namespace _18_CRUD_Personas_UWP_Entidades
         public string Telefono { get { return _telefono; } set { _telefono = value; NotifyPropertyChanged("Telefono"); } }
         public int idDepartamento { get; set; }
         #endregion
+
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 

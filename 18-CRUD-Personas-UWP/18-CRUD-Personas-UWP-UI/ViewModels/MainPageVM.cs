@@ -195,6 +195,8 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
         }
 
         #endregion
+
+        #region "Metodos"
         /// <summary>
         /// Metodo que permite desactivar o activar el boton de borrar
         /// </summary>
@@ -231,16 +233,25 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
             return buscara;
         }
 
+        delegate void search(ObservableCollection<clsPersona> ps);
+        delegate int del(int i);
+        delegate void TestDelegate(string s);
+
+        public void Each<T>(IEnumerable<T> items, Action<T> action )
+        {
+            
+            foreach (var item in items)
+                action(item);
+        }
+
         /// <summary>
         /// Metodo Execute que realiza la busqueda de personas, por nombre, a través de un cuadro de texto
         /// </summary>
         public void ExecuteSearch()
             {
-                //Listado para buscar LAMBDA EXPRESION TO SEARCH
-                //LINQ expresion para buscar
-
                 mListaConBusqueda = new ObservableCollection<clsPersona>();
                 NotifyPropertyChanged("mListaConBusqueda");
+
                     for (int i = 0; i < mListaCompleta.Count; i++)
                     {
                         if ((mListaCompleta.ElementAt(i).Nombre.ToLower().Contains(textoABuscar)) ||
@@ -250,9 +261,22 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
                         }
                     }
                 //_mListaCompleta = mListaConBusqueda;
-            
                 NotifyPropertyChanged("mListaConBusqueda");
-            }
+
+            //Listado para buscar LAMBDA EXPRESION TO SEARCH
+            //LINQ expresion para buscar
+
+            /*del myDelegate = x => x * x;
+            int j = myDelegate(5); //j = 25
+            del search = mListaCompleta => mListaCompleta; */
+            //Each(mListaCompleta, i => Console.WriteLine(i));
+            
+            // Console.WriteLine(i)
+            
+            
+
+
+        }
 
         /// <summary>
         /// Metodo Execute que realiza el eliminar a una persona de la BD
@@ -270,8 +294,13 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
         {
             _personSeleccionada = new clsPersona();
             NotifyPropertyChanged("personSeleccionada");
+            _cmdSave.RaiseCanExecuteChanged();
             
         }
+        /// <summary>
+        /// Metodo que guarda se xcerciora si debe o no habilitar el boton de guardar
+        /// </summary>
+        /// <returns></returns>
         private bool canExecuteSavePersona()
         {
             bool proceder = false;
@@ -333,19 +362,25 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
             volverAJugar.PrimaryButtonText = "Si";
             volverAJugar.SecondaryButtonText = "No";
             ContentDialogResult resultado = await volverAJugar.ShowAsync();
+            int filasafectadas = 0;
             if (resultado == ContentDialogResult.Primary)
             {
                 //Llamamos a la BL para borrar de la BD
                 ManejadoraBL manejadorabl = new ManejadoraBL();
-                manejadorabl.borrarPersona(_personSeleccionada.IdPersona);
+                filasafectadas= manejadorabl.borrarPersona(_personSeleccionada.IdPersona);
+                if (filasafectadas>-1)
+                {
+                    //Hace el efecto inmediato de que borra de lista
+                    mListaCompleta.Remove(_personSeleccionada);
+                    NotifyPropertyChanged("mListaCompleta");
+                }
 
-                //Hace el efecto inmediato de que borra de lista
-                mListaCompleta.Remove(_personSeleccionada);
-                NotifyPropertyChanged("mListaCompleta");
             }
 
         }
-        
+
+        #endregion
+
     }
 }
 
