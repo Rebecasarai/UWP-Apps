@@ -191,7 +191,7 @@ namespace _18_CRUD_Personas_UWP_DAL.Manejadoras
         public void updatePersona(clsPersona p)
         {
             clsConnection cx = new clsConnection();
-            SqlCommand consulta = new SqlCommand();
+            SqlCommand miComando = new SqlCommand();
             SqlParameter nombre = new SqlParameter();
             SqlParameter apellidos = new SqlParameter();
             SqlParameter id = new SqlParameter();
@@ -201,7 +201,7 @@ namespace _18_CRUD_Personas_UWP_DAL.Manejadoras
             SqlParameter fechanacimient = new SqlParameter();
             try
             {
-                nombre.ParameterName = "@nombre";
+                /*nombre.ParameterName = "@nombre";
                 nombre.SqlDbType = System.Data.SqlDbType.NVarChar;
                 nombre.Value = p.Nombre;
 
@@ -221,24 +221,31 @@ namespace _18_CRUD_Personas_UWP_DAL.Manejadoras
                 telefono.SqlDbType = System.Data.SqlDbType.Char;
                 telefono.Value = p.Telefono;
 
-                id.ParameterName = "@fechanacimient";
+                id.ParameterName = "@FECHANACIMIENT";
                 id.SqlDbType = System.Data.SqlDbType.DateTime2;
                 id.Value = p.FechaNac;
 
                 id.ParameterName = "@id";
                 id.SqlDbType = System.Data.SqlDbType.Int;
-                id.Value = p.IdPersona;
-                
+                id.Value = p.IdPersona;*/
 
-                consulta.Parameters.Add(nombre);
-                consulta.Parameters.Add(apellidos);
-                consulta.Parameters.Add(direccion);
-                consulta.Parameters.Add(telefono);
-                consulta.Parameters.Add(id);
-                consulta.Parameters.Add(idDepartamento);
-                consulta.CommandText = "Update PersonasBD Set nombre=@nombre, apellido=@apellido, direccion=@direccion, telefono=@telefono, iddepartamento=@iddepartamento WHERE id=@id";
-                consulta.Connection = cx.conexion;
-                consulta.ExecuteNonQuery();
+                miComando.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = p.IdPersona;
+                miComando.Parameters.Add("@nombre", System.Data.SqlDbType.VarChar).Value = p.Nombre;
+                miComando.Parameters.Add("@apellido", System.Data.SqlDbType.VarChar).Value = p.Apellido;
+                miComando.Parameters.Add("@fechanacimient", System.Data.SqlDbType.DateTime2).Value = p.FechaNac;
+                miComando.Parameters.Add("@direccion", System.Data.SqlDbType.VarChar).Value = p.Direccion;
+                miComando.Parameters.Add("@telefono", System.Data.SqlDbType.VarChar).Value = p.Telefono;
+
+/*
+                miComando.Parameters.Add(nombre);
+                miComando.Parameters.Add(apellidos);
+                miComando.Parameters.Add(direccion);
+                miComando.Parameters.Add(telefono);
+                miComando.Parameters.Add(id);
+                miComando.Parameters.Add(idDepartamento);*/
+                miComando.CommandText = "Update PersonasBD Set nombre=@nombre, apellido=@apellido, direccion=@direccion, telefono=@telefono, FECHANACIMIENT = @FECHANACIMIENT WHERE id=@id";
+                miComando.Connection = cx.conexion;
+                miComando.ExecuteNonQuery();
                 cx.closeConnection();
             }
             catch (SqlException e)

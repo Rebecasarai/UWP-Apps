@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CRUD_Personas_UWP_Entidades
+namespace _18_CRUD_Personas_UWP_Entidades
 {
     /// <summary>
     /// Implements a (helper) class to convert date and time values.

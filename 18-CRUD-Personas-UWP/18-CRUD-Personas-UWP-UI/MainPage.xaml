@@ -6,12 +6,16 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:modelo="using:_18_CRUD_Personas_UWP_UI.ViewModels"
+    xmlns:dp="using:_18_CRUD_Personas_UWP_Entidades"
     mc:Ignorable="d">
-
-
     <Page.DataContext>
         <modelo:MainPageVM></modelo:MainPageVM>
+        
     </Page.DataContext>
+
+    <Page.Resources>
+        <dp:DateTimeToDateTimeOffsetConverter x:Key="DateTimeToDateTimeOffsetConverter"></dp:DateTimeToDateTimeOffsetConverter>
+    </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <VisualStateManager.VisualStateGroups>
@@ -109,8 +113,8 @@
             <TextBox Name="txtBlctelefono" Margin="0 10 20 10" Text="{Binding personSeleccionada.Telefono, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="3" ></TextBox>
 
             <TextBlock Text="Fecha de Nacimiento" Margin="30 10" FontSize="16" Grid.Column="0" Grid.Row="4" TextAlignment="Right"></TextBlock>
-            <TextBox Name="txtBlcFechaNacimiento" Margin="0 10 20 10" Text="{Binding personSeleccionada.FechaNac, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="4" ></TextBox>
-            <!--DatePicker Name="txtBlcFechaNacimiento" Header="Date of birth " Margin="0 10 20 10"  ="{Binding personSeleccionada.FechaNac, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="4" />-->
+            <!--<TextBox Name="txtBlcFechaNacimiento" Margin="0 10 20 10" Text="{Binding personSeleccionada.FechaNac, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="4" ></TextBox>-->
+            <DatePicker Name="txtBlcFechaNacimiento" Header="" Margin="0 10 20 10"  Date="{Binding personSeleccionada.FechaNac, Converter={StaticResource DateTimeToDateTimeOffsetConverter}, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="4" />
 
             <TextBlock Text="Dirección" Margin="30 10" FontSize="16" Grid.Column="0" Grid.Row="5" TextAlignment="Right"></TextBlock>
             <TextBox Name="txtBlcDireccion" Margin="0 10 20 10" Text="{Binding personSeleccionada.Direccion, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2"  ></TextBox>

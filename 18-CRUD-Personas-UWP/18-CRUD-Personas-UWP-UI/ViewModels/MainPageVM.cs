@@ -237,6 +237,13 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
         delegate int del(int i);
         delegate void TestDelegate(string s);
 
+        /// <summary>
+        /// Metodo lambada, que recibe un IEnumerable, en este caso, una lista de personas, y ejecuta un for each
+        /// Por cada item, ejecuta una action
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="items"></param>
+        /// <param name="action"></param>
         public void Each<T>(IEnumerable<T> items, Action<T> action )
         {
             
@@ -272,10 +279,6 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
             //Each(mListaCompleta, i => Console.WriteLine(i));
             
             // Console.WriteLine(i)
-            
-            
-
-
         }
 
         /// <summary>

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Data;
 
-namespace CRUD_Personas_UWP_Entidades
+namespace _18_CRUD_Personas_UWP_Entidades
 {
     public class DateTimeToDateTimeOffsetConverter: IValueConverter
     {
