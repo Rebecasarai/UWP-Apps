@@ -44,7 +44,7 @@ namespace _18_CRUD_Personas_UWP_BL.Manejadoras
         {
             int filasAfectadas = 0;
             ManejadoraDAL manejadora = new ManejadoraDAL();
-            manejadora.eliminarPersonaDAL(id);
+            filasAfectadas = manejadora.eliminarPersonaDAL(id);
             
             return filasAfectadas;
         }

@@ -20,8 +20,7 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
         #region "Atributos"
         private clsPersona _personSeleccionada;
         private ObservableCollection<clsPersona> _mListaCompleta;
-        private ObservableCollection<clsPersona> _mListaConBusqueda; /*= new ObservableCollection<clsPersona>();*/
-        //public ObservableCollection<clsPersona> _mPersonasIntantactas;
+        private ObservableCollection<clsPersona> _mListaConBusqueda; 
         private String _textoABuscar;
         
         private DelegateCommand _cmdSearch;
@@ -33,6 +32,8 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
         private ManejadoraBL _manejadoraBL;
         private ListadoPersonasBL _listadoBL;
 
+        private String _mensaje;
+        private Boolean _mostrarMensaje;
 
         #endregion
 
@@ -43,6 +44,7 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
             _listadoBL = new ListadoPersonasBL();
             this._mListaCompleta = new ObservableCollection<clsPersona>(_listadoBL.getListadoBL());
             this._mListaConBusqueda = this._mListaCompleta;
+            _mostrarMensaje = false;
         }
         #endregion
         
@@ -191,6 +193,26 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
             set
             {
                 _actualizar = value;
+            }
+        }
+        /// <summary>
+        /// Mensaje de notificación, para mostrar si se ha eliminado correctamente una persona
+        /// </summary>
+        public String mensaje
+        {
+            get { return _mensaje; }
+            set
+            {
+                _mensaje = value;
+            }
+        }
+
+        public Boolean mostrarMensaje
+        {
+            get { return _mostrarMensaje; }
+            set
+            {
+                _mostrarMensaje = value;
             }
         }
 
@@ -347,7 +369,7 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
         {
             mListaCompleta = new ObservableCollection<clsPersona>(_listadoBL.getListadoBL());
             mListaConBusqueda = this._mListaCompleta;
-            NotifyPropertyChanged("mListaCompleta");
+           // NotifyPropertyChanged("mListaCompleta");
             NotifyPropertyChanged("mListaConBusqueda");
         }
 
@@ -370,11 +392,13 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
                 //Llamamos a la BL para borrar de la BD
                 ManejadoraBL manejadorabl = new ManejadoraBL();
                 filasafectadas= manejadorabl.borrarPersona(_personSeleccionada.IdPersona);
-                if (filasafectadas>-1)
+                if (filasafectadas==1)
                 {
                     //Hace el efecto inmediato de que borra de lista
                     mListaCompleta.Remove(_personSeleccionada);
-                    NotifyPropertyChanged("mListaCompleta");
+                    NotifyPropertyChanged("mListaConBusqueda");
+                    _mensaje = "Borrado exitosamente";
+                    _mostrarMensaje = true;
                 }
 
             }
