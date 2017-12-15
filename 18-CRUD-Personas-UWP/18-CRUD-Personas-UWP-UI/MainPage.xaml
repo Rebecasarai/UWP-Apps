@@ -7,6 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:modelo="using:_18_CRUD_Personas_UWP_UI.ViewModels"
     xmlns:dp="using:_18_CRUD_Personas_UWP_Entidades"
+    xmlns:conv="using:_18_CRUD_Personas_UWP_UI.Converters"
     mc:Ignorable="d">
     <Page.DataContext>
         <modelo:MainPageVM></modelo:MainPageVM>
@@ -14,7 +15,10 @@
 
     <Page.Resources>
         <dp:DateTimeToDateTimeOffsetConverter x:Key="DateTimeToDateTimeOffsetConverter"></dp:DateTimeToDateTimeOffsetConverter>
+        <conv:dateTimeToStringConverter x:Key="DateStringconver"></conv:dateTimeToStringConverter>
     </Page.Resources>
+    
+    
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <VisualStateManager.VisualStateGroups>
@@ -51,6 +55,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <!-- Le damos la fuente los items, bindeando la lista o colection de Personas 
@@ -112,14 +117,14 @@
             <TextBox Name="txtBlctelefono" Margin="0 10 20 10" Text="{Binding personSeleccionada.Telefono, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="3" ></TextBox>
 
             <TextBlock Text="Fecha de Nacimiento" Margin="30 10" FontSize="16" Grid.Column="0" Grid.Row="4" TextAlignment="Right"></TextBlock>
-            <!--<TextBox Name="txtBlcFechaNacimiento" Margin="0 10 20 10" Text="{Binding personSeleccionada.FechaNac, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="4" ></TextBox>-->
-            <DatePicker Name="txtBlcFechaNacimiento" Header="" Margin="0 10 20 10"  Date="{Binding personSeleccionada.FechaNac, Converter={StaticResource DateTimeToDateTimeOffsetConverter}, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="4" />
+            <TextBox Name="txtBlcFechaNacimiento" Margin="0 10 20 10" Text="{Binding personSeleccionada.FechaNac, Converter={StaticResource DateStringconver}, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="4" ></TextBox>
+            <!--<DatePicker Name="txtBlcFechaNacimiento" Header="" Margin="0 10 20 10"  Date="{Binding personSeleccionada.FechaNac, Converter={StaticResource DateTimeToDateTimeOffsetConverter}, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="4" />-->
 
             <TextBlock Text="Dirección" Margin="30 10" FontSize="16" Grid.Column="0" Grid.Row="5" TextAlignment="Right"></TextBlock>
             <TextBox Name="txtBlcDireccion" Margin="0 10 20 10" Text="{Binding personSeleccionada.Direccion, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2"  ></TextBox>
 
         </Grid>
-        <StackPanel Background="CornflowerBlue" Grid.Row="3" Name="stackMensaje" >
+        <StackPanel Background="CornflowerBlue" Grid.Row="4" Name="stackMensaje" >
             <TextBlock Name="notification" Text="{Binding mensaje, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  ></TextBlock>
         </StackPanel>
 

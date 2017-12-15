@@ -38,7 +38,8 @@ namespace _18_CRUD_Personas_UWP_UI
             this.txtBlcNombre.GetBindingExpression(TextBox.TextProperty).UpdateSource();
             this.txtBlcapellido.GetBindingExpression(TextBox.TextProperty).UpdateSource();
             this.txtBlcDireccion.GetBindingExpression(TextBox.TextProperty).UpdateSource();
-            this.txtBlcFechaNacimiento.GetBindingExpression(DatePicker.DateProperty).UpdateSource();
+            //this.txtBlcFechaNacimiento.GetBindingExpression(DatePicker.DateProperty).UpdateSource();
+            this.txtBlcFechaNacimiento.GetBindingExpression(TextBox.TextProperty).UpdateSource();
             this.txtBlctelefono.GetBindingExpression(TextBox.TextProperty).UpdateSource();
         }
     }

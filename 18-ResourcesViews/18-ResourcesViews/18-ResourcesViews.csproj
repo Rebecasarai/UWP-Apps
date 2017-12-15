@@ -4,20 +4,20 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{6EB8A8D6-C2B9-44E2-9909-6333300DE28F}</ProjectGuid>
+    <ProjectGuid>{5A2279A1-C5A6-41D9-93BB-7F55D5AFDA7B}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_18_CRUD_Personas_UWP_UI</RootNamespace>
-    <AssemblyName>18-CRUD-Personas-UWP-UI</AssemblyName>
+    <RootNamespace>_18_ResourcesViews</RootNamespace>
+    <AssemblyName>18-ResourcesViews</AssemblyName>
     <DefaultLanguage>es-ES</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.16299.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
-    <PackageCertificateKeyFile>18-CRUD-Personas-UWP-UI_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>18-ResourcesViews_TemporaryKey.pfx</PackageCertificateKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -95,21 +95,16 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Converters\clsDateconverter.cs" />
-    <Compile Include="Converters\dateTimeToStringConverter.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\clsVMBase.cs" />
-    <Compile Include="ViewModels\DelegateCommand.cs" />
-    <Compile Include="ViewModels\MainPageVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="18-CRUD-Personas-UWP-UI_TemporaryKey.pfx" />
+    <None Include="18-ResourcesViews_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Default.rd.xml" />
@@ -126,6 +121,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Dictionary1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -136,17 +136,6 @@
       <Version>6.0.1</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\18-CRUD-Personas-UWP-BL\18-CRUD-Personas-UWP-BL.csproj">
-      <Project>{5885a3c4-eab9-4ffc-aad2-e0ee6f9a9940}</Project>
-      <Name>18-CRUD-Personas-UWP-BL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\18-CRUD-Personas-UWP-Entidades\18-CRUD-Personas-UWP-Entidades.csproj">
-      <Project>{87cd5310-1a45-4d03-8cc0-739f4d04cfb8}</Project>
-      <Name>18-CRUD-Personas-UWP-Entidades</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

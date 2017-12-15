@@ -72,8 +72,7 @@ namespace _18_CRUD_Personas_UWP_Entidades
 
             return FResult;
         }
-
-
+        
         /// <summary>
         /// Converts from DateTime to DateTimeOffSet.
         /// </summary>
@@ -91,8 +90,7 @@ namespace _18_CRUD_Personas_UWP_Entidades
                 return null;
             }
         }
-
-
+        
         /// <summary>
         /// Converts from DateTimeOffSet to DateTime.
         /// </summary>
