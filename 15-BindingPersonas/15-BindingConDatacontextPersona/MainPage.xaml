@@ -6,9 +6,13 @@
     xmlns:local="using:_15_BindingConDatacontextPersona"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:conver ="using:_15_BindingConDatacontextPersona.Converter"
     mc:Ignorable="d">
     
     <!--Nunca combinar DAtaContext con x:Bind-->
+    <Page.Resources>
+        <conver:ConverterPersona x:Key="converter"></conver:ConverterPersona>
+    </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <VisualStateManager.VisualStateGroups>
@@ -51,7 +55,7 @@
         Y que al seleccionar un item, bindee la personaSeleccionada, Two Ways para que avise cuando cambie-->
         <!-- en vez de Binding, usamos x:Bind y ViewModel.tal.tal.
         Cambiamos SelectedItem por SelectedIndex y se lo pasamos como atributo para luego en el evento borrar, borramos del array el qie este en esa posicion. DEBE SER TWO WAYS PARA QUE BORRE EL QUE ES-->
-        <ListView x:Name="itemListView" Grid.Row="0" Grid.Column="0" MinWidth="100"  ItemsSource="{x:Bind ViewModel.mListadoColecPersons}" SelectedIndex="{x:Bind ViewModel.indiceDePersonaSelec, Mode=TwoWay}" >
+        <ListView x:Name="itemListView" Grid.Row="0" Grid.Column="0" MinWidth="100"  ItemsSource="{x:Bind ViewModel.mListadoColecPersons}" SelectedItem="{x:Bind ViewModel.personSeleccionada, Converter={StaticResource converter}, Mode=TwoWay}" >
             <ListView.ItemTemplate>
                 <DataTemplate >
                     <StackPanel Orientation="Horizontal">
@@ -84,16 +88,16 @@
             <TextBox Name="txtBlcNombre" Text="{x:Bind ViewModel.personSeleccionada.Nombre, Mode=TwoWay}" Grid.Column="1" ></TextBox>
 
             <TextBlock Text="Apellido" Margin="20 0" FontSize="20" Grid.Column="0" Grid.Row="1"></TextBlock>
-            <TextBox Name="txtBlcapellido" Text="{Binding Apellido, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="1" ></TextBox>
+            <TextBox Name="txtBlcapellido" Text="{x:Bind ViewModel.personSeleccionada.Apellido, Mode=TwoWay }" Grid.Column="1" Grid.Row="1" ></TextBox>
 
             <TextBlock Text="Telefóno" Margin="20 0" FontSize="20" Grid.Column="0" Grid.Row="2"></TextBlock>
-            <TextBox Name="txtBlctelefono" Text="{Binding Telefono, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="2" ></TextBox>
+            <TextBox Name="txtBlctelefono" Text="{x:Bind ViewModel.personSeleccionada.Telefono, Mode=TwoWay}" Grid.Column="1" Grid.Row="2" ></TextBox>
 
             <TextBlock Text="Fecha de Nacimiento" Margin="20 0" FontSize="20" Grid.Column="0" Grid.Row="3"></TextBlock>
-            <TextBox Name="txtBlcFechaNacimiento" Text="{Binding FechaNac, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="1" Grid.Row="3" ></TextBox>
+            <TextBox Name="txtBlcFechaNacimiento" Text="{x:Bind ViewModel.personSeleccionada.FechaNac, Mode=TwoWay}" Grid.Column="1" Grid.Row="3" ></TextBox>
             
             <TextBlock Text="Dirección" Margin="20 0" FontSize="20" Grid.Column="0" Grid.Row="4"></TextBlock>
-            <TextBox Name="txtBlcDireccion" Text="{Binding Direccion, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="0" Grid.Row="5" Grid.RowSpan="2" Grid.ColumnSpan="2" ></TextBox>
+            <TextBox Name="txtBlcDireccion" Text="{x:Bind ViewModel.personSeleccionada.Direccion, Mode=TwoWay}" Grid.Column="0" Grid.Row="5" Grid.RowSpan="2" Grid.ColumnSpan="2" ></TextBox>
 
             <AppBarButton Icon="Save" Name="btnGuardar" Click="{x:Bind ViewModel.Guardar_Click}" Grid.Row="7"  ></AppBarButton>
             <AppBarButton Icon="Delete" Click="{x:Bind ViewModel.BorrarClick}" Grid.Row="7" Grid.Column="1" ></AppBarButton>

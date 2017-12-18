@@ -21,13 +21,16 @@ namespace _18_CRUD_Personas_UWP_UI.Converters
         public object ConvertBack(object value, Type targetType, object parameter, string language)
         {
             string strValue = value as string;
-            DateTime resultDateTime = DateTime.Now;
-            if (value.GetType() == typeof(String)) {
+            //DateTime resultDateTime= DateTime.Now;
 
-                String[] sfecha = ((String)value).Split("/");
-                resultDateTime = new DateTime(int.Parse(sfecha[0]), int.Parse(sfecha[1]), int.Parse(sfecha[2]));
-            }
-            return resultDateTime;
+            DateTime myDate = DateTime.Parse(value.ToString());
+
+
+            //if (value.GetType() == typeof(String)) {
+              //  String[] sfecha = ((String)value).Split("/");
+              //  resultDateTime = new DateTime(int.Parse(sfecha[0]), int.Parse(sfecha[1]), int.Parse(sfecha[2]));
+            //}
+            return myDate;
         }
     }
 }

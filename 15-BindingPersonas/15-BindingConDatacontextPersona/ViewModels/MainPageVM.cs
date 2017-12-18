@@ -37,9 +37,12 @@ namespace _15_BindingConDatacontextPersona.ViewModels
         {
             get { return _personSeleccionada; }
             set {
-                _personSeleccionada = value;
-                //Notificación a la vista
-                NotifyPropertyChanged("personSeleccionada");
+                if (_personSeleccionada != value)
+                {
+                    _personSeleccionada = value;
+                    //Notificación a la vista
+                    NotifyPropertyChanged("personSeleccionada");
+                }
             }
         }
 
@@ -79,19 +82,15 @@ namespace _15_BindingConDatacontextPersona.ViewModels
         {
             //Código para guardar
         }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f6bfe85081f05ead5b96cfbb3f79905252b44c13
         /// <summary>
         /// eVENTO DEL CLICK, EN vm, NO ES CODIGO BEHIND
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         public void BorrarClick(object sender, RoutedEventArgs e)
-<<<<<<< HEAD
-=======
-=======
+        {
+
+        }
         //private bool canExecuteSavePersona()
         //{
         //    bool sePuede = false;
@@ -103,8 +102,6 @@ namespace _15_BindingConDatacontextPersona.ViewModels
         //    return sePuede;
         //}
         private void ExecuteSavePersona()
->>>>>>> refs/remotes/origin/master
->>>>>>> f6bfe85081f05ead5b96cfbb3f79905252b44c13
         {
             mListadoColecPersons.RemoveAt(indiceDePersonaSelec);
             NotifyPropertyChanged("mListadoColecPersons");
