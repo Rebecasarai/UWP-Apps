@@ -21,14 +21,13 @@ namespace _18_CRUD_Personas_UWP_UI.Listado
         public async Task<List<clsPersona>> getPersonas()
         {
             clsConnection mCon = new clsConnection();
-            clsPersona p;
             HttpClient client = new HttpClient();
             String resultadoJSON;
 
             try
             {
                 resultadoJSON = await client.GetStringAsync(mCon.uriBase);
-
+                
 
             }
             catch (SqlException e)
