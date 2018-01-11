@@ -12,6 +12,7 @@ using _18_CRUD_Personas_UWP_BL.Listados;
 using _18_CRUD_Personas_UWP_Entidades;
 using _18_CRUD_Personas_UWP_BL.Manejadoras;
 using Windows.UI.Xaml.Controls;
+using Windows.Web.Http;
 
 namespace _18_CRUD_Personas_UWP_UI.ViewModels
 {
@@ -34,7 +35,6 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
 
         private String _mensaje;
         private Boolean _mostrarMensaje;
-        private ProgressRing _mProgressRing;
         private bool _mHabiliteProgressring = true;
 
         #endregion
@@ -44,8 +44,6 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
         {
             _manejadoraBL = new ManejadoraBL();
             _listadoBL = new ListadoPersonasBL();
-            //this._mListaCompleta = new ObservableCollection<clsPersona>( _listadoBL.getListadoBL());
-            //this._mListaConBusqueda = this._mListaCompleta;
             fillList();
             _mostrarMensaje = false;
         }
@@ -360,20 +358,21 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
                 //Añadimos a la BD, a través de la BL
                 //Colocar insertar a la tabla
                 _personSeleccionada.IdPersona = mListaCompleta.ElementAt(mListaCompleta.Count() - 1).IdPersona - 1;
-        
-                _manejadoraBL.addPersona(_personSeleccionada);
+
+                await _manejadoraBL.addPersonaAsync(_personSeleccionada);
 
                 mListaCompleta.Add(_personSeleccionada);
                 //NotifyPropertyChanged("mListaCompleta");
             }
             else
             {
-                _manejadoraBL.updatePersona(_personSeleccionada);
-                _mListaCompleta = new ObservableCollection<clsPersona>( await _listadoBL.getListadoBL());
-                _mListaConBusqueda = mListaCompleta;
-                NotifyPropertyChanged("personSeleccionada");
+                int mCode = (int) await _manejadoraBL.updatePersonaAsync(_personSeleccionada);
+                
+                    _mListaCompleta = new ObservableCollection<clsPersona>(await _listadoBL.getListadoBL());
+                    _mListaConBusqueda = mListaCompleta;
+                    NotifyPropertyChanged("personSeleccionada");
+                
             }
-
         }
         
         /// <summary>
@@ -405,9 +404,9 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
             {
                 //Llamamos a la BL para borrar de la BD
                 ManejadoraBL manejadorabl = new ManejadoraBL();
-                filasafectadas= manejadorabl.borrarPersona(_personSeleccionada.IdPersona);
-                if (filasafectadas==1)
-                {
+                filasafectadas= await manejadorabl.borrarPersonaAsync(_personSeleccionada.IdPersona);
+               if (filasafectadas==1)
+               {
                     //Hace el efecto inmediato de que borra de lista
                     mListaCompleta.Remove(_personSeleccionada);
                     NotifyPropertyChanged("mListaConBusqueda");

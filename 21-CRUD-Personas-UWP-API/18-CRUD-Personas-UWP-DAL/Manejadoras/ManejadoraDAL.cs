@@ -6,8 +6,10 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using Windows.Web.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace _18_CRUD_Personas_UWP_DAL.Manejadoras
 {
@@ -111,149 +113,95 @@ namespace _18_CRUD_Personas_UWP_DAL.Manejadoras
         }//fin guardarPersonaDAL
 
         /// <summary>
-        /// 
+        /// Eliminamos a una persona con el verbo delete
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public int eliminarPersonaDAL(int id)
+        public async Task<int> eliminarPersonaDALAsync(int id)
         {
-            clsConnection miConexion = new clsConnection();
-            SqlConnection conexion = new SqlConnection();
-            SqlCommand miComando = new SqlCommand();
-
-            int filasAfectadas = 0;
-
-            SqlParameter param;
-            param = new SqlParameter();
-            param.ParameterName = "@id";
-            param.SqlDbType = System.Data.SqlDbType.Int;
-            param.Value = id;
-
-            //Le damos al comando el paramentro
-            miComando.Parameters.Add(param);
-
+            clsConnection mConexion = new clsConnection();
+            int mResultado = 0;
+            HttpClient client = new HttpClient();
+            HttpResponseMessage respuesta;
+            Uri mUri = new Uri(mConexion.uriBase + "/" + id);
             try
             {
-                conexion = miConexion.conexion;
-                miComando.CommandText = "Delete From PersonasBD where ID=@id";
-                miComando.Connection = conexion; //no olvides esto
-                filasAfectadas = miComando.ExecuteNonQuery();
-
+                respuesta = await client.DeleteAsync(mUri);
+                client.Dispose();
+                
+                if (respuesta.IsSuccessStatusCode)
+                {
+                    mResultado = 1;
+                }
             }
             catch (Exception e) { throw e; }
 
-            return filasAfectadas;
+            return mResultado;
 
         }
 
         /// <summary>
-        /// este metodo inserta una nueva persona
+        /// Este metodo inserta una nueva persona
         /// </summary>
-        /// <param name="persona"></param>
-        /// <returns></returns>
-        public int crearPersonaDAL(clsPersona persona)
+        /// <param name="persona">Recibe un objeto persona</param>
+        /// <returns>Devuelve un 1 si se ha creado correctamente. Un 0 si ha fallado.</returns>
+        public async Task<int> crearPersonaDALAsync(clsPersona persona)
         {
             clsConnection miConexion = new clsConnection();
-            SqlConnection conexion = new SqlConnection();
-            SqlCommand miComando = new SqlCommand();
-
             int resultado = 0;
-
-            //miComando.Parameters.Add("@IDPERSONA", System.Data.SqlDbType.Int).Value = persona.IdPersona;
-            miComando.Parameters.Add("@nombre", System.Data.SqlDbType.VarChar).Value = persona.Nombre;
-            miComando.Parameters.Add("@apellido", System.Data.SqlDbType.VarChar).Value = persona.Apellido;
-            miComando.Parameters.Add("@fechanacimient", System.Data.SqlDbType.DateTime2).Value = persona.FechaNac;
-            miComando.Parameters.Add("@direccion", System.Data.SqlDbType.VarChar).Value = persona.Direccion;
-            miComando.Parameters.Add("@telefono", System.Data.SqlDbType.VarChar).Value = persona.Telefono;
-
+            HttpClient client = new HttpClient();
+            String body;
+            HttpStringContent mContenido;
+            HttpResponseMessage mRespuesta;
             try
             {
-                conexion = miConexion.conexion;
-                //Insertamos los datos de la persona en la base de datos
-                miComando.CommandText = "INSERT INTO PERSONASBD (NOMBRE,APELLIDO,DIRECCION,TELEFONO, FECHANACIMIENT) VALUES (@nombre, @apellido," +
-                                        " @direccion, @telefono, @fechanacimient)";
-                miComando.Connection = conexion;
+                // Serializamos al objeto persona que recibe
+                body = JsonConvert.SerializeObject(persona);
 
-                //ejecutamos el comando de actualizar
-                resultado = miComando.ExecuteNonQuery();
+                mContenido = new HttpStringContent(body, Windows.Storage.Streams.UnicodeEncoding.Utf8, "application/json");
+                    
+                mRespuesta = await client.PostAsync(miConexion.uriBase, mContenido);
 
-                conexion.Close();
+                if (mRespuesta.IsSuccessStatusCode)
+                {
+                    resultado = 1;
+                }
             }
-            catch (SqlException sql) { throw sql; }
+            catch (Exception e) { throw e; }
+
 
             return (resultado);
-        }//fin crearPersonaDAL
+        }
+        //fin crearPersonaDAL
 
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="p"></param>
-        public void updatePersona(clsPersona p)
+        /// <param name="persona"></param>
+        /// <returns></returns>
+        public async Task<HttpStatusCode> updatePersonaAsync(clsPersona persona)
         {
-            clsConnection cx = new clsConnection();
-            SqlCommand miComando = new SqlCommand();
-            SqlParameter nombre = new SqlParameter();
-            SqlParameter apellidos = new SqlParameter();
-            SqlParameter id = new SqlParameter();
-            SqlParameter idDepartamento = new SqlParameter();
-            SqlParameter direccion = new SqlParameter();
-            SqlParameter telefono = new SqlParameter();
-            SqlParameter fechanacimient = new SqlParameter();
+            clsConnection miConexion = new clsConnection();
+            HttpClient client = new HttpClient();
+            String body;
+            HttpStringContent mContenido;
+            HttpResponseMessage mRespuesta;
+            Uri mUri = new Uri(miConexion.uriBase+"/"+persona.IdPersona);
             try
             {
-                /*nombre.ParameterName = "@nombre";
-                nombre.SqlDbType = System.Data.SqlDbType.NVarChar;
-                nombre.Value = p.Nombre;
+                // Serializamos al objeto persona que recibe
+                body = JsonConvert.SerializeObject(persona);
 
-                idDepartamento.ParameterName = "@iddepartamento";
-                idDepartamento.SqlDbType = System.Data.SqlDbType.Int;
-                idDepartamento.Value = p.idDepartamento;
+                mContenido = new HttpStringContent(body, Windows.Storage.Streams.UnicodeEncoding.Utf8, "application/json");
 
-                apellidos.ParameterName = "@apellido";
-                apellidos.SqlDbType = System.Data.SqlDbType.NVarChar;
-                apellidos.Value = p.Apellido;
-
-                direccion.ParameterName = "@direccion";
-                direccion.SqlDbType = System.Data.SqlDbType.NVarChar;
-                direccion.Value = p.Direccion;
-
-                telefono.ParameterName = "@telefono";
-                telefono.SqlDbType = System.Data.SqlDbType.Char;
-                telefono.Value = p.Telefono;
-
-                id.ParameterName = "@FECHANACIMIENT";
-                id.SqlDbType = System.Data.SqlDbType.DateTime2;
-                id.Value = p.FechaNac;
-
-                id.ParameterName = "@id";
-                id.SqlDbType = System.Data.SqlDbType.Int;
-                id.Value = p.IdPersona;*/
-
-                miComando.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = p.IdPersona;
-                miComando.Parameters.Add("@nombre", System.Data.SqlDbType.VarChar).Value = p.Nombre;
-                miComando.Parameters.Add("@apellido", System.Data.SqlDbType.VarChar).Value = p.Apellido;
-                miComando.Parameters.Add("@fechanacimient", System.Data.SqlDbType.DateTime2).Value = p.FechaNac;
-                miComando.Parameters.Add("@direccion", System.Data.SqlDbType.VarChar).Value = p.Direccion;
-                miComando.Parameters.Add("@telefono", System.Data.SqlDbType.VarChar).Value = p.Telefono;
-
-/*
-                miComando.Parameters.Add(nombre);
-                miComando.Parameters.Add(apellidos);
-                miComando.Parameters.Add(direccion);
-                miComando.Parameters.Add(telefono);
-                miComando.Parameters.Add(id);
-                miComando.Parameters.Add(idDepartamento);*/
-                miComando.CommandText = "Update PersonasBD Set nombre=@nombre, apellido=@apellido, direccion=@direccion, telefono=@telefono, FECHANACIMIENT = @FECHANACIMIENT WHERE id=@id";
-                miComando.Connection = cx.conexion;
-                miComando.ExecuteNonQuery();
-                cx.closeConnection();
+                mRespuesta = await client.PutAsync(mUri, mContenido);
+                
             }
-            catch (SqlException e)
-            {
-                throw e;
-            }
+            catch (Exception e) { throw e; }
+
+            return mRespuesta.StatusCode;
+            
         }
-
 
         public clsPersona getPersonaDAL(int id)
         {

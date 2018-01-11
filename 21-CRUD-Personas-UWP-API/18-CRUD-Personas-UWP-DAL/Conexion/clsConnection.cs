@@ -22,7 +22,7 @@ namespace _18_CRUD_Personas_UWP_DAL.Conexion
             this.user = "rsgonzalez";
             //this.user = "pruebaResident";
             this.pass = "IwRmGaM-23";
-            this.uriBase = new Uri("http://webAPI-Rebeca.azurewebsites.net/api/Persona/");
+            this.uriBase = new Uri("http://webAPI-Rebeca.azurewebsites.net/api/Persona");
             this.conexion = new SqlConnection();
             try
             {

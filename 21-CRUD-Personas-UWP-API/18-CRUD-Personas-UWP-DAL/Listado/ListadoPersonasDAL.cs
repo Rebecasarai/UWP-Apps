@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Net.Http;
+using Windows.Web.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -28,7 +28,7 @@ namespace _18_CRUD_Personas_UWP_UI.Listado
         public async Task<List<clsPersona>> getPersonas()
         {
             clsConnection mCon = new clsConnection();
-            List<clsPersona> listaPersonas = new List<clsPersona>();
+            //List<clsPersona> listaPersonas = new List<clsPersona>();
             HttpClient client = new HttpClient();
             String resultadoJSON;
 
@@ -37,7 +37,7 @@ namespace _18_CRUD_Personas_UWP_UI.Listado
                 resultadoJSON = await client.GetStringAsync(mCon.uriBase);
                 client.Dispose();
                 //JsonConvert
-                listaPersonas = JsonConvert.DeserializeObject<List<clsPersona>>(resultadoJSON);
+                listado = JsonConvert.DeserializeObject<List<clsPersona>>(resultadoJSON);
 
             }
             catch (SqlException e)
@@ -45,7 +45,7 @@ namespace _18_CRUD_Personas_UWP_UI.Listado
                 throw e;
             }
 
-            return listaPersonas;
+            return listado;
         }
     }
 }

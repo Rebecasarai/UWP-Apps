@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using _18_CRUD_Personas_UWP_DAL.Manejadoras;
+using Windows.Web.Http;
 
 namespace _18_CRUD_Personas_UWP_BL.Manejadoras
 {
@@ -29,10 +30,10 @@ namespace _18_CRUD_Personas_UWP_BL.Manejadoras
         /// </summary>
         /// <param name="p">Recibe al objeto de persona</param>
         /// <returns>Retorna un entero que representa el numero de filas afectadas</returns>
-        public void updatePersona(clsPersona p)
+        public async Task<HttpStatusCode> updatePersonaAsync(clsPersona p)
         {
             ManejadoraDAL manejadoraDAL = new ManejadoraDAL();
-            manejadoraDAL.updatePersona(p);
+            return await manejadoraDAL.updatePersonaAsync(p);
         }
         
         /// <summary>
@@ -40,11 +41,11 @@ namespace _18_CRUD_Personas_UWP_BL.Manejadoras
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public int borrarPersona(int id)
+        public async Task<int> borrarPersonaAsync(int id)
         {
             int filasAfectadas = 0;
             ManejadoraDAL manejadora = new ManejadoraDAL();
-            filasAfectadas = manejadora.eliminarPersonaDAL(id);
+            filasAfectadas = await manejadora.eliminarPersonaDALAsync(id);
             
             return filasAfectadas;
         }
@@ -53,10 +54,10 @@ namespace _18_CRUD_Personas_UWP_BL.Manejadoras
         /// Metodo que añade la persona, la inserta a la BD
         /// </summary>
         /// <param name="p"></param>
-        public void addPersona(clsPersona p)
+        public async Task addPersonaAsync(clsPersona p)
         {
             ManejadoraDAL manejadora = new ManejadoraDAL();
-            manejadora.crearPersonaDAL(p);
+            await manejadora.crearPersonaDALAsync(p);
 
         }
     }
