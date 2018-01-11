@@ -73,18 +73,32 @@
 
         </StackPanel>
 
-        <ListView x:Name="itemListView" Grid.Row="1" Grid.Column="0" MinWidth="100"  SelectedItem="{Binding personSeleccionada,Mode=TwoWay}" ItemsSource="{Binding mListaConBusqueda}">
-            <ListView.ItemTemplate>
-                <DataTemplate >
-                    <StackPanel Orientation="Horizontal">
-                        <SymbolIcon Symbol="Contact"></SymbolIcon>
-                        <TextBlock Text="{Binding Nombre}" Margin=" 10 0"></TextBlock>
-                        <TextBlock Text="{Binding Apellido}"></TextBlock>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
+        <ScrollViewer  x:Name="itemListView" Grid.Row="1" Grid.Column="0">
+            <StackPanel>
+                
+                <ListView  MinWidth="100"  SelectedItem="{Binding personSeleccionada,Mode=TwoWay}" ItemsSource="{Binding mListaConBusqueda}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate >
+                            <StackPanel Orientation="Horizontal">
+                                <SymbolIcon Symbol="Contact"></SymbolIcon>
+                                <TextBlock Text="{Binding Nombre}" Margin=" 10 0"></TextBlock>
+                                <TextBlock Text="{Binding Apellido}"></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
 
-        </ListView>
+                </ListView>
+
+                <ProgressRing Name="progressBar" Margin="0 90 0 0" IsActive="{Binding mHabiliteProgressring, Mode=TwoWay}"></ProgressRing>
+
+
+            </StackPanel>
+            
+            
+            
+        </ScrollViewer>
+
+        
 
         <StackPanel Grid.Row="0" Grid.Column="2" Background="AliceBlue"/>
 

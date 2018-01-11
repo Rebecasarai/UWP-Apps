@@ -34,6 +34,8 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
 
         private String _mensaje;
         private Boolean _mostrarMensaje;
+        private ProgressRing _mProgressRing;
+        private bool _mHabiliteProgressring = true;
 
         #endregion
 
@@ -42,13 +44,25 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
         {
             _manejadoraBL = new ManejadoraBL();
             _listadoBL = new ListadoPersonasBL();
-            this._mListaCompleta = new ObservableCollection<clsPersona>(_listadoBL.getListadoBL());
-            this._mListaConBusqueda = this._mListaCompleta;
+            //this._mListaCompleta = new ObservableCollection<clsPersona>( _listadoBL.getListadoBL());
+            //this._mListaConBusqueda = this._mListaCompleta;
+            fillList();
             _mostrarMensaje = false;
         }
         #endregion
         
         #region "Propiedades públicas"
+
+        public bool mHabiliteProgressring
+        {
+            get { return _mHabiliteProgressring; }
+            set
+            {
+                _mHabiliteProgressring = value;
+            }
+        }
+
+
         /// <summary>
         /// Persona seleccionada que utilizaremos para actualizar, crear nueva persona o eliminar.
         /// </summary>
@@ -339,7 +353,7 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
         /// Metodo que realiza el guardar.
         /// Es invocado atraves de cmdSave, al ser presionado el boton de "Guardar"
         /// </summary>
-        private void ExecuteSave()
+        private async void ExecuteSave()
         {
             if (_personSeleccionada.IdPersona == 0)
             {
@@ -355,7 +369,7 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
             else
             {
                 _manejadoraBL.updatePersona(_personSeleccionada);
-                _mListaCompleta = new ObservableCollection<clsPersona>(_listadoBL.getListadoBL());
+                _mListaCompleta = new ObservableCollection<clsPersona>( await _listadoBL.getListadoBL());
                 _mListaConBusqueda = mListaCompleta;
                 NotifyPropertyChanged("personSeleccionada");
             }
@@ -365,9 +379,9 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
         /// <summary>
         /// Metodo que realiza la actualizaciónd e la lista, el Refresh
         /// </summary>
-        private void ExecuteActualizar()
+        private async void ExecuteActualizar()
         {
-            mListaCompleta = new ObservableCollection<clsPersona>(_listadoBL.getListadoBL());
+            mListaCompleta = new ObservableCollection<clsPersona>(await _listadoBL.getListadoBL());
             mListaConBusqueda = this._mListaCompleta;
            // NotifyPropertyChanged("mListaCompleta");
             NotifyPropertyChanged("mListaConBusqueda");
@@ -402,6 +416,29 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
                 }
 
             }
+
+        }
+
+
+        public async void fillList()
+        {
+            try
+            {
+
+            _listadoBL = new ListadoPersonasBL();
+            this._mListaCompleta = new ObservableCollection<clsPersona>(await _listadoBL.getListadoBL());
+            this._mListaConBusqueda = this._mListaCompleta;
+            _mHabiliteProgressring = false;
+            NotifyPropertyChanged("mListaCompleta");
+            NotifyPropertyChanged("mListaConBusqueda");
+            NotifyPropertyChanged("mHabiliteProgressring");
+            }
+            catch (Exception e)
+            {
+
+            }
+
+            //Por la forma en que lo hacemos debemos notificar. No siempre es necesario
 
         }
 
