@@ -1,0 +1,17 @@
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\bin\x86\Debug\18-CRUD-Personas-UWP-Entidades.dll
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\bin\x86\Debug\18-CRUD-Personas-UWP-Entidades.pdb
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\bin\x86\Debug\18-CRUD-Personas-UWP-Entidades.pri
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\x86\Debug\18-CRUD-Personas-UWP-Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\x86\Debug\18-CRUD-Personas-UWP-Entidades.dll
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\x86\Debug\18-CRUD-Personas-UWP-Entidades.pdb
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\x86\Debug\priconfig.xml
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\x86\Debug\priconfig.xml.intermediate
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\x86\Debug\layout.resfiles
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\x86\Debug\layout.resfiles.intermediate
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\x86\Debug\resources.resfiles
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\x86\Debug\resources.resfiles.intermediate
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\x86\Debug\pri.resfiles
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\x86\Debug\pri.resfiles.intermediate
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\x86\Debug\qualifiers.txt
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\x86\Debug\qualifiers.txt.intermediate
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt

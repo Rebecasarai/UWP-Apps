@@ -1,0 +1,5 @@
+C:\Users\Rebeca\Desktop\UWP-Apps\21-CRUD-Personas-UWP-API\18-CRUD-Personas-UWP-BL\18-CRUD-Personas-UWP-BL.csproj;x86
+C:\Users\Rebeca\Desktop\UWP-Apps\21-CRUD-Personas-UWP-API\18-CRUD-Personas-UWP-DAL\18-CRUD-Personas-UWP-DAL.csproj;x86
+C:\Users\Rebeca\Desktop\UWP-Apps\21-CRUD-Personas-UWP-API\18-CRUD-Personas-UWP-Entidades\18-CRUD-Personas-UWP-Entidades.csproj;x86
+C:\Users\Rebeca\Desktop\UWP-Apps\21-CRUD-Personas-UWP-API\18-CRUD-Personas-UWP-Entidades\18-CRUD-Personas-UWP-Entidades.csproj;x86
+C:\Users\Rebeca\Desktop\UWP-Apps\21-CRUD-Personas-UWP-API\18-CRUD-Personas-UWP-UI\18-CRUD-Personas-UWP-UI.csproj;x86

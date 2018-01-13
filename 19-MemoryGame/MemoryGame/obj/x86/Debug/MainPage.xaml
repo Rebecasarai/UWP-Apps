@@ -1,0 +1,47 @@
+﻿<Page
+    x:Class="MemoryGame.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MemoryGame"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:MemoryGame.ViewModels"
+    mc:Ignorable="d">
+
+
+    <Page.DataContext>
+        <vm:MemoryGameVM></vm:MemoryGameVM>
+    </Page.DataContext>
+
+
+    <Grid Background="LightBlue">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <RelativePanel x:ConnectionId='1' Name="Botones"  Grid.Row="0" Grid.Column="0" Margin="12" Background="LightSkyBlue" >
+            <AppBarButton x:ConnectionId='3' Name="Jugar" Icon="Refresh"                     Margin="20" />
+            <TextBlock x:ConnectionId='4'  Name="mWatch" Text="{Binding mWatch,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" FontFamily="Georgia" FontSize="30" Margin="30"  RelativePanel.RightOf="Jugar" />
+            <TextBlock x:ConnectionId='5' Name="txtFinal" FontSize="20" Text="{Binding mTxtFinal,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Visibility="{Binding mFinal, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+
+            <TextBlock x:ConnectionId='6'  Name="intents" Text="Intentos:" RelativePanel.RightOf="txtFinal" Margin="150 30 10 30" FontFamily="Georgia" FontSize="30"/>
+            <TextBlock  Text="{Binding mIntentsCont,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"  RelativePanel.RightOf="intents" RelativePanel.AlignVerticalCenterWith="intents" FontFamily="Georgia" FontSize="40"/>
+        </RelativePanel>
+
+        <GridView Grid.Row="1" Margin="10" ItemsSource="{Binding mCarts,UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding mSelectioned,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding mCartseleccionada, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"   >
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Image x:ConnectionId='2' Name="cart" Source="{Binding uri}" MaxWidth="300" MaxHeight="200"                                       >
+                        <Image.Projection>
+                            <PlaneProjection></PlaneProjection>
+                        </Image.Projection>
+                    </Image>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
+    </Grid>
+</Page>
+

@@ -1,0 +1,17 @@
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\bin\Debug\18-CRUD-Personas-UWP-Entidades.dll
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\bin\Debug\18-CRUD-Personas-UWP-Entidades.pdb
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\bin\Debug\18-CRUD-Personas-UWP-Entidades.pri
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\Debug\18-CRUD-Personas-UWP-Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\Debug\18-CRUD-Personas-UWP-Entidades.dll
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\Debug\18-CRUD-Personas-UWP-Entidades.pdb
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\Debug\priconfig.xml
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\Debug\priconfig.xml.intermediate
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\Debug\layout.resfiles
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\Debug\layout.resfiles.intermediate
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\Debug\resources.resfiles
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\Debug\resources.resfiles.intermediate
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\Debug\pri.resfiles
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\Debug\pri.resfiles.intermediate
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\Debug\qualifiers.txt
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\Debug\qualifiers.txt.intermediate
+C:\Users\Rebeca\Desktop\UWP-Apps\18-CRUD-Personas-UWP\18-CRUD-Personas-UWP-Entidades\obj\Debug\MultipleQualifiersPerDimensionFound.txt
