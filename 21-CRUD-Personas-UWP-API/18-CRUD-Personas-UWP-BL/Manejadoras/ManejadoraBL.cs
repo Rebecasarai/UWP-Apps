@@ -16,7 +16,7 @@ namespace _18_CRUD_Personas_UWP_BL.Manejadoras
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public clsPersona getPersona(int id)
+        public async Task<clsPersona> getPersona(int id)
         {
             clsPersona person = new clsPersona();
             ManejadoraBL manejadoraDAL = new ManejadoraBL();

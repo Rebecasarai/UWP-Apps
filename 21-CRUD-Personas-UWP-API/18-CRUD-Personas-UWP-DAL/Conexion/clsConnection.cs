@@ -10,6 +10,7 @@ namespace _18_CRUD_Personas_UWP_DAL.Conexion
     public class clsConnection {
 
         public Uri uriBase { get; set; }
+        public Uri uriBaseCore { get; set; }
         public String dataBase { get; set; }
         public String user { get; set; }
         public String pass { get; set; }
@@ -23,6 +24,8 @@ namespace _18_CRUD_Personas_UWP_DAL.Conexion
             //this.user = "pruebaResident";
             this.pass = "IwRmGaM-23";
             this.uriBase = new Uri("http://webAPI-Rebeca.azurewebsites.net/api/Persona");
+            this.uriBaseCore = new Uri("https://webapicorerebeca.azurewebsites.net/api/Persona");
+
             this.conexion = new SqlConnection();
             try
             {

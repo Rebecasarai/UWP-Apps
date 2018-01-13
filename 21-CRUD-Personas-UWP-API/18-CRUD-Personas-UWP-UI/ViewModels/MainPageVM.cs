@@ -366,11 +366,15 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
             }
             else
             {
-                int mCode = (int) await _manejadoraBL.updatePersonaAsync(_personSeleccionada);
-                
+                HttpStatusCode mCode= await _manejadoraBL.updatePersonaAsync(_personSeleccionada);
+               
+                if ((int) mCode == 204)
+                {
                     _mListaCompleta = new ObservableCollection<clsPersona>(await _listadoBL.getListadoBL());
                     _mListaConBusqueda = mListaCompleta;
                     NotifyPropertyChanged("personSeleccionada");
+                }
+                
                 
             }
         }
