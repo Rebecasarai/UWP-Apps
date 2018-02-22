@@ -99,6 +99,9 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="prueba.xaml.cs">
+      <DependentUpon>prueba.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\Class1.cs" />
     <Compile Include="ViewModel\clsVMBase.cs" />
     <Compile Include="ViewModel\DelegateCommand.cs" />
@@ -128,6 +131,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="prueba.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

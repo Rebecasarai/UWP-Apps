@@ -9,8 +9,21 @@ using Windows.Web.Http;
 
 namespace Capa_BL
 {
-    class ManejadoraBL
+    public class ManejadoraBL
     {
+        
+
+        public async Task<List<Photo>> getPhotos()
+        {
+            ManejadoraDAL manejadora = new ManejadoraDAL();
+            List<Photo> photos = new List<Photo>();
+            photos = await manejadora.getPhotos();
+            return photos;
+
+        }
+
+
+
         /// <summary>
         /// Metodo que obtiene la persona por id
         /// </summary>

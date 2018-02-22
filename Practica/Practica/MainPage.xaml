@@ -5,7 +5,7 @@
     xmlns:local="using:Practica"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:vm="using:SpaceInvaders.ViewModels"
+    xmlns:vm="using:Practica.ViewModel"
     mc:Ignorable="d">
 
     <Page.DataContext>
@@ -13,11 +13,57 @@
     </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
-        <Canvas x:Name="canvas" MaxHeight="600" MaxWidth="1350">
-            <Image x:Name="player" Source="{Binding player.imagen}" Height="58" Width="72" Opacity="{Binding player.visible,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
-                       Canvas.Left="{Binding player.posicionX, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="534"  />
-        </Canvas>
+        <GridView Name="planetas"  ItemsSource="{Binding mListaPhotos, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding photoSeleccionada, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Image MaxHeight="120" Source="{Binding thumbnailUrl}"/>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
+        <RelativePanel Grid.Column="1">
+            <TextBlock FontSize="40" Name="adivinaa" Foreground="Chocolate" Text="{Binding palabraAdivinar, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+
+            <Button Name="postText" Content="Crear Planeta" RelativePanel.Below="adivinaa"></Button>
+            <TextBox Name="post" PlaceholderText="Planeta" RelativePanel.RightOf="postText"></TextBox>
+            <TextBox Name="a" PlaceholderText="Adivina" RelativePanel.RightOf="post"  ></TextBox>
+            <Button Name="delete" Content="Elimiar Planeta" Command="{Binding delete}" RelativePanel.Below="postText" ></Button>
+            <Button Name="adivina" Content="Adivinar" Command="{Binding delete}" RelativePanel.Below="a" RelativePanel.RightOf="delete" ></Button>
+
+            <FlipView MaxHeight="200" Name="flip" RelativePanel.Below="delete" ItemsSource="{Binding mListaPhotos, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
+                <FlipView.ItemTemplate>
+                    <DataTemplate>
+                        <Image Source="{Binding thumbnailUrl}"></Image>
+                    </DataTemplate>
+                </FlipView.ItemTemplate>
+
+            </FlipView>
+            <RelativePanel Name="lineas" RelativePanel.Below="flip">
+
+
+            </RelativePanel>
+            <Button Name="navigate" Content="navegar" RelativePanel.Below="flip" Click="{x:Bind vm.btnPlay_Click}" ></Button>
+            <MediaPlayerElement RelativePanel.Below="navigate" Name="mediaSimple" Source="{Binding uri}"  Width="400" AutoPlay="True"/>
+
+            <Canvas Width="400" Height="400" Name="canvas" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="mediaSimple">
+                <Image Canvas.Top="{Binding planeta.posicionX}" Canvas.Left="{Binding planeta.posicionY}" Source="{Binding planeta.uri}" Height="140" Width="120"></Image>
+                
+            </Canvas>
+           </RelativePanel>
+
+       
+        
+
+
 
     </Grid>
 </Page>

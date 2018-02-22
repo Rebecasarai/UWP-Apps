@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,92 @@ namespace Capa_DAL
 {
     public class ManejadoraDAL
     {
+
+
+        public List<Personaje> getPersonajes()
+        {
+            Conexion con = new Conexion();
+            SqlDataReader lector;
+            SqlCommand consulta = new SqlCommand();
+            consulta.CommandText = "Select * From Personajes";
+            consulta.Connection = con.con;
+            lector = consulta.ExecuteReader();
+            List<Personaje> listado = new List<Personaje>();
+            Personaje p;
+
+            if (lector.HasRows)
+            {
+                while (lector.Read())
+                {
+                    p = new Personaje();
+                    p.id = (int)lector["ID"];
+                    p.nombre = (string)lector["NOMBRE"];
+                    p.alias = (float)lector["APELLIDO"];
+                    p.armadura = (float)lector["DIRECCION"];
+                    listado.Add(p);
+                }
+            }
+            con.closeCon();
+            return listado;
+        }
+
+
+
+        public int deletePersonaje(int id)
+        {
+            Conexion con = new Conexion();
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand miComando = new SqlCommand();
+
+            int filasAfectadas = 0;
+
+            SqlParameter param;
+            param = new SqlParameter();
+            param.ParameterName = "@id";
+            param.SqlDbType = System.Data.SqlDbType.Int;
+            param.Value = id;
+
+            //Le damos al comando el paramentro
+            miComando.Parameters.Add(param);
+
+            try
+            {
+                conexion = con.con;
+                miComando.CommandText = "Delete From Personajes where ID=@id";
+                miComando.Connection = conexion; //no olvides esto
+                filasAfectadas = miComando.ExecuteNonQuery();
+
+            }
+            catch (Exception e) { throw e; }
+
+            return filasAfectadas;
+        }
+
+
+
+
+        public async Task<List<Photo>> getPhotos()
+        {
+            Conexion conexion = new Conexion();
+            List<Photo> photos = new List<Photo>();
+            HttpClient client = new HttpClient();
+            String resultadoJSON;
+            //Uri uri = new Uri(conexion.photosApi + "/");
+            Uri uri = new Uri("https://jsonplaceholder.typicode.com/photos/");
+
+            try
+            {
+                resultadoJSON = await client.GetStringAsync(uri);
+                client.Dispose();
+                //JsonConvert
+                photos = JsonConvert.DeserializeObject<List<Photo>>(resultadoJSON); 
+            }
+            catch (Exception e) { throw e; }
+
+            List<Photo> photosDef = new List<Photo>(photos.Take(10));
+            return photosDef;
+        }
+
 
         /// <summary>
         /// Eliminamos con el verbo delete
@@ -23,7 +110,7 @@ namespace Capa_DAL
             int mResultado = 0;
             HttpClient client = new HttpClient();
             HttpResponseMessage respuesta;
-            Uri mUri = new Uri(mConexion.Api + "/" + id);
+            Uri mUri = new Uri(mConexion.photosApi + "/" + id);
             try
             {
                 respuesta = await client.DeleteAsync(mUri);

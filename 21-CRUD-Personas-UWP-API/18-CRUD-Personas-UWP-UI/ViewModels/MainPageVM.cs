@@ -384,7 +384,8 @@ namespace _18_CRUD_Personas_UWP_UI.ViewModels
         /// </summary>
         private async void ExecuteActualizar()
         {
-            mListaCompleta = new ObservableCollection<clsPersona>(await _listadoBL.getListadoBL());
+            _mListaCompleta = new ObservableCollection<clsPersona>(await _listadoBL.getListadoBL());
+
             mListaConBusqueda = this._mListaCompleta;
            // NotifyPropertyChanged("mListaCompleta");
             NotifyPropertyChanged("mListaConBusqueda");

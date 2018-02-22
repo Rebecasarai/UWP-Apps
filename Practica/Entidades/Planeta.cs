@@ -10,12 +10,17 @@ namespace Entidades
     {
         public int id { get; set; }
         public String name { get; set; }
-        public String rotation_period { get; set; }
-        public String diameter { get; set; }
-        public String climate { get; set; }
-        public String gravity { get; set; }
-        public String terrain { get; set; }
-        public String population { get; set; }
+        public int posicionX { get; set; }
+        public int posicionY { get; set; }
+        public Uri uri { get; set; }
 
+        public Planeta(int id, string name, int posicionX, int posicionY, Uri uri)
+        {
+            this.id = id;
+            this.name = name;
+            this.posicionX = posicionX;
+            this.posicionY = posicionY;
+            this.uri = uri;
+        }
     }
 }
